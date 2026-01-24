@@ -1,0 +1,83 @@
+So for bullet proof future proof what are the commands I should use in nodejs reactjs project while I need to update codes everyday? Explain very simply step by stpe with begineer type so I understand clearly.Here’s the simplest, most bullet-proof, future-proof daily workflow for a Node.js + React.js project (especially when you're updating code every single day).
+This method is used by most professional developers in 2026 who want to stay safe, never lose work, and avoid stress.
+Very Simple Daily Workflow (Beginner-Friendly – Step by Step)
+Think of Git like a time machine + save point system in a video game.
+Every day when you start working (5 seconds)
+
+Open terminal → go to your project folderBashcd C:\Projects\Web\shakil-it-solutions
+Always start on the safe main branchBashgit checkout main
+Pull latest changes (in case you pushed from another computer or a teammate did something)Bashgit pull(This makes sure your main branch is up-to-date)
+Create a new fresh branch for today’s work
+(This is the most important safety step!)Bashgit checkout -b today-2026-01-11-feature-chat-widget→ You can name it anything: today-YYYY-MM-DD-what-you-will-do
+→ Example names: today-2026-01-11-fix-navbar, today-2026-01-12-add-areas-page
+
+→ From now on all your work today stays only in this new branch
+→ Your main branch stays clean and safe forever
+While you work during the day (every 10–30 minutes)
+
+Save your work in small pieces (very important habit!)Every time you finish a small logical part (e.g. fixed button, added one component, made chat look better):Bashgit add .               # "take a photo" of all changes
+git commit -m "fixed chat widget positioning and added smooth open animation"→ Do this many times a day — small commits are best
+→ Each commit is a save point you can go back to
+
+At the end of the day (or when feature is finished)
+
+Make sure everything works → test in browser
+Final save of the dayBashgit add .
+git commit -m "Finished chat widget improvements for today - looks good on mobile"
+(Optional but very good) Push your branch to GitHub/GitLab
+(so you have backup even if computer dies)Bashgit push origin today-2026-01-11-feature-chat-widget
+Go back to main branch (clean state for tomorrow)Bashgit checkout main
+
+Now your computer is clean, your work is safe on its own branch, and tomorrow you start fresh.
+Next day (repeat)
+
+Start again from step 1 → git checkout main → git pull
+Create new branch for the new day → git checkout -b today-2026-01-12-...
+
+Quick Emergency Recovery Commands (When Things Break)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SituationWhat to do (very simple)What it doesCode broke, want to go back 1 savegit reset --hard HEAD~1Throw away last commit, go back to previous good stateWant to throw away everything todaygit checkout main 
+ git branch -D today-...Delete today's branch, back to clean mainAccidentally worked on wrong branchgit checkout main 
+ git reset --hardWipe everything, back to originalWant to see what changed todaygit log --oneline or git diffSee history or differences
+Summary Table – Your Daily Safety Routine (Copy-Paste this somewhere)
+textEVERY DAY ROUTINE – 1 minute
+
+1. cd to project
+2. git checkout main
+3. git pull
+4. git checkout -b today-YYYY-MM-DD-what-im-doing     ← new day, new branch!
+5. Work + commit often: git add . && git commit -m "small description"
+6. End of day: git push (optional)
+7. git checkout main                                   ← clean for tomorrow
+Do this every single day and you will never lose work, never get stressed, and your project will stay bullet-proof and future-proof forever.
+This is the exact workflow 90% of serious React developers use in 2026 — simple, safe, powerful.
+Any question about any step? Just ask — we can practice it live if you want! 😊

@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "allowJs": true,
+    "checkJs": false,                    // safe choice for JS-only (no type checking noise)
+    "jsx": "react-jsx",
+    "paths": {
+      "@lucide/*": ["node_modules/lucide-react/dist/esm/icons/*"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}

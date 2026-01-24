@@ -1,0 +1,267 @@
+/* src/index.css - CLEAN & FIXED - January 22, 2026 */
+
+/* Font Import – Keep at top */
+@import 'leaflet/dist/leaflet.css';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ──────────────────────────────────────────────────────────
+   ROOT VARIABLES
+─────────────────────────────────────────────────────────── */
+:root {
+  /* Typography Scale – clamped & fluid */
+  --text-xs:   clamp(0.65rem, 0.64rem + 0.08vw, 0.6875rem);
+  --text-sm:   clamp(0.6875rem, 0.68rem + 0.09vw, 0.75rem);
+  --text-base: clamp(0.75rem,  0.74rem + 0.1vw,  0.8125rem);
+  --text-lg:   clamp(0.8125rem, 0.8rem + 0.11vw,  0.875rem);
+  --text-xl:   clamp(0.875rem,  0.86rem + 0.12vw, 0.9375rem);
+  --text-2xl:  clamp(1rem,      0.98rem + 0.14vw, 1.125rem);
+  --text-3xl:  clamp(1.125rem,  1.1rem + 0.16vw,  1.25rem);
+  --text-4xl:  clamp(1.25rem,   1.22rem + 0.18vw, 1.5rem);
+  --text-5xl:  clamp(1.5rem,    1.45rem + 0.2vw,  1.75rem);
+  --text-6xl:  clamp(1.75rem,   1.7rem + 0.22vw,  2rem);
+
+  /* Line Heights */
+  --leading-tight:   1.1;
+  --leading-normal:  1.4;
+  --leading-relaxed: 1.6;
+
+  /* Colors */
+  --color-primary:       #3b82f6;
+  --color-primary-light: #60a5fa;
+  --color-text:          #e2e8f0;
+  --color-background:    #0f172a;
+
+  /* Fonts */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Navbar height – consistent offset */
+  --navbar-height: 5rem; /* 80px */
+}
+
+/* Responsive root font scaling */
+@media (min-width: 1536px) { :root { font-size: 14px; } }
+@media (max-width: 640px)  { :root { font-size: 15.5px; } }
+
+/* ──────────────────────────────────────────────────────────
+   GLOBAL BASE & ACCESSIBILITY
+─────────────────────────────────────────────────────────── */
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--navbar-height);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  font-weight: 400;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Scrollbars – only once */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(59, 130, 246, 0.3) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+*::-webkit-scrollbar-track { background: transparent; }
+*::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.3);
+  border-radius: 3px;
+}
+*::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.5); }
+
+/* Selection & Focus */
+::selection {
+  background: rgba(59, 130, 246, 0.3);
+  color: white;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+}
+
+:focus:not(:focus-visible) { outline: none; }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+/* ──────────────────────────────────────────────────────────
+   TYPOGRAPHY UTILITIES
+─────────────────────────────────────────────────────────── */
+h1, .text-6xl { font-size: var(--text-6xl); font-weight: 800; line-height: var(--leading-tight); letter-spacing: -0.02em; }
+h2, .text-5xl { font-size: var(--text-5xl); font-weight: 800; line-height: var(--leading-tight); letter-spacing: -0.015em; }
+h3, .text-4xl { font-size: var(--text-4xl); font-weight: 700; line-height: 1.2; letter-spacing: -0.01em; }
+h4, .text-3xl { font-size: var(--text-3xl); font-weight: 700; line-height: 1.25; }
+h5, .text-2xl { font-size: var(--text-2xl); font-weight: 600; line-height: 1.3; }
+h6, .text-xl  { font-size: var(--text-xl);  font-weight: 600; line-height: 1.35; }
+
+p, li, .text-base { font-size: var(--text-base); line-height: var(--leading-relaxed); font-weight: 400; }
+.text-lg { font-size: var(--text-lg); line-height: var(--leading-relaxed); font-weight: 500; }
+.text-sm { font-size: var(--text-sm); line-height: var(--leading-normal);  font-weight: 400; }
+.text-xs { font-size: var(--text-xs); line-height: var(--leading-normal);  font-weight: 400; }
+
+/* ──────────────────────────────────────────────────────────
+   LINKS & BUTTONS
+─────────────────────────────────────────────────────────── */
+a {
+  color: var(--color-primary-light);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover, a:focus-visible { color: var(--color-primary); }
+
+button, a.btn, .font-semibold { font-weight: 600; }
+
+/* ──────────────────────────────────────────────────────────
+   UTILITIES
+─────────────────────────────────────────────────────────── */
+@keyframes shimmer {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+.animate-shimmer { animation: shimmer 2s infinite; }
+
+/* Lottie global limit */
+.lottie-wrapper { max-height: 85vh; }
+
+/* ──────────────────────────────────────────────────────────
+   CTA SECTION – RESPONSIVE, NO OVERLAP, PERFECT ON RESIZE
+─────────────────────────────────────────────────────────── */
+.cta-headline {
+  font-size: clamp(2.25rem, 6vw, 4rem);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+
+.cta-subheadline {
+  font-size: clamp(1.125rem, 3.5vw, 1.375rem);
+  line-height: 1.6;
+}
+
+.cta-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+  margin-bottom: 3rem;
+}
+
+.cta-metrics-card {
+  padding: clamp(1.25rem, 2.5vw, 1.75rem);
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 1rem;
+  backdrop-filter: blur(8px);
+}
+
+.cta-metrics-number {
+  font-size: clamp(2.25rem, 6vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1;
+  color: white;
+}
+
+.cta-metrics-label {
+  font-size: clamp(0.875rem, 2.2vw, 1rem);
+  font-weight: 500;
+  color: #cbd5e1;
+  margin-top: 0.5rem;
+}
+
+.cta-lottie-container {
+  max-width: clamp(320px, 55vw, 520px);
+  margin: 0 auto 3rem;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(15,23,42,0.6);
+}
+
+@media (max-width: 640px) {
+  .cta-lottie-container {
+    aspect-ratio: 1 / 1; /* Square on small screens to avoid crop */
+    max-width: 90vw;
+  }
+  .cta-metrics {
+    grid-template-columns: 1fr; /* Stack vertically */
+  }
+}
+
+.cta-rotating-text {
+  min-height: 1.6em;
+  display: inline-block;
+  color: #60a5fa;
+}
+
+/* ──────────────────────────────────────────────────────────
+   LEAFLET POPUP – WIDER HORIZONTALLY, RECTANGULAR, DARK
+─────────────────────────────────────────────────────────── */
+.leaflet-popup-content-wrapper {
+  min-width: 340px !important;           /* Wider horizontally – adjust to 380–420px if you want more */
+  max-width: 480px !important;
+  background: rgba(15, 23, 42, 0.94) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(59, 130, 246, 0.4) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6) !important;
+  color: white !important;
+  overflow: hidden;
+}
+
+.leaflet-popup-content {
+  margin: 0 !important;
+  padding: 20px !important;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.leaflet-popup-tip {
+  background: rgba(15, 23, 42, 0.94) !important;
+}
+
+/* Mobile popup size */
+@media (max-width: 640px) {
+  .leaflet-popup-content-wrapper {
+    min-width: 280px !important;
+    max-width: 90vw !important;
+  }
+  .leaflet-popup-content {
+    padding: 14px !important;
+    font-size: 0.875rem;
+  }
+}
+
+/* ──────────────────────────────────────────────────────────
+   MAIN OFFSET & CRISP TEXT
+─────────────────────────────────────────────────────────── */
+main {
+  padding-top: var(--navbar-height);
+}
+
+* {
+  text-shadow: 0 0 1px rgba(0,0,0,0.02);
+}

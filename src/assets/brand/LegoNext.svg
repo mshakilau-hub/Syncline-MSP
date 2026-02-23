@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1600"
+   height="1600"
+   viewBox="0 0 1600 1600"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   sodipodi:docname="LegoNext.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:clip-to-page="true"
+     inkscape:zoom="0.34431467"
+     inkscape:cx="-320.92736"
+     inkscape:cy="637.49824"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="path2"
+       style="fill:#ccffaa;fill-rule:evenodd"
+       d="M 1442.8652 69.238281 A 23.23456 975.8515 41.434639 0 0 1251.8809 263.70703 A 653.47198 704.29761 0 0 1 1273.9824 287.62891 A 23.23456 975.8515 41.434639 0 0 1442.8652 69.238281 z M 1273.9824 287.62891 A 23.23456 975.8515 41.434639 0 1 1216.2129 355.98633 A 516.38177 703.93695 0 0 1 1315.0488 722.08594 A 516.38177 703.93695 0 0 1 838.89648 1474.5781 L 831.65039 1475.2559 A 516.38177 703.93695 0 0 1 423.56055 1254.498 A 23.23456 975.8515 41.434639 0 1 374.94336 1307.4121 A 653.47198 704.29761 0 0 0 840.05469 1475.4434 L 849.22266 1474.7656 A 653.47198 704.29761 0 0 0 1451.7852 721.88867 A 653.47198 704.29761 0 0 0 1273.9824 287.62891 z M 374.94336 1307.4121 A 653.47198 704.29761 0 0 1 350.38867 1283.5625 A 23.23456 975.8515 41.434639 0 0 156.70117 1531.125 A 23.23456 975.8515 41.434639 0 0 374.94336 1307.4121 z M 350.38867 1283.5625 A 23.23456 975.8515 41.434639 0 1 402.55859 1222.0684 A 516.38177 703.93695 0 0 1 284.70312 818.25977 A 516.38177 703.93695 0 0 1 764.72461 70.349609 A 516.38177 703.93695 0 0 1 1197.2578 322.91406 A 23.23456 975.8515 41.434639 0 1 1251.8809 263.70703 A 653.47198 704.29761 0 0 0 755.36133 69.816406 A 653.47198 704.29761 0 0 0 147.90234 818.10938 A 653.47198 704.29761 0 0 0 350.38867 1283.5625 z M 1197.2578 322.91406 A 23.23456 975.8515 41.434639 0 0 738.50781 834.69727 A 23.23456 975.8515 41.434639 0 0 402.55859 1222.0684 A 516.38177 703.93695 0 0 0 423.56055 1254.498 A 23.23456 975.8515 41.434639 0 0 856.96875 770.56445 L 866.01367 760.28516 A 23.23456 975.8515 41.434639 0 0 1216.2129 355.98633 A 516.38177 703.93695 0 0 0 1197.2578 322.91406 z " />
+  </g>
+</svg>

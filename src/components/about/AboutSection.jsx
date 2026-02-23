@@ -14,19 +14,49 @@ import Clock from '@lucide/clock';
 import Sparkles from '@lucide/sparkles';
 
 const AboutSection = () => {
-  const values = [
-    { icon: Eye, title: 'Transparency', description: 'No surprises. You see exactly what we do and why.' },
-    { icon: Heart, title: 'Reliability', description: 'We do what we say. Your business depends on us.' },
-    { icon: BookOpen, title: 'Clarity', description: 'No jargon. We explain technology in plain English.' },
-    { icon: Code, title: 'Documentation', description: 'Everything is documented. No tribal knowledge.' }
-  ];
+const values = [
+  {
+    icon: Eye,
+    title: 'Transparency',
+    description: 'Clear communication and no surprises — you always know what’s happening.'
+  },
+  {
+    icon: Heart,
+    title: 'Reliability',
+    description: 'We follow through on every commitment because your business depends on it.'
+  },
+  {
+    icon: BookOpen,
+    title: 'Clarity',
+    description: 'No jargon or confusion — we explain things in plain, practical language.'
+  },
+  {
+    icon: Code,
+    title: 'Documentation',
+    description: 'Your systems are clearly documented so nothing is ever hidden or forgotten.'
+  }
+];
+
 
   const approach = [
-    { title: 'Listen First', description: 'We understand your business before touching technology' },
-    { title: 'Document Everything', description: 'Visual guides and clear processes for every system' },
-    { title: 'Build to Last', description: 'Repeatable solutions that scale with your growth' },
-    { title: 'Stay Proactive', description: 'We prevent problems, not just react to them' }
+    {
+      title: 'Listen First',
+      description: 'We take time to understand your business before recommending any solution.'
+    },
+    {
+      title: 'Document Everything',
+      description: 'Clear guides and simple processes so your team always knows what to do.'
+    },
+    {
+      title: 'Build to Last',
+      description: 'We create stable, repeatable setups that grow with your business.'
+    },
+    {
+      title: 'Stay Proactive',
+      description: 'We help prevent issues early with regular reviews and practical improvements.'
+    }
   ];
+
 
   return (
     <section id="about" className="relative py-20 lg:py-32 bg-slate-950 overflow-hidden">
@@ -44,7 +74,7 @@ const AboutSection = () => {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <span className="inline-block px-4 py-1.5 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-4">
-            About Shakil IT
+            About Syncline IT Solutions
           </span>
           <h2 className="text-4xl lg:text-5xl font-black text-white mb-6" id="about-heading">
             Your Partner in{' '}
@@ -53,7 +83,7 @@ const AboutSection = () => {
             </span>
           </h2>
           <p className="text-lg text-slate-400">
-            I'm Shakil – a hands-on IT consultant who believes small businesses deserve enterprise-grade technology without the enterprise complexity.
+            I'm MSA – a hands-on IT consultant who believes small businesses deserve enterprise-grade technology without the enterprise complexity.
           </p>
         </motion.div>
 
@@ -126,7 +156,7 @@ const AboutSection = () => {
           <GlassCard className="p-8 lg:p-12">
             <div className="grid lg:grid-cols-2 gap-8 items-center">
               <div>
-                <h3 className="text-3xl font-black text-white mb-4">The Shakil IT Approach</h3>
+                <h3 className="text-3xl font-black text-white mb-4">The Syncline IT Approach</h3>
                 <p className="text-lg text-slate-400 mb-8">
                   I've worked with enough businesses to know that most IT problems come from poor communication and undocumented systems. That's why I do things differently.
                 </p>

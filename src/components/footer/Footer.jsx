@@ -8,7 +8,7 @@ import Linkedin from '@lucide/linkedin';
 import Facebook from '@lucide/facebook';
 import ArrowUp from '@lucide/arrow-up';
 import ExternalLink from '@lucide/external-link';
-
+import footerLogo from "/src/assets/brand/Exports/Old/Syncline_Master_512.png";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -20,7 +20,7 @@ const footerLinks = {
     { name: 'Automation & AI', href: '/automation' }
   ],
   company: [
-    { name: 'About Us', href: '/about-shakil' },
+    { name: 'About Us', href: '/about-syncline' },
     { name: 'Service Areas', href: '/areas' },
     { name: 'Customer Portal', href: '/customer-portal' },
     { name: 'Contact', href: '/contact' }
@@ -51,11 +51,13 @@ const footerLinks = {
           {/* Brand Column */}
           <div className="col-span-2">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-xl flex items-center justify-center">
-                <Shield className="w-6 h-6 text-white" />
-              </div>
+              <img
+                    src={footerLogo}
+                    alt="Syncline IT Solutions Logo"
+                    className="w-12 h-12 object-contain"
+              />
               <div>
-                <span className="text-xl font-bold text-white">Shakil IT</span>
+                <span className="text-xl font-bold text-white">Syncline IT Solutions</span>
                 <span className="block text-xs text-slate-400">Enterprise IT for SMBs</span>
               </div>
             </div>
@@ -69,9 +71,9 @@ const footerLinks = {
                 <Phone className="w-4 h-4" />
                 1300 XXX XXX
               </a>
-              <a href="mailto:info@shakilit.com.au" className="flex items-center gap-3 text-slate-400 hover:text-white transition-colors">
+              <a href="mailto:info@syncline.com.au" className="flex items-center gap-3 text-slate-400 hover:text-white transition-colors">
                 <Mail className="w-4 h-4" />
-                info@shakilit.com.au
+                info@syncline.com.au
               </a>
               <div className="flex items-center gap-3 text-slate-400">
                 <MapPin className="w-4 h-4" />
@@ -151,7 +153,7 @@ const footerLinks = {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex flex-wrap items-center gap-4 text-sm text-slate-500">
-              <span>© {currentYear} Shakil IT. All rights reserved.</span>
+              <span>© {currentYear} Syncline IT Solutions. All rights reserved.</span>
               <span>ABN: XX XXX XXX XXX</span>
             </div>
             

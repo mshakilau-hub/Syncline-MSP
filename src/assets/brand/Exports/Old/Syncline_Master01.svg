@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="3000"
+   height="3000"
+   viewBox="0 0 3000 3000"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   sodipodi:docname="Syncline_Master01.svg"
+   inkscape:export-filename="C:\Users\Shakil\Desktop\logo.png"
+   inkscape:export-xdpi="16.384001"
+   inkscape:export-ydpi="16.384001"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#000000"
+     bordercolor="#000000"
+     borderopacity="0"
+     inkscape:showpageshadow="false"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="0.24346724"
+     inkscape:cx="1000.1346"
+     inkscape:cy="1624.4485"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showborder="false"
+     borderlayer="false"
+     labelstyle="default"
+     inkscape:clip-to-page="false"
+     inkscape:export-bgcolor="#00000000" />
+  <defs
+     id="defs1">
+    <color-profile
+       name="sRGB-IEC61966-2.1"
+       xlink:href="../../../../../../../../WINDOWS/system32/spool/drivers/color/sRGB%20Color%20Space%20Profile.icm"
+       id="color-profile2" />
+    <color-profile
+       name="Agfa-:-Swop-Standard"
+       xlink:href="../../../../../../../../WINDOWS/system32/spool/drivers/color/RSWOP.icm"
+       id="color-profile3" />
+    <linearGradient
+       id="linearGradient2"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#0a1a2f;stop-opacity:1;"
+         offset="0"
+         id="stop2" />
+      <stop
+         style="stop-color:#0077ff;stop-opacity:1;"
+         offset="1"
+         id="stop3" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2"
+       id="linearGradient3"
+       x1="176.99954"
+       y1="1399.7181"
+       x2="1408.4789"
+       y2="194.47311"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.5333872,0,0,1.5333872,916.56257,412.37694)" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-643.27242,-139.08675)">
+    <path
+       id="path1"
+       style="fill:#0a3d62;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.7784"
+       d="m 2127.1452,293.38339 a 1068.2847,1345.8561 0 0 0 -49.6876,2.40364 1068.2847,1345.8561 0 0 0 -1000.4524,1426.00267 1068.2847,1345.8561 0 0 0 189.8174,686.7923 85.827995,1802.388 45.498038 0 1 166.2429,-174.8746 791.64989,1345.9819 0 0 1 -79.9449,-511.9109 791.64989,1345.9819 0 0 1 741.3811,-1426.13453 791.64989,1345.9819 0 0 1 32.6435,-2.27858 z m 32.2545,0 A 791.64989,1345.9819 0 0 1 2801.6452,891.65475 85.827995,1802.388 45.498038 0 1 2949.708,756.39851 1068.2847,1345.8561 0 0 0 2159.3997,293.38339 Z m 860.3227,576.20801 a 85.827995,1802.388 45.498038 0 1 -166.2393,174.8744 791.64989,1345.9819 0 0 1 79.9276,511.4873 791.64989,1345.9819 0 0 1 -741.121,1426.534 l -0.4931,0.052 a 791.64989,1345.9819 0 0 1 -32.3969,2.2509 1068.2847,1345.8561 0 0 0 49.3509,-2.3793 l 0.6703,-0.052 A 1068.2847,1345.8561 0 0 0 3209.5192,1555.9636 1068.2847,1345.8561 0 0 0 3019.7224,869.5914 Z M 1484.8999,2386.5186 a 85.827995,1802.388 45.498038 0 1 -148.0629,135.2563 1068.2847,1345.8561 0 0 0 790.3082,463.0152 791.64989,1345.9819 0 0 1 -642.2453,-598.2715 z"
+       inkscape:export-filename="C:\Users\Shakil\Desktop\logo1.png"
+       inkscape:export-xdpi="18.26"
+       inkscape:export-ydpi="18.26" />
+    <path
+       id="path2"
+       style="fill:url(#linearGradient3);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.53339"
+       d="M 1189.3536,2580.9559 A 34.639689,1343.0753 45.45491 0 1 2060.1985,1672.3402 34.639689,1343.0753 45.45491 0 1 3097.1652,697.22793 34.639689,1343.0753 45.45491 0 1 2226.645,1605.5383 34.639689,1343.0753 45.45491 0 1 1189.4058,2580.9349" />
+  </g>
+</svg>

@@ -6,12 +6,29 @@ import { Cloud, Database, Zap, Shield, ArrowRight } from 'lucide-react';
 import GlassCard from '../components/ui/GlassCard';
 
 const CloudPage = () => {
-  const benefits = [
-    { icon: Cloud, title: 'Azure Virtual Desktop', desc: 'Secure, scalable desktops accessible from anywhere' },
-    { icon: Database, title: 'Microsoft 365 Management', desc: 'Full administration, security, and compliance' },
-    { icon: Zap, title: 'Cloud Migration & Optimization', desc: 'Lift-and-shift or modernize – zero disruption' },
-    { icon: Shield, title: 'Cloud Security & Backup', desc: 'Immutable backups, zero-trust access' }
-  ];
+const benefits = [
+  {
+    icon: Cloud,
+    title: 'Azure Virtual Desktop',
+    desc: 'A practical option for teams who need a shared, secure desktop they can access from anywhere.'
+  },
+  {
+    icon: Database,
+    title: 'Microsoft 365 Support',
+    desc: 'Setup, guidance, and ongoing help with Outlook, Teams, and SharePoint.'
+  },
+  {
+    icon: Zap,
+    title: 'Smooth Cloud Transitions',
+    desc: 'Helping your business move to the cloud with minimal disruption.'
+  },
+  {
+    icon: Shield,
+    title: 'Protection & Backups',
+    desc: 'Practical security basics and reliable backup options for peace of mind.'
+  }
+];
+
 
   return (
     <section className="relative py-20 lg:py-32 bg-gradient-to-b from-slate-950 via-cyan-950/20 to-slate-950">

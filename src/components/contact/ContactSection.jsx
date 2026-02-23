@@ -46,7 +46,7 @@ const ContactSection = () => {
 
   const contactInfo = [
     { icon: Phone, title: 'Phone', content: '1300 XXX XXX', detail: 'Mon-Fri, 8am-6pm AEST' },
-    { icon: Mail, title: 'Email', content: 'info@shakilit.com.au', detail: '24hr response guarantee' },
+    { icon: Mail, title: 'Email', content: 'info@syncline.com.au', detail: '24hr response guarantee' },
     { icon: MapPin, title: 'Service Area', content: 'Victoria, Australia', detail: 'Melbourne & Regional VIC' },
     { icon: Clock, title: 'Emergency', content: '24/7 Available', detail: 'For managed clients' }
   ];

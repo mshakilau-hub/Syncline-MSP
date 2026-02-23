@@ -20,79 +20,82 @@ import CheckCircle from '@lucide/check-circle';
 import GlassCard from '../ui/GlassCard';
 
 const MonitoringDashboard = () => {
-  const [metrics, setMetrics] = useState({
-    threats: 3,
-    uptime: 99.94,
-    response: 1.8,
-    protected: 147
-  });
+const [metrics, setMetrics] = useState({
+  devicesHealthy: 12,
+  updatesPending: 3,
+  backupsOk: 9,
+  checksCompleted: 27
+});
 
-  const [activity, setActivity] = useState([
-    { time: 'Just now', event: 'Security scan completed', status: 'success' },
-    { time: '2m ago', event: 'Backup verified', status: 'success' },
-    { time: '5m ago', event: 'Phishing attempt blocked', status: 'warning' },
-    { time: '12m ago', event: 'System update applied', status: 'success' }
-  ]);
+const [activity, setActivity] = useState([
+  { time: 'Just now', event: 'Health check completed', status: 'success' },
+  { time: '10m ago', event: 'Backup confirmed', status: 'success' },
+  { time: '1h ago', event: 'Software update available', status: 'info' },
+  { time: '3h ago', event: 'System restarted', status: 'success' }
+]);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setMetrics(prev => ({
-        threats: Math.max(0, prev.threats + Math.floor(Math.random() * 3 - 1)),
-        uptime: Math.min(100, Math.max(99.5, prev.uptime + (Math.random() * 0.1 - 0.05))),
-        response: Math.max(1, Math.min(3, prev.response + (Math.random() * 0.4 - 0.2))),
-        protected: prev.protected + Math.floor(Math.random() * 2)
-      }));
 
-      // Occasionally add new activity (simulated live feed)
-      if (Math.random() > 0.7) {
-        setActivity(prev => [
-          {
-            time: 'Just now',
-            event: ['Threat blocked', 'Scan completed', 'Backup successful'][Math.floor(Math.random() * 3)],
-            status: Math.random() > 0.2 ? 'success' : 'warning'
-          },
-          ...prev.slice(0, 5) // Keep only last 6 items
-        ]);
-      }
-    }, 8000); // Slower interval = better performance
+useEffect(() => {
+  const interval = setInterval(() => {
+    setMetrics(prev => ({
+      devicesHealthy: prev.devicesHealthy + (Math.random() > 0.5 ? 1 : 0),
+      updatesPending: Math.max(0, prev.updatesPending + (Math.random() > 0.7 ? 1 : -1)),
+      backupsOk: prev.backupsOk,
+      checksCompleted: prev.checksCompleted + 1
+    }));
 
-    return () => clearInterval(interval);
-  }, []);
-
-  const stats = [
-    { 
-      label: 'Threats Blocked Today', 
-      value: metrics.threats, 
-      icon: Shield, 
-      color: 'from-red-500 to-orange-500',
-      trend: 'neutral',
-      detail: 'Real-time protection'
-    },
-    { 
-      label: 'System Uptime', 
-      value: `${metrics.uptime.toFixed(2)}%`, 
-      icon: TrendingUp, 
-      color: 'from-green-500 to-emerald-500',
-      trend: 'up',
-      detail: 'Last 30 days'
-    },
-    { 
-      label: 'Avg Response Time', 
-      value: `${metrics.response.toFixed(1)} hrs`, 
-      icon: Zap, 
-      color: 'from-blue-500 to-cyan-500',
-      trend: 'down',
-      detail: 'Target: < 2 hours'
-    },
-    { 
-      label: 'Businesses Protected', 
-      value: metrics.protected, 
-      icon: Users, 
-      color: 'from-purple-500 to-pink-500',
-      trend: 'up',
-      detail: 'Across Victoria'
+    // Occasionally add new activity
+    if (Math.random() > 0.7) {
+      setActivity(prev => [
+        {
+          time: 'Just now',
+          event: ['Health check completed', 'Backup confirmed', 'Update available'][Math.floor(Math.random() * 3)],
+          status: 'success'
+        },
+        ...prev.slice(0, 5)
+      ]);
     }
-  ];
+  }, 8000);
+
+  return () => clearInterval(interval);
+}, []);
+
+
+const stats = [
+  { 
+    label: 'Devices Healthy', 
+    value: metrics.devicesHealthy, 
+    icon: Shield, 
+    color: 'from-green-500 to-emerald-500',
+    trend: 'up',
+    detail: 'Checked recently'
+  },
+  { 
+    label: 'Updates Pending', 
+    value: metrics.updatesPending, 
+    icon: Activity, 
+    color: 'from-blue-500 to-cyan-500',
+    trend: 'neutral',
+    detail: 'Across all devices'
+  },
+  { 
+    label: 'Backups Confirmed', 
+    value: metrics.backupsOk, 
+    icon: CheckCircle, 
+    color: 'from-purple-500 to-pink-500',
+    trend: 'up',
+    detail: 'Last 24 hours'
+  },
+  { 
+    label: 'Checks Completed', 
+    value: metrics.checksCompleted, 
+    icon: Zap, 
+    color: 'from-amber-500 to-yellow-500',
+    trend: 'up',
+    detail: 'Routine system checks'
+  }
+];
+
 
   return (
     <section className="relative py-16 md:py-24 lg:py-32 bg-gradient-to-b from-slate-900 to-slate-950 overflow-hidden">
@@ -106,13 +109,13 @@ const MonitoringDashboard = () => {
           className="text-center max-w-3xl mx-auto mb-12 lg:mb-16"
         >
           <span className="inline-block px-4 py-1.5 bg-green-500/10 border border-green-500/20 rounded-full text-green-400 text-xs sm:text-sm font-medium mb-4">
-            Live Dashboard
+            Dashboard Overview 
           </span>
           
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-4 lg:mb-6 leading-tight text-balance">
-            Real-Time{' '}
+            Clear {' '}
             <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
-              Protection
+              insights, no complexity
             </span>
           </h2>
           

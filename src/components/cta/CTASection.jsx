@@ -1,267 +1,508 @@
 ﻿// src/components/cta/CTASection.jsx
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { Link as RouterLink } from 'react-router-dom';
+import { motion, useInView, AnimatePresence } from 'framer-motion';
 
-import { Link } from 'react-router-dom';
-import { motion, AnimatePresence, useInView } from 'framer-motion';
-const MotionLink = motion.create(Link);
-
-import CountUp from 'react-countup';
-import { ArrowRight, Phone, Shield, Clock, Zap } from 'lucide-react';
-import LottieAnimation from '../ui/LottieAnimation';
+import { 
+  AlertTriangle, Phone, Shield, Zap, TrendingUp, ArrowRight, 
+  CheckCircle, Clock, Server, Lock, Activity, Database, 
+  Cloud, Cpu, HardDrive, Layers, Code, Boxes
+} from 'lucide-react';
 
 const CTASection = () => {
   const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { once: false, margin: "-100px" });
+  const timelineRef = useRef(null);
+  const terminalRef = useRef(null);
+  const networkRef = useRef(null);
+  const logosRef = useRef(null);
 
-  const benefits = [
-    { icon: Shield, text: 'Free security assessment included' },
-    { icon: Clock, text: 'Results within 48 hours' },
-    { icon: Zap, text: 'No obligation, no pressure' }
-  ];
+  const isTimelineInView = useInView(timelineRef, { once: true, margin: "-100px" });
+  const isTerminalInView = useInView(terminalRef, { once: true, margin: "-100px" });
+  const isNetworkInView = useInView(networkRef, { once: true, margin: "-100px" });
+  const isLogosInView = useInView(logosRef, { once: true, margin: "-100px" });
 
   const rotatingTexts = [
-    'Stop fearing ransomware attacks.',
-    'Stop losing revenue to IT downtime.',
-    'Stop wasting time on IT fires.',
-    'Stop settling for slow support.',
-  ];
-
-  const metrics = [
-    { end: 150, suffix: '+', label: 'Victorian businesses' },
-    { end: 99.9, suffix: '%', label: 'Uptime SLA', decimals: 1 },
-    { end: 98, suffix: '%', label: 'Customer satisfaction' },
-  ];
-
-  const lotties = [
-    '/assets/lottie/animation1_IsometricDataAnalysis.json',
-    '/assets/lottie/animation2_CloudService.json',
-    '/assets/lottie/animation3_CyberSecurity.json',
+    { 
+      text: 'Turn IT chaos into reliable growth.',
+      style: 'font-serif italic text-2xl lg:text-3xl tracking-wide'
+    },
+    { 
+      text: 'Eliminate ransomware fears forever.',
+      style: 'font-bold text-xl lg:text-2xl tracking-tight uppercase'
+    },
+    { 
+      text: 'Stop losing revenue to downtime.',
+      style: 'font-mono text-2xl lg:text-3xl tracking-wider'
+    },
+    { 
+      text: 'Build unbreakable trust in your IT.',
+      style: 'font-sans italic text-xl lg:text-2xl font-light tracking-wide'
+    }
   ];
 
   const [currentText, setCurrentText] = useState(0);
-  const [currentLottie, setCurrentLottie] = useState(0);
+  const [terminalStep, setTerminalStep] = useState(0);
 
-  // Rotate rotating text
-  useEffect(() => {
-    if (isInView) {
-      const interval = setInterval(() => {
-        setCurrentText((prev) => (prev + 1) % rotatingTexts.length);
-      }, 4000);
-      return () => clearInterval(interval);
-    }
-  }, [isInView]);
-
-  // Rotate Lottie
+  // Rotate transformative texts every 3 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentLottie((prev) => (prev + 1) % lotties.length);
-    }, 7000);
+      setCurrentText(prev => (prev + 1) % rotatingTexts.length);
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 
+  // Terminal typing animation
+  useEffect(() => {
+    if (isTerminalInView) {
+      const interval = setInterval(() => {
+        setTerminalStep(prev => (prev < 5 ? prev + 1 : prev));
+      }, 1200);
+      return () => clearInterval(interval);
+    }
+  }, [isTerminalInView]);
+
+  const terminalLines = [
+    { text: '> Scanning systems for vulnerabilities...', color: 'text-red-400' },
+    { text: '> Deploying zero-trust security protocols...', color: 'text-orange-400' },
+    { text: '> Optimising performance & cloud resources...', color: 'text-blue-400' },
+    { text: '> Enabling proactive 24/7 monitoring...', color: 'text-purple-400' },
+    { text: '> Transformation complete. Growth unlocked.', color: 'text-green-400' }
+  ];
+
   return (
-    <section ref={sectionRef} className="relative py-16 lg:py-20 overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-600">
-        <div 
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-          }}
+    <section ref={sectionRef} className="relative py-16 lg:py-24 overflow-hidden bg-gradient-to-br from-slate-950 via-blue-950 to-cyan-950">
+      {/* Background orbs */}
+      <div className="absolute inset-0 pointer-events-none">
+        <motion.div 
+          animate={{ x: [0, 100, 0], y: [0, -50, 0] }}
+          transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-0 left-0 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl" 
         />
-        {/* Orbs */}
-        <motion.div
-          animate={{ x: [0, 50, 0], y: [0, -30, 0] }}
-          transition={{ duration: 20, repeat: Infinity }}
-          className="absolute top-10 left-10 w-64 h-64 bg-white/10 rounded-full blur-3xl"
+        <motion.div 
+          animate={{ x: [0, -100, 0], y: [0, 50, 0] }}
+          transition={{ duration: 25, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+          className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" 
         />
-        <motion.div
-          animate={{ x: [0, -30, 0], y: [0, 40, 0] }}
-          transition={{ duration: 25, repeat: Infinity }}
-          className="absolute bottom-10 right-10 w-96 h-96 bg-white/10 rounded-full blur-3xl"
+        <motion.div 
+          animate={{ scale: [1, 1.2, 1] }}
+          transition={{ duration: 15, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" 
         />
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        {/* Badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="inline-block px-6 py-3 bg-white/10 rounded-full text-white font-medium mb-8 backdrop-blur-sm border border-white/20"
         >
-          {/* Badge */}
-          <span className="inline-block px-4 py-1.5 bg-white/20 rounded-full text-white text-sm font-medium mb-6">
-            Limited Time Offer
-          </span>
+          🇦🇺 Limited-Time Free IT Transformation Assessment
+        </motion.div>
 
+        {/* Headline */}
+        <motion.h2 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight mb-6"
+        >
+          <div className="mb-2">
+            Transform Your Victorian SMB IT Risks
+          </div>
+          <div 
+            className="bg-gradient-to-r from-cyan-400 via-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent"
+            style={{ backgroundSize: '200% 100%' }}
+          >
+            Into Reliable Business Growth
+          </div>
+        </motion.h2>
 
+        <motion.p 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3 }}
+          className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto mb-12"
+        >
+          Australian SMBs trust us to eliminate downtime, defeat cyber threats, and unlock growth — 
+          with transparent pricing and proven results.
+        </motion.p>
 
-<motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-  <Link to="/contact" className="cta-button">
-    Book Free Assessment
-  </Link>
-</motion.div>
-
-
-
-          {/* Subheadline */}
-          <p className="text-xl text-white/90 max-w-2xl mx-auto mb-8">
-            Discover vulnerabilities, inefficiencies, and opportunities in your current IT setup. 
-            No cost, no obligation – just clarity.
-          </p>
-
-          {/* Rotating text – simple fade, no Typed.js */}
+        {/* Rotating Text */}
+        <div className="relative h-16 sm:h-20 mb-12 flex items-center justify-center">
           <AnimatePresence mode="wait">
             <motion.p
               key={currentText}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
+              initial={{ opacity: 0, y: 20, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -20, scale: 0.95 }}
               transition={{ duration: 0.5 }}
-              className="text-lg sm:text-xl text-slate-200 max-w-3xl mx-auto mb-10 leading-relaxed"
+              className={`absolute inset-0 flex items-center justify-center font-bold text-cyan-300 ${rotatingTexts[currentText].style}`}
             >
-              <span className="text-blue-400 font-medium">
-                {rotatingTexts[currentText]}
-              </span>
+              {rotatingTexts[currentText].text}
             </motion.p>
           </AnimatePresence>
+        </div>
 
-          {/* Metrics – CountUp only when in view */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-            {metrics.map((metric, i) => (
-              <div key={i} className="p-6 bg-white/5 rounded-2xl border border-white/10">
-                <div className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-1">
-                  {isInView ? (
-                    <CountUp 
-                      start={0}
-                      end={metric.end}
-                      duration={2.5}
-                      decimals={metric.decimals || 0}
-                      suffix={metric.suffix}
-                      delay={0.3 + i * 0.4}
-                    />
-                  ) : (
-                    '0' + (metric.suffix || '')
-                  )}
-                </div>
-                <div className="text-sm sm:text-base text-slate-400 leading-tight">
-                  {metric.label}
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Lottie – zoomed out */}
-          <div className="
-            relative w-full aspect-[4/3] max-h-[380px] lg:max-h-[440px] mx-auto
-            overflow-hidden rounded-2xl border border-white/10 shadow-2xl
-            bg-slate-900/70 p-6 lg:p-10 mb-10
-          ">
-            <AnimatePresence mode="wait">
+        {/* LOGO SHOWCASE - Horizontal Single Row */}
+        <div ref={logosRef} className="mb-16">
+          <motion.h3 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-xl sm:text-2xl font-bold text-white mb-8"
+          >
+            Comprehensive IT Solutions
+          </motion.h3>
+          <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 lg:gap-8 max-w-5xl mx-auto">
+            {[
+              { icon: Cloud, label: 'Cloud', color: 'text-cyan-400 bg-cyan-500/10 border-cyan-500/30' },
+              { icon: Activity, label: 'Networking', color: 'text-blue-400 bg-blue-500/10 border-blue-500/30' },
+              { icon: Boxes, label: 'M365', color: 'text-orange-400 bg-orange-500/10 border-orange-500/30' },
+              { icon: Server, label: 'Azure', color: 'text-purple-400 bg-purple-500/10 border-purple-500/30' },
+              { icon: Shield, label: 'Security', color: 'text-red-400 bg-red-500/10 border-red-500/30' },
+              { icon: Code, label: 'Software', color: 'text-green-400 bg-green-500/10 border-green-500/30' },
+              { icon: Cpu, label: 'Hardware', color: 'text-indigo-400 bg-indigo-500/10 border-indigo-500/30' },
+              { icon: HardDrive, label: 'Infrastructure', color: 'text-pink-400 bg-pink-500/10 border-pink-500/30' }
+            ].map((service, i) => (
               <motion.div
-                key={currentLottie}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 1.2, ease: 'easeInOut' }}
-                className="w-full h-full flex items-center justify-center"
+                key={i}
+                initial={{ opacity: 0, scale: 0.5, y: 30 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1, duration: 0.6, type: "spring", stiffness: 100 }}
+                whileHover={{ scale: 1.15, y: -8 }}
+                className="flex flex-col items-center gap-2"
               >
-                <LottieAnimation
-                  src={lotties[currentLottie]}
-                  autoplay={true}
-                  loop={false}
-                  speed={0.55}
-                  className="w-[80%] h-[80%] max-w-[85%] max-h-[85%] object-contain"
-                />
+                <motion.div 
+                  animate={{ y: [-5, 5, -5] }}
+                  transition={{ duration: 2 + (i % 3) * 0.5, repeat: Infinity, ease: "easeInOut" }}
+                  className={`w-16 h-16 sm:w-20 sm:h-20 rounded-xl ${service.color} border-2 flex items-center justify-center backdrop-blur-sm`}
+                >
+                  <service.icon className={`w-8 h-8 sm:w-10 sm:h-10 ${service.color.split(' ')[0]}`} />
+                </motion.div>
+                <p className="text-xs sm:text-sm text-slate-300 font-medium">{service.label}</p>
               </motion.div>
-            </AnimatePresence>
-          </div>
-
-          {/* Benefits */}
-          <div className="flex flex-wrap justify-center gap-6 mb-10">
-            {benefits.map((benefit, i) => (
-              <div key={i} className="flex items-center gap-2 text-white/90 text-sm sm:text-base">
-                <benefit.icon className="w-5 h-5 sm:w-6 sm:h-6" />
-                <span>{benefit.text}</span>
-              </div>
             ))}
           </div>
+        </div>
 
-          {/* CTAs */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+        {/* LIVE DATA FLOW NETWORK */}
+        <div ref={networkRef} className="relative mb-20 h-64 sm:h-80 max-w-6xl mx-auto">
+          <motion.h3 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-xl sm:text-2xl font-bold text-white mb-8"
+          >
+            Live Data Flow & Monitoring Network
+          </motion.h3>
+          
+          <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1000 300">
+            <defs>
+              <filter id="glow">
+                <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                <feMerge>
+                  <feMergeNode in="coloredBlur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+            </defs>
+            
+            {/* Network Lines */}
+            {[
+              { x1: 120, y1: 150, x2: 280, y2: 100, color: 'cyan' },
+              { x1: 280, y1: 100, x2: 440, y2: 150, color: 'blue' },
+              { x1: 440, y1: 150, x2: 600, y2: 100, color: 'purple' },
+              { x1: 600, y1: 100, x2: 760, y2: 150, color: 'green' },
+              { x1: 760, y1: 150, x2: 880, y2: 150, color: 'orange' }
+            ].map((line, i) => (
+              <motion.line
+                key={i}
+                x1={line.x1} y1={line.y1}
+                x2={line.x2} y2={line.y2}
+                stroke={`var(--color-${line.color})`}
+                strokeWidth="2"
+                className={`stroke-${line.color}-500`}
+                initial={{ pathLength: 0, opacity: 0 }}
+                animate={isNetworkInView ? { pathLength: 1, opacity: 1 } : {}}
+                transition={{ duration: 2, delay: i * 0.15 }}
+              />
+            ))}
+            
+            {/* Animated Data Packets */}
+            {isNetworkInView && [
+              { x1: 120, y1: 150, x2: 280, y2: 100, color: '#06b6d4' },
+              { x1: 280, y1: 100, x2: 440, y2: 150, color: '#3b82f6' },
+              { x1: 440, y1: 150, x2: 600, y2: 100, color: '#8b5cf6' },
+              { x1: 600, y1: 100, x2: 760, y2: 150, color: '#10b981' },
+              { x1: 760, y1: 150, x2: 880, y2: 150, color: '#f59e0b' }
+            ].map((path, i) => (
+              <motion.circle
+                key={i}
+                r="6"
+                fill={path.color}
+                filter="url(#glow)"
+                animate={{
+                  cx: [path.x1, path.x2, path.x1],
+                  cy: [path.y1, path.y2, path.y1],
+                }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  delay: i * 0.5,
+                  ease: "linear"
+                }}
+              />
+            ))}
+          </svg>
 
-            {/* Primary CTA – MotionLink */}
-            <MotionLink
-              to="/contact"
-              whileHover={{ scale: 1.06, y: -3 }}
-              whileTap={{ scale: 0.97 }}
-              className="
-                relative w-full sm:w-auto inline-flex items-center justify-center gap-3 px-10 py-4
-                font-bold text-lg text-white rounded-2xl transition-all
-                bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500
-                shadow-[0_0_25px_rgba(139,92,246,0.45)]
-                hover:shadow-[0_0_45px_rgba(236,72,153,0.65)]
-                hover:brightness-110
-                overflow-hidden group
-              "
+          {/* Network Nodes */}
+          {[
+            { Icon: Server, label: 'Edge Server', left: '12%', top: '50%', color: 'cyan' },
+            { Icon: Shield, label: 'Firewall', left: '28%', top: '33%', color: 'blue' },
+            { Icon: Activity, label: 'Monitoring', left: '44%', top: '50%', color: 'purple' },
+            { Icon: Database, label: 'Database', left: '60%', top: '33%', color: 'green' },
+            { Icon: Cloud, label: 'Cloud Storage', left: '76%', top: '50%', color: 'orange' },
+            { Icon: Cpu, label: 'AI Engine', right: '12%', top: '50%', color: 'cyan' }
+          ].map((node, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, scale: 0 }}
+              animate={isNetworkInView ? { opacity: 1, scale: 1 } : {}}
+              transition={{ delay: 1 + i * 0.1, type: "spring", stiffness: 200 }}
+              className="absolute -translate-x-1/2 -translate-y-1/2 flex flex-col items-center"
+              style={{ 
+                left: node.left || 'auto', 
+                right: node.right || 'auto',
+                top: node.top 
+              }}
             >
-              {/* Text + Icon */}
-              <span className="relative z-10 flex items-center gap-3">
-                Book Free Assessment
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </span>
+              <motion.div 
+                animate={{ scale: [1, 1.1, 1] }}
+                transition={{ duration: 1.5, repeat: Infinity, delay: i * 0.2 }}
+                className={`w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-${node.color}-500/20 border-3 border-${node.color}-500 flex items-center justify-center backdrop-blur-sm`}
+              >
+                <node.Icon className={`w-8 h-8 sm:w-10 sm:h-10 text-${node.color}-400`} />
+              </motion.div>
+              <motion.p 
+                initial={{ opacity: 0, y: 10 }}
+                animate={isNetworkInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ delay: 2 + i * 0.15 }}
+                className={`mt-2 sm:mt-3 text-xs sm:text-sm font-semibold text-${node.color}-300 bg-slate-900/80 px-2 sm:px-3 py-1 rounded-full whitespace-nowrap`}
+              >
+                {node.label}
+              </motion.p>
+            </motion.div>
+          ))}
+        </div>
 
-              {/* Glow aura */}
-              <span
-                className="
-                  absolute inset-0 rounded-2xl opacity-60 blur-xl
-                  bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500
-                  animate-pulse
-                "
-              ></span>
+        {/* WORKFLOW TIMELINE */}
+        <div ref={timelineRef} className="relative mb-20">
+          <motion.h3 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-2xl sm:text-3xl font-bold text-white mb-12"
+          >
+            Your IT Transformation Journey
+          </motion.h3>
+          
+          <div className="relative flex flex-col md:flex-row justify-between items-center gap-8 max-w-5xl mx-auto">
+            {/* Connecting Path */}
+            <svg className="absolute inset-0 w-full h-full pointer-events-none hidden md:block" viewBox="0 0 1000 200">
+              <motion.path 
+                d="M 150,100 Q 350,50 500,100 T 850,100" 
+                fill="none"
+                stroke="rgb(6, 182, 212)"
+                strokeWidth="3"
+                strokeOpacity="0.5"
+                strokeLinecap="round"
+                initial={{ pathLength: 0 }}
+                animate={isTimelineInView ? { pathLength: 1 } : {}}
+                transition={{ duration: 3 }}
+              />
+            </svg>
 
-              {/* Border ring */}
-              <span
-                className="
-                  absolute inset-0 rounded-2xl border border-white/20
-                  group-hover:border-white/40 transition-all
-                "
-              ></span>
-            </MotionLink>
-
-            {/* Secondary CTA – Phone */}
-            <motion.a
-              href="tel:1300000000"
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.97 }}
-              className="
-                relative w-full sm:w-auto inline-flex items-center justify-center gap-3 px-10 py-4
-                font-bold text-lg text-white rounded-2xl transition-all
-                bg-white/10 border border-white/20
-                hover:bg-white/20 hover:border-white/30
-                shadow-[0_0_20px_rgba(255,255,255,0.15)]
-                overflow-hidden
-              "
-            >
-              <Phone className="w-5 h-5" />
-              Call 1300 XXX XXX
-
-              {/* Soft glow */}
-              <span
-                className="
-                  absolute inset-0 rounded-2xl opacity-40 blur-xl
-                  bg-white/20
-                "
-              ></span>
-            </motion.a>
-
+            {[
+              { Icon: AlertTriangle, label: 'IT Fires & Risks', color: 'red', rotate: 12 },
+              { Icon: Phone, label: 'Free Assessment', color: 'blue', rotate: -6 },
+              { Icon: Shield, label: 'Proactive Security', color: 'cyan', rotate: 6 },
+              { Icon: TrendingUp, label: 'Reliable Growth', color: 'green', rotate: -12 }
+            ].map((step, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 50, scale: 0.5, rotate: step.rotate * 2 }}
+                animate={isTimelineInView ? { 
+                  opacity: 1, 
+                  y: 0, 
+                  scale: 1, 
+                  rotate: 0 
+                } : {}}
+                transition={{ 
+                  delay: i * 0.4,
+                  type: "spring",
+                  stiffness: 100,
+                  damping: 10
+                }}
+                className="z-10"
+              >
+                <motion.div 
+                  animate={i === 3 && isTimelineInView ? { scale: [1, 1.2, 1] } : {}}
+                  transition={{ duration: 0.8, repeat: Infinity, repeatDelay: 2 }}
+                  className={`p-6 rounded-2xl bg-${step.color}-500/20 text-${step.color}-400 border-2 border-${step.color}-500`}
+                >
+                  <step.Icon className="w-12 h-12 sm:w-16 sm:h-16" />
+                </motion.div>
+                <p className="mt-4 text-base sm:text-lg font-semibold text-white">{step.label}</p>
+              </motion.div>
+            ))}
           </div>
+        </div>
 
+        {/* TERMINAL ANIMATION */}
+        <div ref={terminalRef} className="max-w-4xl mx-auto mb-20">
+          <div className="relative p-6 sm:p-8 bg-slate-900/90 rounded-2xl border border-cyan-500/30 backdrop-blur-xl text-left font-mono overflow-hidden shadow-2xl">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-3 h-3 rounded-full bg-red-500" />
+              <div className="w-3 h-3 rounded-full bg-yellow-500" />
+              <div className="w-3 h-3 rounded-full bg-green-500" />
+              <span className="text-slate-400 ml-2 text-xs sm:text-sm">terminal@shakilit.au — transformation.sh</span>
+            </div>
 
-          {/* Trust */}
-          <p className="mt-8 text-white/60 text-sm">
-            Trusted by 150+ Victorian businesses
-          </p>
-        </motion.div>
+            {/* Scanline effect */}
+            <motion.div 
+              className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-cyan-400/50 to-transparent pointer-events-none"
+              animate={{ y: ['0%', '100%'] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+            />
+
+            {terminalLines.map((line, i) => (
+              <motion.p 
+                key={i}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: i < terminalStep ? 1 : 0 }}
+                className={`mb-2 text-sm sm:text-lg ${line.color}`}
+              >
+                {line.text}
+              </motion.p>
+            ))}
+            
+            <motion.span 
+              animate={{ opacity: [1, 0, 1] }}
+              transition={{ duration: 0.8, repeat: Infinity }}
+              className="inline-block w-2 h-5 bg-green-400 ml-1"
+            />
+          </div>
+        </div>
+
+        {/* METRICS */}
+        <div className="metrics-grid grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto mb-16">
+          {[
+            { label: 'Average Revenue Saved', value: 85, color: 'cyan' },
+            { label: 'Guaranteed Uptime', value: 99.9, color: 'blue' },
+            { label: 'Risk Reduction', value: 95, color: 'green' }
+          ].map((metric, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.2 }}
+              whileHover={{ borderColor: `rgb(var(--color-${metric.color}))`, scale: 1.02 }}
+              className="relative p-6 sm:p-8 bg-slate-900/60 rounded-2xl border border-white/10 backdrop-blur-xl overflow-hidden group transition-all"
+            >
+              <motion.div 
+                animate={{ scale: [1, 1.5, 1], opacity: [0.5, 0, 0.5] }}
+                transition={{ duration: 2, repeat: Infinity, repeatDelay: i }}
+                className={`absolute top-4 right-4 w-8 h-8 bg-${metric.color}-400 rounded-full blur-md`}
+              />
+              <p className={`text-${metric.color}-400 text-base sm:text-lg mb-4 font-semibold`}>{metric.label}</p>
+              <div className="relative h-10 sm:h-12 bg-slate-800 rounded-full overflow-hidden mb-4">
+                <motion.div 
+                  initial={{ width: 0 }}
+                  whileInView={{ width: `${metric.value}%` }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 2, delay: 0.5 + i * 0.2 }}
+                  className={`absolute inset-y-0 left-0 bg-gradient-to-r from-${metric.color}-500 to-${metric.color}-600 rounded-full shadow-lg shadow-${metric.color}-500/50`}
+                />
+              </div>
+              <motion.p 
+                initial={{ textContent: 0 }}
+                whileInView={{ textContent: metric.value }}
+                viewport={{ once: true }}
+                transition={{ duration: 2.5, delay: 0.5 }}
+                className="text-4xl sm:text-5xl font-black text-white"
+              >
+                {metric.value}%
+              </motion.p>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* BENEFITS */}
+        <div className="benefits-grid flex flex-wrap justify-center gap-4 sm:gap-6 lg:gap-8 mb-16">
+          {[
+            { Icon: CheckCircle, text: 'Free in-depth security & performance assessment', color: 'green' },
+            { Icon: Clock, text: 'Clear report within 48 hours', color: 'blue' },
+            { Icon: Zap, text: 'No obligation — just actionable insights', color: 'cyan' }
+          ].map((benefit, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.15 }}
+              whileHover={{ scale: 1.05, y: -2 }}
+              className="flex items-center gap-3 sm:gap-4 text-white text-sm sm:text-base lg:text-lg backdrop-blur-sm bg-white/5 px-4 sm:px-6 py-3 sm:py-4 rounded-xl border border-white/10"
+            >
+              <benefit.Icon className={`w-6 h-6 sm:w-8 sm:h-8 text-${benefit.color}-400 flex-shrink-0`} />
+              <span>{benefit.text}</span>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* CTAs */}
+        <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <RouterLink
+              to="/contact"
+              className="relative group inline-flex items-center justify-center gap-3 sm:gap-4 px-8 sm:px-12 py-4 sm:py-6 text-lg sm:text-xl lg:text-2xl font-bold text-white rounded-2xl bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-500 shadow-2xl overflow-hidden transition-all"
+            >
+              <span className="relative z-10">Book Your Free Assessment</span>
+              <ArrowRight className="relative z-10 w-6 h-6 sm:w-8 sm:h-8 group-hover:translate-x-3 transition-transform" />
+              <motion.span 
+                className="absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-cyan-500"
+                initial={{ opacity: 0 }}
+                whileHover={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+              />
+            </RouterLink>
+          </motion.div>
+
+          <motion.a
+            href="tel:1300XXXXXX"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="inline-flex items-center justify-center gap-3 sm:gap-4 px-8 sm:px-12 py-4 sm:py-6 text-lg sm:text-xl lg:text-2xl font-bold text-cyan-300 rounded-2xl border-2 sm:border-3 border-cyan-500/60 bg-slate-900/60 backdrop-blur-md hover:bg-slate-800/80 hover:border-cyan-400 transition-all"
+          >
+            <Phone className="w-6 h-6 sm:w-8 sm:h-8" />
+            <span className="hidden sm:inline">Call 1300 XXX XXX Now</span>
+            <span className="sm:hidden">Call Now</span>
+          </motion.a>
+        </div>
+
+        <motion.p 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="mt-12 text-slate-400 text-base sm:text-lg"
+        >
+          ⭐ Trusted by 150+ Victorian & Tasmanian businesses
+        </motion.p>
       </div>
     </section>
   );

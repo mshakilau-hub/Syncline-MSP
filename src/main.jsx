@@ -16,7 +16,7 @@ function Root() {
   return (
     <React.StrictMode>
     <BrowserRouter>
-          <ScrollToTop /> {/* ← add this */}
+          <ScrollToTop />
           <App />
       </BrowserRouter>
     </React.StrictMode>

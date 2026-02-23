@@ -77,85 +77,86 @@ const ServiceAreasSection = () => {
   const [mapLoaded, setMapLoaded] = useState(false);
 
   const cities = [
-    {
-      id: 'melbourne',
-      name: 'Melbourne',
-      coords: [-37.8136, 144.9631],
-      response: 'Same-day onsite',
-      responseTime: '< 2 hours',
-      description: 'Full coverage across greater Melbourne metro area',
-      coverage: ['CBD', 'Inner Suburbs', 'Eastern Suburbs', 'Western Suburbs', 'Northern Suburbs', 'Bayside'],
-      color: '#3b82f6',
-      clients: 85,
-      services: ['24/7 Monitoring', 'Same-day Onsite', 'Emergency Support', 'Cloud Solutions'],
-      isHighlight: true
-    },
-    {
-      id: 'geelong',
-      name: 'Geelong',
-      coords: [-38.1499, 144.3617],
-      response: 'Same/Next-day',
-      responseTime: '< 4 hours',
-      description: 'Supporting businesses along the surf coast',
-      coverage: ['Geelong CBD', 'Bellarine Peninsula', 'Surf Coast', 'Golden Plains'],
-      color: '#10b981',
-      clients: 32,
-      services: ['24/7 Monitoring', 'Next-day Onsite', 'Remote Support', 'Security Services'],
-      isHighlight: true
-    },
-    {
-      id: 'ballarat',
-      name: 'Ballarat',
-      coords: [-37.5622, 143.8503],
-      response: '24-48 hours',
-      responseTime: '< 24 hours',
-      description: 'Reliable IT support for regional goldfields',
-      coverage: ['Ballarat', 'Daylesford', 'Creswick', 'Ararat', 'Skipton'],
-      color: '#a855f7',
-      clients: 18,
-      services: ['24/7 Monitoring', 'Scheduled Visits', 'Remote Priority', 'Cloud Backup'],
-      isHighlight: true
-    },
-    {
-      id: 'bendigo',
-      name: 'Bendigo',
-      coords: [-36.7570, 144.2794],
-      response: '24-72 hours',
-      responseTime: '< 48 hours',
-      description: 'Enterprise IT in central Victoria',
-      coverage: ['Bendigo', 'Castlemaine', 'Echuca', 'Shepparton'],
-      color: '#f59e0b',
-      clients: 15,
-      services: ['24/7 Monitoring', 'Bi-weekly Visits', 'Remote Support', 'Network Management'],
-      isHighlight: true
-    },
-    {
-      id: 'warrnambool',
-      name: 'Warrnambool',
-      coords: [-38.3815, 142.4860],
-      response: '48-72 hours',
-      responseTime: '< 72 hours',
-      description: 'Regional support for south-west Victoria',
-      coverage: ['Warrnambool', 'Port Fairy', 'Portland'],
-      color: '#06b6d4',
-      clients: 8,
-      services: ['Remote Support', 'Monthly Visits', 'Cloud Solutions'],
-      isHighlight: false
-    },
-    {
-      id: 'mildura',
-      name: 'Mildura',
-      coords: [-34.1889, 142.1583],
-      response: 'Remote priority',
-      responseTime: '< 4 hours (remote)',
-      description: 'Remote-first support for northern Victoria',
-      coverage: ['Mildura', 'Swan Hill', 'Ouyen'],
-      color: '#ec4899',
-      clients: 5,
-      services: ['Remote Support', 'Quarterly Visits', 'Cloud-First'],
-      isHighlight: false
-    }
-  ];
+  {
+    id: 'melbourne',
+    name: 'Melbourne',
+    coords: [-37.8136, 144.9631],
+    response: 'Prompt support',
+    responseTime: 'Same-day for most issues',
+    description: 'Helping small businesses across greater Melbourne with reliable IT support.',
+    coverage: ['CBD', 'Inner Suburbs', 'Eastern Suburbs', 'Western Suburbs', 'Northern Suburbs', 'Bayside'],
+    color: '#3b82f6',
+    clients: null,
+    services: ['Remote Support', 'Onsite Visits', 'Microsoft 365 Setup', 'Business Protection'],
+    isHighlight: true
+  },
+  {
+    id: 'geelong',
+    name: 'Geelong',
+    coords: [-38.1499, 144.3617],
+    response: 'Same/next-day',
+    responseTime: 'Varies by location',
+    description: 'Supporting local businesses along the surf coast with practical IT help.',
+    coverage: ['Geelong CBD', 'Bellarine Peninsula', 'Surf Coast', 'Golden Plains'],
+    color: '#10b981',
+    clients: null,
+    services: ['Remote Support', 'Onsite Visits', 'Cloud Setup'],
+    isHighlight: true
+  },
+  {
+    id: 'ballarat',
+    name: 'Ballarat',
+    coords: [-37.5622, 143.8503],
+    response: 'Scheduled visits',
+    responseTime: 'Planned onsite availability',
+    description: 'Reliable IT support for regional businesses in the goldfields.',
+    coverage: ['Ballarat', 'Daylesford', 'Creswick', 'Ararat', 'Skipton'],
+    color: '#a855f7',
+    clients: null,
+    services: ['Remote Support', 'Planned Onsite', 'Backup Setup'],
+    isHighlight: true
+  },
+  {
+    id: 'bendigo',
+    name: 'Bendigo',
+    coords: [-36.7570, 144.2794],
+    response: 'Scheduled visits',
+    responseTime: 'Planned onsite availability',
+    description: 'Helping central Victorian businesses with practical IT solutions.',
+    coverage: ['Bendigo', 'Castlemaine', 'Echuca', 'Shepparton'],
+    color: '#f59e0b',
+    clients: null,
+    services: ['Remote Support', 'Planned Visits', 'Cloud Setup'],
+    isHighlight: true
+  },
+  {
+    id: 'warrnambool',
+    name: 'Warrnambool',
+    coords: [-38.3815, 142.4860],
+    response: 'Remote-first',
+    responseTime: 'Remote support available',
+    description: 'Supporting south‑west Victoria with remote IT help and planned visits.',
+    coverage: ['Warrnambool', 'Port Fairy', 'Portland'],
+    color: '#06b6d4',
+    clients: null,
+    services: ['Remote Support', 'Planned Visits'],
+    isHighlight: false
+  },
+  {
+    id: 'mildura',
+    name: 'Mildura',
+    coords: [-34.1889, 142.1583],
+    response: 'Remote-first',
+    responseTime: 'Remote support available',
+    description: 'Helping northern Victorian businesses with cloud and remote IT support.',
+    coverage: ['Mildura', 'Swan Hill', 'Ouyen'],
+    color: '#ec4899',
+    clients: null,
+    services: ['Remote Support', 'Cloud Setup'],
+    isHighlight: false
+  }
+];
+
 
   return (
     <section id="areas" className="relative py-20 lg:py-32 bg-gradient-to-b from-slate-900 to-slate-950 overflow-hidden">

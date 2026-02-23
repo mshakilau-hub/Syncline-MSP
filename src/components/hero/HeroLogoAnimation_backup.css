@@ -1,0 +1,272 @@
+/**
+ * HeroLogoAnimation.css — v4 FINAL
+ * Syncline IT Solutions
+ * Zero overflow · Viewport-safe · Bigger readable text
+ */
+
+/* ══════════════════════════════════════════
+   OUTER WRAPPER
+   - Fills whatever height the right column gives it
+   - overflow:hidden is the hard boundary
+══════════════════════════════════════════ */
+.sl-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;            /* parent (.hero right col) controls the height */
+  min-height: 360px;
+  max-height: 520px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  overflow: hidden;        /* HARD STOP — nothing escapes */
+  user-select: none;
+}
+
+/* ══════════════════════════════════════════
+   COLUMNS
+══════════════════════════════════════════ */
+.sl-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* Left and right cols are narrow fixed-width */
+.sl-col-left,
+.sl-col-right {
+  width: 110px;
+}
+
+/* Centre col grows to fill remaining space but stays square */
+.sl-col-centre {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+}
+
+/* ══════════════════════════════════════════
+   LOGO STAGE
+   Square, centred inside sl-col-centre.
+   Uses min() so it never exceeds the column.
+══════════════════════════════════════════ */
+.sl-stage {
+  position: relative;
+  /*
+    Width = min of:
+      - 90% of the centre column (flex fills remaining space)
+      - 46vh (never taller than ~46% of viewport height)
+      - 340px absolute cap
+  */
+  width:  min(90%, 46vh, 340px);
+  height: min(90%, 46vh, 340px);
+  flex-shrink: 0;
+  will-change: transform;
+}
+
+/* Each SVG layer fills the stage exactly */
+.sl-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* ══════════════════════════════════════════
+   GLOW
+   Same size as stage, absolutely positioned
+   behind it in sl-col-centre.
+══════════════════════════════════════════ */
+.sl-glow {
+  position: absolute;
+  /*
+    We match the stage size via the same clamp.
+    Using inset:auto with percentage-based approach
+    keeps it centred even if stage size changes.
+  */
+  width:  min(90%, 46vh, 340px);
+  height: min(90%, 46vh, 340px);
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse 55% 42% at 63% 36%,
+    rgba(0, 119, 255, 0.30) 0%,
+    rgba(0, 119, 255, 0.08) 55%,
+    transparent 100%
+  );
+  pointer-events: none;
+  will-change: opacity;
+  /* stays in normal flow of sl-col-centre, stacked before stage */
+  flex-shrink: 0;
+  position: absolute;   /* behind stage */
+  z-index: 0;
+}
+
+.sl-stage {
+  z-index: 1;
+}
+
+/* ══════════════════════════════════════════
+   PHASE LABEL  (below logo)
+══════════════════════════════════════════ */
+.sl-label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-wrap: wrap;
+  justify-content: center;
+  will-change: transform, opacity;
+}
+
+.sl-label-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { transform: scale(1);   opacity: 1; }
+  50%       { transform: scale(1.4); opacity: 0.7; }
+}
+
+.sl-label-phase {
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.sl-label-brand {
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.02em;
+}
+
+/* ══════════════════════════════════════════
+   LEFT — METRIC CARDS
+══════════════════════════════════════════ */
+.sl-card {
+  background: rgba(10, 26, 47, 0.75);
+  border: 1px solid rgba(0, 119, 255, 0.25);
+  border-radius: 10px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  backdrop-filter: blur(8px);
+}
+
+.sl-card-label {
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.45);
+  text-transform: uppercase;
+}
+
+.sl-card-value {
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  font-size: 1.15rem;          /* bigger, readable */
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  transition: color 0.8s ease;
+}
+
+/* ══════════════════════════════════════════
+   RIGHT — SYS LOG
+══════════════════════════════════════════ */
+.sl-log {
+  background: rgba(10, 26, 47, 0.75);
+  border: 1px solid rgba(0, 119, 255, 0.20);
+  border-radius: 10px;
+  padding: 10px 12px;
+  backdrop-filter: blur(8px);
+  width: 100%;
+}
+
+.sl-log-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sl-log-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: background 0.8s ease;
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+.sl-log-title {
+  font-family: 'Inter', 'Courier New', monospace;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+}
+
+.sl-log-line {
+  font-family: 'Courier New', 'Fira Code', monospace;
+  font-size: 0.68rem;           /* bigger than before */
+  line-height: 1.6;
+  transition: color 0.6s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ══════════════════════════════════════════
+   RESPONSIVE BREAKPOINTS
+══════════════════════════════════════════ */
+
+/* Tablet: hide side panels, centre only */
+@media (max-width: 900px) {
+  .sl-col-left,
+  .sl-col-right {
+    display: none;
+  }
+
+  .sl-wrapper {
+    min-height: 300px;
+    max-height: 420px;
+  }
+}
+
+/* Small screens */
+@media (max-width: 640px) {
+  .sl-wrapper {
+    min-height: 260px;
+    max-height: 360px;
+  }
+}
+
+/* Short viewports (e.g. landscape phone) */
+@media (max-height: 620px) {
+  .sl-wrapper {
+    min-height: 240px;
+    max-height: 320px;
+  }
+
+  .sl-col-left,
+  .sl-col-right {
+    display: none;
+  }
+}

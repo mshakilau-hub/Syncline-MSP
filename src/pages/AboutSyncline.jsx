@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import { UserCheck, Award, Cpu, Target, ArrowRight } from 'lucide-react';
 import GlassCard from '../components/ui/GlassCard';
 
-const AboutShakil = () => {
+const AboutSyncline = () => {
   const highlights = [
     { icon: Cpu, title: 'Infrastructure Architect', desc: 'Designing secure, scalable systems for SMEs and multi‑site organisations.' },
     { icon: Award, title: 'Enterprise‑Grade Standards', desc: 'Every solution follows the same rigor used by large‑scale IT teams.' },
@@ -20,7 +20,7 @@ const AboutShakil = () => {
 
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
           <h1 className="text-5xl lg:text-6xl font-black text-white mb-6">
-            About Shakil
+            About Syncline
             <span className="block text-4xl lg:text-5xl text-indigo-400 mt-2">Your Dedicated IT Partner</span>
           </h1>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
@@ -85,4 +85,5 @@ const AboutShakil = () => {
   );
 };
 
-export default AboutShakil;
+export default AboutSyncline;
+

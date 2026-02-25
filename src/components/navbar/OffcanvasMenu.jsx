@@ -1,4 +1,4 @@
-ï»¿// src/components/navbar/OffcanvasMenu.jsx
+// src/components/navbar/OffcanvasMenu.jsx
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 // Individual Lucide icon imports (tree-shake friendly + alias)
@@ -45,7 +45,7 @@ const OffcanvasMenu = ({ isOpen, onClose }) => {
     title: 'Resources',
     items: [
       { icon: BookOpen, title: 'Case Studies', href: '/case-studies' },
-      { icon: Users, title: 'About Shakil', href: '/about-shakil' },
+      { icon: Users, title: 'About Syncline', href: '/about-Syncline' },
       { icon: FileCheck, title: 'IT Health Check', href: '/it-health-check' },
       { icon: Shield, title: 'Customer Portal', href: '/customer-portal' }
     ]
@@ -105,13 +105,13 @@ const OffcanvasMenu = ({ isOpen, onClose }) => {
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-blue-400" />
-                <a href="mailto:info@shakilit.com.au" className="text-slate-300 text-sm">info@shakilit.com.au</a>
+                <a href="mailto:info@syncline.com.au" className="text-slate-300 text-sm">info@syncline.com.au</a>
               </div>
             </div>
 
             {/* Navigation */}
             <div className="flex-1 overflow-y-auto p-6 space-y-2">
-              {/* Home Link â€” added here */} <Link to="/" onClick={onClose} className="block py-3 text-white font-semibold text-lg hover:text-blue-400 transition-colors border-b border-white/5" > Home </Link>
+              {/* Home Link — added here */} <Link to="/" onClick={onClose} className="block py-3 text-white font-semibold text-lg hover:text-blue-400 transition-colors border-b border-white/5" > Home </Link>
               
               {menuSections.map((section) => (
                 <div key={section.id} className="border-b border-white/5 pb-2">
@@ -187,7 +187,7 @@ const OffcanvasMenu = ({ isOpen, onClose }) => {
                   <MapPin className="w-5 h-5 mt-0.5 text-blue-400" />
                   <div>
                     <p className="text-sm">Serving Victoria, Australia</p>
-                    <p className="text-xs text-slate-500">Melbourne â€¢ Geelong â€¢ Ballarat â€¢ Bendigo</p>
+                    <p className="text-xs text-slate-500">Melbourne • Geelong • Ballarat • Bendigo</p>
                   </div>
                 </div>
               </div>
@@ -200,3 +200,4 @@ const OffcanvasMenu = ({ isOpen, onClose }) => {
 };
 
 export default OffcanvasMenu;
+

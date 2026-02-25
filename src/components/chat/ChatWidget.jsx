@@ -1,4 +1,4 @@
-﻿import React, { useReducer, useEffect, useRef, useState } from "react";
+import React, { useReducer, useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 // Icons
@@ -13,7 +13,7 @@ const quickOptions = [
   { icon: Phone, text: "Emergency Support", value: "emergency" },
   { icon: Clock, text: "Response Times", value: "response" },
   { icon: Shield, text: "Cybersecurity Solutions", value: "security" },
-  { icon: User, text: "About Shakil IT", value: "about" },
+  { icon: User, text: "About Syncline IT", value: "about" },
   { icon: MapPin, text: "Service Coverage Areas", value: "coverage" },
   { icon: MessageSquare, text: "Custom IT Solutions", value: "custom" },
 ];
@@ -106,8 +106,8 @@ const ChatWidget = () => {
               <div className="flex items-center gap-3">
                 <Shield className="w-6 h-6 text-white" />
                 <div>
-                  <h3 className="text-white font-semibold">Shakil IT Support</h3>
-                  <p className="text-xs text-white/80">Online • Instant replies</p>
+                  <h3 className="text-white font-semibold">Syncline IT Support</h3>
+                  <p className="text-xs text-white/80">Online � Instant replies</p>
                 </div>
               </div>
               <button onClick={handleClose}>
@@ -236,7 +236,7 @@ export default ChatWidget;
 //     {
 //       id: 1,
 //       type: 'bot',
-//       text: "Hi 👋 I'm your IT assistant. How can I help today?",
+//       text: "Hi ?? I'm your IT assistant. How can I help today?",
 //       time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
 //     }
 //   ]);
@@ -253,7 +253,7 @@ export default ChatWidget;
 //     { icon: Clock, label: 'Response Times' },
 //     { icon: MapPin, label: 'Service Areas' },
 //     { icon: MessageSquare, label: 'Custom Solutions' },
-//     { icon: User, label: 'About Shakil IT' }
+//     { icon: User, label: 'About Syncline IT' }
 //   ];
 
 //   /* ------------------ helpers ------------------ */
@@ -311,7 +311,7 @@ export default ChatWidget;
 //       setIsTyping(false);
 //       addMessage(
 //         'bot',
-//         "Great question. I can help with that — would you like to continue here or book a free consult?"
+//         "Great question. I can help with that � would you like to continue here or book a free consult?"
 //       );
 //     }, 1000);
 //   };
@@ -320,7 +320,7 @@ export default ChatWidget;
 
 //   return (
 //     <>
-//       {/* Floating launcher — always right, never overlapping */}
+//       {/* Floating launcher � always right, never overlapping */}
 //       <motion.button
 //         type="button"
 //         onClick={() => setIsOpen(v => !v)}
@@ -364,8 +364,8 @@ export default ChatWidget;
 //                   <Shield className="w-5 h-5 text-white" />
 //                 </div>
 //                 <div>
-//                   <p className="text-white font-semibold text-sm">Shakil IT Support</p>
-//                   <p className="text-xs text-white/80">Online • Instant replies</p>
+//                   <p className="text-white font-semibold text-sm">Syncline IT Support</p>
+//                   <p className="text-xs text-white/80">Online � Instant replies</p>
 //                 </div>
 //               </div>
 //               <button
@@ -400,7 +400,7 @@ export default ChatWidget;
 
 //               {isTyping && (
 //                 <div className="bg-slate-800 px-4 py-2 rounded-2xl text-xs text-slate-400 w-fit">
-//                   Typing…
+//                   Typing�
 //                 </div>
 //               )}
 
@@ -437,7 +437,7 @@ export default ChatWidget;
 //                 ref={inputRef}
 //                 value={input}
 //                 onChange={e => setInput(e.target.value)}
-//                 placeholder="Type your message…"
+//                 placeholder="Type your message�"
 //                 className="
 //                   flex-1 px-4 py-2 rounded-xl
 //                   bg-slate-800 border border-white/10
@@ -486,7 +486,7 @@ export default ChatWidget;
 // import CheckCircle from 'lucide-react/dist/esm/icons/check-circle';
 // import Shield from 'lucide-react/dist/esm/icons/shield';
 // import MessageSquare from 'lucide-react/dist/esm/icons/message-square';
-// import MapPin from 'lucide-react/dist/esm/icons/map-pin';       // ← added here (was missing)
+// import MapPin from 'lucide-react/dist/esm/icons/map-pin';       // ? added here (was missing)
 
 // const ChatWidget = () => {
 //   const [isOpen, setIsOpen] = useState(false);
@@ -494,7 +494,7 @@ export default ChatWidget;
 //     {
 //       id: 1,
 //       type: 'bot',
-//       text: "Hi! 👋 I'm here to help. How can we assist your business today?",
+//       text: "Hi! ?? I'm here to help. How can we assist your business today?",
 //       timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
 //     }
 //   ]);
@@ -511,8 +511,8 @@ export default ChatWidget;
 //     { icon: Phone, text: 'Emergency Support', value: 'emergency' },
 //     { icon: Clock, text: 'Response Times', value: 'response' },
 //     { icon: Shield, text: 'Cybersecurity Solutions', value: 'security' },
-//     { icon: User, text: 'About Shakil IT', value: 'about' },
-//     { icon: MapPin, text: 'Service Coverage Areas', value: 'areas' }, // ← now properly imported
+//     { icon: User, text: 'About Syncline IT', value: 'about' },
+//     { icon: MapPin, text: 'Service Coverage Areas', value: 'areas' }, // ? now properly imported
 //     { icon: MessageSquare, text: 'Custom IT Solutions', value: 'custom' }
 //   ];
 
@@ -578,11 +578,11 @@ export default ChatWidget;
 
 //     const responses = {
 //       pricing: "Our plans start from $199/month for SMBs (24/7 monitoring + remote support). Enterprise from $599/month. Need a custom quote?",
-//       assessment: "Free IT audit: security scan, performance check, recommendations. 2–3 hrs, no obligation. Preferred date?",
+//       assessment: "Free IT audit: security scan, performance check, recommendations. 2�3 hrs, no obligation. Preferred date?",
 //       emergency: "Urgent? Call 1300 XXX XXX (24/7). <2hr critical response. What's happening right now?",
 //       response: "Metro <2hrs, Regional <4hrs, Remote <30min. 99.9% SLA. Your area?",
 //       security: "Zero-trust + custom VPN + endpoint protection. Interested in a security review?",
-//       about: "Shakil IT: 10+ yrs, 150+ VIC clients, Microsoft certified. Proactive & transparent. Want to talk to Shakil?",
+//       about: "Syncline IT: 10+ yrs, 150+ VIC clients, Microsoft certified. Proactive & transparent. Want to talk to Syncline?",
 //       areas: "Full VIC coverage: Melbourne same-day, Geelong next-day, Ballarat/Bendigo scheduled. Remote AUS-wide. Where are you?",
 //       custom: "Custom scripts, migrations, portals. What's the challenge you're facing?"
 //     };
@@ -609,7 +609,7 @@ export default ChatWidget;
 
 //   const handleContactAction = (type) => {
 //     if (type === 'email') {
-//       window.location.href = 'mailto:info@shakilit.com.au';
+//       window.location.href = 'mailto:info@syncline.com.au';
 //     } else if (type === 'phone') {
 //       window.location.href = 'tel:1300000000';
 //     } else if (type === 'contact') {
@@ -658,10 +658,10 @@ export default ChatWidget;
 //                   <div className="absolute -bottom-1 -right-1 w-3.5 h-3.5 bg-green-400 rounded-full border-2 border-slate-900 animate-pulse" />
 //                 </div>
 //                 <div>
-//                   <h3 className="text-white font-semibold text-base">Shakil IT Support</h3>
+//                   <h3 className="text-white font-semibold text-base">Syncline IT Support</h3>
 //                   <p className="text-xs text-white/85 flex items-center gap-1.5">
 //                     <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-//                     Online • Instant replies
+//                     Online � Instant replies
 //                   </p>
 //                 </div>
 //               </div>
@@ -708,7 +708,7 @@ export default ChatWidget;
 //               <div ref={messagesEndRef} />
 //             </div>
 
-//             {/* Quick Options – always visible */}
+//             {/* Quick Options � always visible */}
 //             <div className="p-3 border-t border-white/10 bg-slate-900/70">
 //               <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
 //                 {quickOptions.map(opt => (
@@ -812,7 +812,7 @@ export default ChatWidget;
 //     {
 //       id: 1,
 //       type: 'bot',
-//       text: "Hi! 👋 I'm here to help. How can we assist your business today?",
+//       text: "Hi! ?? I'm here to help. How can we assist your business today?",
 //       timestamp: new Date()
 //     }
 //   ]);
@@ -829,7 +829,7 @@ export default ChatWidget;
 //     { icon: Phone, text: 'Emergency Support', value: 'emergency' },
 //     { icon: Clock, text: 'Response Times', value: 'response' },
 //     { icon: Shield, text: 'Cybersecurity Solutions', value: 'security' },
-//     { icon: User, text: 'About Shakil IT', value: 'about' },
+//     { icon: User, text: 'About Syncline IT', value: 'about' },
 //     { icon: CheckCircle, text: 'Service Coverage Areas', value: 'areas' },
 //     { icon: MessageSquare, text: 'Custom IT Solutions', value: 'custom' }
 //   ];
@@ -894,13 +894,13 @@ export default ChatWidget;
     
 //     const responses = {
 //       pricing: "Our IT support plans start from $199/month for small businesses, including 24/7 monitoring, unlimited remote support, and proactive security management. Enterprise packages available from $599/month with dedicated support. Would you like a custom quote based on your specific needs?",
-//       assessment: "Perfect! Our free IT health check includes: ✓ Comprehensive security audit ✓ Network performance analysis ✓ Cloud readiness assessment ✓ Custom recommendations. This typically takes 2-3 hours and has no obligations. What's your preferred date?",
+//       assessment: "Perfect! Our free IT health check includes: ? Comprehensive security audit ? Network performance analysis ? Cloud readiness assessment ? Custom recommendations. This typically takes 2-3 hours and has no obligations. What's your preferred date?",
 //       emergency: "For urgent IT issues, call us immediately at 1300 XXX XXX. Our emergency line is monitored 24/7 for managed clients. We provide <2 hour response for critical incidents. Are you currently experiencing a critical system failure or security breach?",
 //       response: "Our response times: Melbourne Metro <2hrs, Regional VIC <4hrs, Remote support <30min. 24/7 emergency support included. Same-day onsite for Melbourne CBD. 99.9% uptime SLA guarantee. Need specific area coverage details?",
-//       security: "We offer complete cybersecurity solutions: ✓ Custom VPN system ✓ Zero-trust architecture ✓ Endpoint protection ✓ 24/7 threat monitoring ✓ Security audits & compliance. Plus our proprietary VPN ensures secure remote access for all your team. Interested in a security assessment?",
-//       about: "Shakil IT is Victoria's trusted IT partner for SMBs. With 10+ years experience, Microsoft certifications, and 150+ happy clients, we provide enterprise-grade technology without enterprise complexity. We believe in transparency, documentation, and proactive support. Want to meet Shakil?",
+//       security: "We offer complete cybersecurity solutions: ? Custom VPN system ? Zero-trust architecture ? Endpoint protection ? 24/7 threat monitoring ? Security audits & compliance. Plus our proprietary VPN ensures secure remote access for all your team. Interested in a security assessment?",
+//       about: "Syncline IT is Victoria's trusted IT partner for SMBs. With 10+ years experience, Microsoft certifications, and 150+ happy clients, we provide professional-grade technology without enterprise complexity. We believe in transparency, documentation, and proactive support. Want to meet Syncline?",
 //       areas: "We serve all of Victoria: Melbourne (same-day), Geelong (next-day), Ballarat, Bendigo, and remote support Australia-wide. Each area gets 24/7 monitoring, remote helpdesk, and scheduled onsite visits. Which area are you located in?",
-//       custom: "We build custom IT solutions including: ✓ Python automation scripts ✓ Cloud migrations (Azure/M365) ✓ Custom portals & ticketing systems ✓ Integration solutions. Everything is documented and built to scale. What challenge are you trying to solve?"
+//       custom: "We build custom IT solutions including: ? Python automation scripts ? Cloud migrations (Azure/M365) ? Custom portals & ticketing systems ? Integration solutions. Everything is documented and built to scale. What challenge are you trying to solve?"
 //     };
 
 //     setTimeout(() => {
@@ -920,13 +920,13 @@ export default ChatWidget;
 //     // Simulate bot response
 //     setTimeout(() => {
 //       setIsTyping(false);
-//       addMessage('bot', "Thanks for your message! A member of our team will respond shortly. For immediate assistance, call us at 1300 XXX XXX or email info@shakilit.com.au");
+//       addMessage('bot', "Thanks for your message! A member of our team will respond shortly. For immediate assistance, call us at 1300 XXX XXX or email info@syncline.com.au");
 //     }, 1500);
 //   };
 
 //   const handleContactAction = (type) => {
 //     if (type === 'email') {
-//       window.location.href = 'mailto:info@shakilit.com.au';
+//       window.location.href = 'mailto:info@syncline.com.au';
 //     } else if (type === 'phone') {
 //       window.location.href = 'tel:1300000000';
 //     } else if (type === 'contact') {
@@ -970,8 +970,8 @@ export default ChatWidget;
 //                   <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-slate-900 animate-pulse" />
 //                 </div>
 //                 <div>
-//                   <h3 id="chat-title" className="font-bold text-white">Shakil IT Support</h3>
-//                   <p className="text-xs text-white/80">Online • Typically replies instantly</p>
+//                   <h3 id="chat-title" className="font-bold text-white">Syncline IT Support</h3>
+//                   <p className="text-xs text-white/80">Online � Typically replies instantly</p>
 //                 </div>
 //               </div>
 //               <button
@@ -1125,7 +1125,7 @@ export default ChatWidget;
 //                   <button
 //                     onClick={() => handleContactAction('email')}
 //                     className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-white/5 hover:bg-white/10 rounded-lg text-xs text-slate-300 transition-colors"
-//                     aria-label="Email us at info@shakilit.com.au"
+//                     aria-label="Email us at info@syncline.com.au"
 //                   >
 //                     <Mail className="w-3 h-3" aria-hidden="true" />
 //                     Email Us
@@ -1237,7 +1237,7 @@ export default ChatWidget;
 //     {
 //       id: 1,
 //       type: 'bot',
-//       text: "Hi! 👋 I'm here to help. How can we assist your business today?",
+//       text: "Hi! ?? I'm here to help. How can we assist your business today?",
 //       timestamp: new Date()
 //     }
 //   ]);
@@ -1254,7 +1254,7 @@ export default ChatWidget;
 //     { icon: Phone, text: 'Emergency Support', value: 'emergency' },
 //     { icon: Clock, text: 'Response Times', value: 'response' },
 //     { icon: Shield, text: 'Cybersecurity Solutions', value: 'security' },
-//     { icon: User, text: 'About Shakil IT', value: 'about' },
+//     { icon: User, text: 'About Syncline IT', value: 'about' },
 //     { icon: CheckCircle, text: 'Service Coverage Areas', value: 'areas' },
 //     { icon: MessageSquare, text: 'Custom IT Solutions', value: 'custom' }
 //   ];
@@ -1300,13 +1300,13 @@ export default ChatWidget;
     
 //     const responses = {
 //       pricing: "Our IT support plans start from $199/month for small businesses, including 24/7 monitoring, unlimited remote support, and proactive security management. Enterprise packages available from $599/month with dedicated support. Would you like a custom quote based on your specific needs?",
-//       assessment: "Perfect! Our free IT health check includes: ✓ Comprehensive security audit ✓ Network performance analysis ✓ Cloud readiness assessment ✓ Custom recommendations. This typically takes 2-3 hours and has no obligations. What's your preferred date?",
+//       assessment: "Perfect! Our free IT health check includes: ? Comprehensive security audit ? Network performance analysis ? Cloud readiness assessment ? Custom recommendations. This typically takes 2-3 hours and has no obligations. What's your preferred date?",
 //       emergency: "For urgent IT issues, call us immediately at 1300 XXX XXX. Our emergency line is monitored 24/7 for managed clients. We provide <2 hour response for critical incidents. Are you currently experiencing a critical system failure or security breach?",
 //       response: "Our response times: Melbourne Metro <2hrs, Regional VIC <4hrs, Remote support <30min. 24/7 emergency support included. Same-day onsite for Melbourne CBD. 99.9% uptime SLA guarantee. Need specific area coverage details?",
-//       security: "We offer complete cybersecurity solutions: ✓ Custom VPN system ✓ Zero-trust architecture ✓ Endpoint protection ✓ 24/7 threat monitoring ✓ Security audits & compliance. Plus our proprietary VPN ensures secure remote access for all your team. Interested in a security assessment?",
-//       about: "Shakil IT is Victoria's trusted IT partner for SMBs. With 10+ years experience, Microsoft certifications, and 150+ happy clients, we provide enterprise-grade technology without enterprise complexity. We believe in transparency, documentation, and proactive support. Want to meet Shakil?",
+//       security: "We offer complete cybersecurity solutions: ? Custom VPN system ? Zero-trust architecture ? Endpoint protection ? 24/7 threat monitoring ? Security audits & compliance. Plus our proprietary VPN ensures secure remote access for all your team. Interested in a security assessment?",
+//       about: "Syncline IT is Victoria's trusted IT partner for SMBs. With 10+ years experience, Microsoft certifications, and 150+ happy clients, we provide professional-grade technology without enterprise complexity. We believe in transparency, documentation, and proactive support. Want to meet Syncline?",
 //       areas: "We serve all of Victoria: Melbourne (same-day), Geelong (next-day), Ballarat, Bendigo, and remote support Australia-wide. Each area gets 24/7 monitoring, remote helpdesk, and scheduled onsite visits. Which area are you located in?",
-//       custom: "We build custom IT solutions including: ✓ Python automation scripts ✓ Cloud migrations (Azure/M365) ✓ Custom portals & ticketing systems ✓ Integration solutions. Everything is documented and built to scale. What challenge are you trying to solve?"
+//       custom: "We build custom IT solutions including: ? Python automation scripts ? Cloud migrations (Azure/M365) ? Custom portals & ticketing systems ? Integration solutions. Everything is documented and built to scale. What challenge are you trying to solve?"
 //     };
 
 //     setTimeout(() => {
@@ -1325,13 +1325,13 @@ export default ChatWidget;
 
 //     setTimeout(() => {
 //       setIsTyping(false);
-//       addMessage('bot', "Thanks for your message! A member of our team will respond shortly. For immediate assistance, call us at 1300 XXX XXX or email info@shakilit.com.au");
+//       addMessage('bot', "Thanks for your message! A member of our team will respond shortly. For immediate assistance, call us at 1300 XXX XXX or email info@syncline.com.au");
 //     }, 1500);
 //   };
 
 //   const handleContactAction = (type) => {
 //     if (type === 'email') {
-//       window.location.href = 'mailto:info@shakilit.com.au';
+//       window.location.href = 'mailto:info@syncline.com.au';
 //     } else if (type === 'phone') {
 //       window.location.href = 'tel:1300000000';
 //     } else if (type === 'contact') {
@@ -1412,8 +1412,8 @@ export default ChatWidget;
 //                   <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-slate-900 animate-pulse" />
 //                 </div>
 //                 <div>
-//                   <h3 className="font-bold text-white">Shakil IT Support</h3>
-//                   <p className="text-xs text-white/80">Online • Typically replies instantly</p>
+//                   <h3 className="font-bold text-white">Syncline IT Support</h3>
+//                   <p className="text-xs text-white/80">Online � Typically replies instantly</p>
 //                 </div>
 //               </div>
 //               <button
@@ -1605,7 +1605,7 @@ export default ChatWidget;
 //     {
 //       id: 1,
 //       type: 'bot',
-//       text: "Hi! 👋 I'm here to help. How can we assist your business today?",
+//       text: "Hi! ?? I'm here to help. How can we assist your business today?",
 //       timestamp: new Date()
 //     }
 //   ]);
@@ -1622,7 +1622,7 @@ export default ChatWidget;
 //     { icon: Phone, text: 'Emergency Support', value: 'emergency' },
 //     { icon: Clock, text: 'Response Times', value: 'response' },
 //     { icon: Shield, text: 'Cybersecurity Solutions', value: 'security' },
-//     { icon: User, text: 'About Shakil IT', value: 'about' },
+//     { icon: User, text: 'About Syncline IT', value: 'about' },
 //     { icon: CheckCircle, text: 'Service Coverage Areas', value: 'areas' },
 //     { icon: MessageSquare, text: 'Custom IT Solutions', value: 'custom' }
 //   ];
@@ -1668,13 +1668,13 @@ export default ChatWidget;
     
 //     const responses = {
 //       pricing: "Our IT support plans start from $199/month for small businesses, including 24/7 monitoring, unlimited remote support, and proactive security management. Enterprise packages available from $599/month with dedicated support. Would you like a custom quote based on your specific needs?",
-//       assessment: "Perfect! Our free IT health check includes: ✓ Comprehensive security audit ✓ Network performance analysis ✓ Cloud readiness assessment ✓ Custom recommendations. This typically takes 2-3 hours and has no obligations. What's your preferred date?",
+//       assessment: "Perfect! Our free IT health check includes: ? Comprehensive security audit ? Network performance analysis ? Cloud readiness assessment ? Custom recommendations. This typically takes 2-3 hours and has no obligations. What's your preferred date?",
 //       emergency: "For urgent IT issues, call us immediately at 1300 XXX XXX. Our emergency line is monitored 24/7 for managed clients. We provide <2 hour response for critical incidents. Are you currently experiencing a critical system failure or security breach?",
 //       response: "Our response times: Melbourne Metro <2hrs, Regional VIC <4hrs, Remote support <30min. 24/7 emergency support included. Same-day onsite for Melbourne CBD. 99.9% uptime SLA guarantee. Need specific area coverage details?",
-//       security: "We offer complete cybersecurity solutions: ✓ Custom VPN system ✓ Zero-trust architecture ✓ Endpoint protection ✓ 24/7 threat monitoring ✓ Security audits & compliance. Plus our proprietary VPN ensures secure remote access for all your team. Interested in a security assessment?",
-//       about: "Shakil IT is Victoria's trusted IT partner for SMBs. With 10+ years experience, Microsoft certifications, and 150+ happy clients, we provide enterprise-grade technology without enterprise complexity. We believe in transparency, documentation, and proactive support. Want to meet Shakil?",
+//       security: "We offer complete cybersecurity solutions: ? Custom VPN system ? Zero-trust architecture ? Endpoint protection ? 24/7 threat monitoring ? Security audits & compliance. Plus our proprietary VPN ensures secure remote access for all your team. Interested in a security assessment?",
+//       about: "Syncline IT is Victoria's trusted IT partner for SMBs. With 10+ years experience, Microsoft certifications, and 150+ happy clients, we provide professional-grade technology without enterprise complexity. We believe in transparency, documentation, and proactive support. Want to meet Syncline?",
 //       areas: "We serve all of Victoria: Melbourne (same-day), Geelong (next-day), Ballarat, Bendigo, and remote support Australia-wide. Each area gets 24/7 monitoring, remote helpdesk, and scheduled onsite visits. Which area are you located in?",
-//       custom: "We build custom IT solutions including: ✓ Python automation scripts ✓ Cloud migrations (Azure/M365) ✓ Custom portals & ticketing systems ✓ Integration solutions. Everything is documented and built to scale. What challenge are you trying to solve?"
+//       custom: "We build custom IT solutions including: ? Python automation scripts ? Cloud migrations (Azure/M365) ? Custom portals & ticketing systems ? Integration solutions. Everything is documented and built to scale. What challenge are you trying to solve?"
 //     };
 
 //     setTimeout(() => {
@@ -1694,13 +1694,13 @@ export default ChatWidget;
 //     // Simulate bot response
 //     setTimeout(() => {
 //       setIsTyping(false);
-//       addMessage('bot', "Thanks for your message! A member of our team will respond shortly. For immediate assistance, call us at 1300 XXX XXX or email info@shakilit.com.au");
+//       addMessage('bot', "Thanks for your message! A member of our team will respond shortly. For immediate assistance, call us at 1300 XXX XXX or email info@syncline.com.au");
 //     }, 1500);
 //   };
 
 //   const handleContactAction = (type) => {
 //     if (type === 'email') {
-//       window.location.href = 'mailto:info@shakilit.com.au';
+//       window.location.href = 'mailto:info@syncline.com.au';
 //     } else if (type === 'phone') {
 //       window.location.href = 'tel:1300000000';
 //     } else if (type === 'contact') {
@@ -1731,8 +1731,8 @@ export default ChatWidget;
 //                   <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-slate-900 animate-pulse" />
 //                 </div>
 //                 <div>
-//                   <h3 className="font-bold text-white">Shakil IT Support</h3>
-//                   <p className="text-xs text-white/80">Online • Typically replies instantly</p>
+//                   <h3 className="font-bold text-white">Syncline IT Support</h3>
+//                   <p className="text-xs text-white/80">Online � Typically replies instantly</p>
 //                 </div>
 //               </div>
 //               <button
@@ -1983,7 +1983,7 @@ export default ChatWidget;
 //     {
 //       id: 1,
 //       type: 'bot',
-//       text: "Hi! 👋 I'm here to help. How can we assist your business today?",
+//       text: "Hi! ?? I'm here to help. How can we assist your business today?",
 //       timestamp: new Date()
 //     }
 //   ]);
@@ -2000,7 +2000,7 @@ export default ChatWidget;
 //     { icon: Phone, text: 'Emergency Support', value: 'emergency' },
 //     { icon: Clock, text: 'Response Times', value: 'response' },
 //     { icon: Shield, text: 'Cybersecurity Solutions', value: 'security' },
-//     { icon: User, text: 'About Shakil IT', value: 'about' },
+//     { icon: User, text: 'About Syncline IT', value: 'about' },
 //     { icon: CheckCircle, text: 'Service Coverage Areas', value: 'areas' },
 //     { icon: MessageSquare, text: 'Custom IT Solutions', value: 'custom' }
 //   ];
@@ -2046,13 +2046,13 @@ export default ChatWidget;
     
 //     const responses = {
 //       pricing: "Our IT support plans start from $199/month for small businesses, including 24/7 monitoring, unlimited remote support, and proactive security management. Enterprise packages available from $599/month with dedicated support. Would you like a custom quote based on your specific needs?",
-//       assessment: "Perfect! Our free IT health check includes: ✓ Comprehensive security audit ✓ Network performance analysis ✓ Cloud readiness assessment ✓ Custom recommendations. This typically takes 2-3 hours and has no obligations. What's your preferred date?",
+//       assessment: "Perfect! Our free IT health check includes: ? Comprehensive security audit ? Network performance analysis ? Cloud readiness assessment ? Custom recommendations. This typically takes 2-3 hours and has no obligations. What's your preferred date?",
 //       emergency: "For urgent IT issues, call us immediately at 1300 XXX XXX. Our emergency line is monitored 24/7 for managed clients. We provide <2 hour response for critical incidents. Are you currently experiencing a critical system failure or security breach?",
 //       response: "Our response times: Melbourne Metro <2hrs, Regional VIC <4hrs, Remote support <30min. 24/7 emergency support included. Same-day onsite for Melbourne CBD. 99.9% uptime SLA guarantee. Need specific area coverage details?",
-//       security: "We offer complete cybersecurity solutions: ✓ Custom VPN system ✓ Zero-trust architecture ✓ Endpoint protection ✓ 24/7 threat monitoring ✓ Security audits & compliance. Plus our proprietary VPN ensures secure remote access for all your team. Interested in a security assessment?",
-//       about: "Shakil IT is Victoria's trusted IT partner for SMBs. With 10+ years experience, Microsoft certifications, and 150+ happy clients, we provide enterprise-grade technology without enterprise complexity. We believe in transparency, documentation, and proactive support. Want to meet Shakil?",
+//       security: "We offer complete cybersecurity solutions: ? Custom VPN system ? Zero-trust architecture ? Endpoint protection ? 24/7 threat monitoring ? Security audits & compliance. Plus our proprietary VPN ensures secure remote access for all your team. Interested in a security assessment?",
+//       about: "Syncline IT is Victoria's trusted IT partner for SMBs. With 10+ years experience, Microsoft certifications, and 150+ happy clients, we provide professional-grade technology without enterprise complexity. We believe in transparency, documentation, and proactive support. Want to meet Syncline?",
 //       areas: "We serve all of Victoria: Melbourne (same-day), Geelong (next-day), Ballarat, Bendigo, and remote support Australia-wide. Each area gets 24/7 monitoring, remote helpdesk, and scheduled onsite visits. Which area are you located in?",
-//       custom: "We build custom IT solutions including: ✓ Python automation scripts ✓ Cloud migrations (Azure/M365) ✓ Custom portals & ticketing systems ✓ Integration solutions. Everything is documented and built to scale. What challenge are you trying to solve?"
+//       custom: "We build custom IT solutions including: ? Python automation scripts ? Cloud migrations (Azure/M365) ? Custom portals & ticketing systems ? Integration solutions. Everything is documented and built to scale. What challenge are you trying to solve?"
 //     };
 
 //     setTimeout(() => {
@@ -2072,13 +2072,13 @@ export default ChatWidget;
 //     // Simulate bot response
 //     setTimeout(() => {
 //       setIsTyping(false);
-//       addMessage('bot', "Thanks for your message! A member of our team will respond shortly. For immediate assistance, call us at 1300 XXX XXX or email info@shakilit.com.au");
+//       addMessage('bot', "Thanks for your message! A member of our team will respond shortly. For immediate assistance, call us at 1300 XXX XXX or email info@syncline.com.au");
 //     }, 1500);
 //   };
 
 //   const handleContactAction = (type) => {
 //     if (type === 'email') {
-//       window.location.href = 'mailto:info@shakilit.com.au';
+//       window.location.href = 'mailto:info@syncline.com.au';
 //     } else if (type === 'phone') {
 //       window.location.href = 'tel:1300000000';
 //     } else if (type === 'contact') {
@@ -2109,8 +2109,8 @@ export default ChatWidget;
 //                   <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-slate-900 animate-pulse" />
 //                 </div>
 //                 <div>
-//                   <h3 className="font-bold text-white">Shakil IT Support</h3>
-//                   <p className="text-xs text-white/80">Online • Typically replies instantly</p>
+//                   <h3 className="font-bold text-white">Syncline IT Support</h3>
+//                   <p className="text-xs text-white/80">Online � Typically replies instantly</p>
 //                 </div>
 //               </div>
 //               <button

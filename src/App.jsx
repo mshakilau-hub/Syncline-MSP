@@ -13,7 +13,7 @@ const Automation      = lazy(() => import('./pages/Automation'));
 
 const CaseStudies     = lazy(() => import('./pages/CaseStudies'));
 const ITHealthCheck   = lazy(() => import('./pages/ITHealthCheck'));
-const AboutShakil     = lazy(() => import('./pages/AboutShakil'));
+const AboutSyncline     = lazy(() => import('./pages/AboutSyncline'));
 const CustomerPortal  = lazy(() => import('./pages/CustomerPortal'));
 
 import MonitoringDashboard from './components/monitoring/MonitoringDashboard';
@@ -43,7 +43,7 @@ export default function App() {
           {/* Resources */}
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/it-health-check" element={<ITHealthCheck />} />
-          <Route path="/about-shakil" element={<AboutShakil />} />
+          <Route path="/about-Syncline" element={<AboutSyncline />} />
           <Route path="/customer-portal" element={<CustomerPortal />} />
 
           {/* ⭐ NEW: Monitoring Dashboard */}
@@ -56,3 +56,4 @@ export default function App() {
     </Suspense>
   );
 }
+

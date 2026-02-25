@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -62,7 +62,7 @@ const CustomToolsSection = () => {
 
   const benefits = [
     { icon: Eye, text: 'Full Transparency', description: 'See exactly what\'s happening with your IT' },
-    { icon: Lock, text: 'Your Data, Secured', description: 'Enterprise-grade encryption everywhere' },
+    { icon: Lock, text: 'Your Data, Secured', description: 'professional-grade encryption everywhere' },
     { icon: RefreshCw, text: 'Always Up-to-Date', description: 'Continuous improvements at no extra cost' },
     { icon: FileText, text: 'Documented', description: 'Every process is documented for you' }
   ];

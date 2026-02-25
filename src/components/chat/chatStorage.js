@@ -1,4 +1,4 @@
-const STORAGE_KEY = 'shakil_chat_session';
+const STORAGE_KEY = 'syncline_chat_session';
 
 export const saveChatSession = (state) => {
   try {
@@ -21,7 +21,7 @@ export const loadChatSession = () => {
 
 
 
-// const STORAGE_KEY = 'shakil_chat_session';
+// const STORAGE_KEY = 'syncline_chat_session';
 
 // export const saveChatSession = (state) => {
 //   try {
@@ -44,7 +44,7 @@ export const loadChatSession = () => {
 
 // // src/components/chat/chatStorage.js
 
-// const STORAGE_KEY = "shakil_chat_session";
+// const STORAGE_KEY = "syncline_chat_session";
 
 // /**
 //  * Saves the chat state to localStorage
@@ -82,3 +82,4 @@ export const loadChatSession = () => {
 //     console.error("Failed to clear chat session:", err);
 //   }
 // };
+

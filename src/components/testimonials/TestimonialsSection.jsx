@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 // Individual Lucide icon imports (tree-shake friendly + alias)
 import Quote from '@lucide/quote';
@@ -16,7 +16,7 @@ const TestimonialsSection = () => {
 
   const testimonials = [
     {
-      quote: "Shakil transformed our IT from a constant headache into something we never worry about. The customer portal means I can see exactly what's happening at any time.",
+      quote: "Syncline transformed our IT from a constant headache into something we never worry about. The customer portal means I can see exactly what's happening at any time.",
       author: "Sarah Mitchell",
       role: "Managing Director",
       company: "Mitchell & Associates, Geelong",
@@ -24,7 +24,7 @@ const TestimonialsSection = () => {
       rating: 5
     },
     {
-      quote: "After a ransomware scare, we needed serious security fast. Shakil's custom VPN and security setup gave us enterprise-level protection without the enterprise price.",
+      quote: "After a ransomware scare, we needed serious security fast. Syncline's custom VPN and security setup gave us business-grade protection without the enterprise price.",
       author: "David Chen",
       role: "Owner",
       company: "Chen's Auto Group, Melbourne",
@@ -40,7 +40,7 @@ const TestimonialsSection = () => {
       rating: 5
     },
     {
-      quote: "Being in regional Victoria, we struggled to find reliable IT support. Shakil's remote monitoring plus regular site visits give us the best of both worlds.",
+      quote: "Being in regional Victoria, we struggled to find reliable IT support. Syncline's remote monitoring plus regular site visits give us the best of both worlds.",
       author: "Michael Roberts",
       role: "General Manager",
       company: "Roberts Manufacturing, Bendigo",

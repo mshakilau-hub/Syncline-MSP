@@ -1,4 +1,4 @@
-﻿// src/components/hero/HeroCTASection.jsx - FINAL ENTERPRISE-GRADE 2-ROW FILAMENT FLOW VERSION
+// src/components/hero/HeroCTASection.jsx - FINAL professional-grade 2-ROW FILAMENT FLOW VERSION
 // 2-row staggered filament-style layout (top: Network, M365 & Azure, Monitoring | bottom: Hardware & Systems, Backup, Cloud Scalability)
 // Smooth, glowing, curved filament-like traffic flow with flowing packets on all major paths
 // Compact height (h-56 max) - fully visible above the fold on 15.6-inch laptops
@@ -150,7 +150,7 @@ const HeroCTASection = () => {
                 animate={{ opacity: 1, y: 0 }}
                 className="inline-block px-3 py-1 bg-white/10 rounded-full text-white text-xs font-semibold backdrop-blur-sm border border-white/20"
               >
-                🇦🇺 Free IT Health Check & Roadmap
+                ???? Free IT Health Check & Roadmap
               </motion.div>
 
               <motion.h1
@@ -464,7 +464,7 @@ const HeroCTASection = () => {
                 <div className="w-3 h-3 rounded-full bg-red-500" />
                 <div className="w-3 h-3 rounded-full bg-yellow-500" />
                 <div className="w-3 h-3 rounded-full bg-green-500" />
-                <span className="text-slate-400 ml-2 text-xs sm:text-sm">terminal@shakilit.au — transformation.sh</span>
+                <span className="text-slate-400 ml-2 text-xs sm:text-sm">terminal@Synclineit.au � transformation.sh</span>
               </div>
               <motion.div
                 className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-cyan-400/50 to-transparent"
@@ -567,7 +567,7 @@ const HeroCTASection = () => {
             viewport={{ once: true }}
             className="text-slate-400 text-base sm:text-lg"
           >
-            ⭐ Trusted by 150+ Victorian & Tasmanian businesses
+            ? Trusted by 150+ Victorian & Tasmanian businesses
           </motion.p>
         </div>
       </div>
@@ -732,7 +732,7 @@ export default HeroCTASection;
 //                 animate={{ opacity: 1, y: 0 }}
 //                 className="inline-block px-3 py-1 bg-white/10 rounded-full text-white text-xs font-semibold backdrop-blur-sm border border-white/20"
 //               >
-//                 🇦🇺 Free IT Health Check & Roadmap
+//                 ???? Free IT Health Check & Roadmap
 //               </motion.div>
 
 //               <motion.h1
@@ -1108,7 +1108,7 @@ export default HeroCTASection;
 //                 <div className="w-3 h-3 rounded-full bg-red-500" />
 //                 <div className="w-3 h-3 rounded-full bg-yellow-500" />
 //                 <div className="w-3 h-3 rounded-full bg-green-500" />
-//                 <span className="text-slate-400 ml-2 text-xs sm:text-sm">terminal@shakilit.au — transformation.sh</span>
+//                 <span className="text-slate-400 ml-2 text-xs sm:text-sm">terminal@Synclineit.au � transformation.sh</span>
 //               </div>
 //               <motion.div
 //                 className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-cyan-400/50 to-transparent"
@@ -1211,7 +1211,7 @@ export default HeroCTASection;
 //             viewport={{ once: true }}
 //             className="text-slate-400 text-base sm:text-lg"
 //           >
-//             ⭐ Trusted by 150+ Victorian & Tasmanian businesses
+//             ? Trusted by 150+ Victorian & Tasmanian businesses
 //           </motion.p>
 //         </div>
 //       </div>
@@ -1358,13 +1358,13 @@ export default HeroCTASection;
 //     return `M ${startNode.x} ${startNode.y} Q ${cp.x} ${cp.y} ${endNode.x} ${endNode.y}`;
 //   };
 
-//   // FIXED: Helper to get points along a quadratic Bézier curve
+//   // FIXED: Helper to get points along a quadratic B�zier curve
 //   const getPointOnCurve = (t, connection) => {
 //     const startNode = networkNodes[connection.from];
 //     const endNode = networkNodes[connection.to];
 //     const cp = connection.cp;
     
-//     // Quadratic Bézier formula: B(t) = (1-t)²P₀ + 2(1-t)tP₁ + t²P₂
+//     // Quadratic B�zier formula: B(t) = (1-t)�P0 + 2(1-t)tP1 + t�P2
 //     const x = Math.pow(1 - t, 2) * startNode.x + 2 * (1 - t) * t * cp.x + Math.pow(t, 2) * endNode.x;
 //     const y = Math.pow(1 - t, 2) * startNode.y + 2 * (1 - t) * t * cp.y + Math.pow(t, 2) * endNode.y;
     
@@ -1405,7 +1405,7 @@ export default HeroCTASection;
 //                 animate={{ opacity: 1, y: 0 }}
 //                 className="inline-block px-4 py-1.5 bg-white/10 rounded-full text-white text-xs sm:text-sm font-semibold backdrop-blur-sm border border-white/20"
 //               >
-//                 🇦🇺 Free IT Health Check & Roadmap
+//                 ???? Free IT Health Check & Roadmap
 //               </motion.div>
 
 //               {/* Heading */}
@@ -1443,7 +1443,7 @@ export default HeroCTASection;
 //                 transition={{ delay: 0.5 }}
 //                 className="text-sm sm:text-base text-slate-300 leading-relaxed max-w-xl"
 //               >
-//                 Proactive, local support for your cloud, M365, networks, hardware, software, systems and backups — keeping your business productive.
+//                 Proactive, local support for your cloud, M365, networks, hardware, software, systems and backups � keeping your business productive.
 //               </motion.p>
 
 //               {/* Animated benefits list */}
@@ -1806,7 +1806,7 @@ export default HeroCTASection;
 //                 <div className="w-3 h-3 rounded-full bg-red-500" />
 //                 <div className="w-3 h-3 rounded-full bg-yellow-500" />
 //                 <div className="w-3 h-3 rounded-full bg-green-500" />
-//                 <span className="text-slate-400 ml-2 text-xs sm:text-sm">terminal@shakilit.au — transformation.sh</span>
+//                 <span className="text-slate-400 ml-2 text-xs sm:text-sm">terminal@Synclineit.au � transformation.sh</span>
 //               </div>
 //               <motion.div
 //                 className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-cyan-400/50 to-transparent"
@@ -1909,7 +1909,7 @@ export default HeroCTASection;
 //             viewport={{ once: true }}
 //             className="text-slate-400 text-base sm:text-lg"
 //           >
-//             ⭐ Trusted by 150+ Victorian & Tasmanian businesses
+//             ? Trusted by 150+ Victorian & Tasmanian businesses
 //           </motion.p>
 //         </div>
 //       </div>
@@ -1923,12 +1923,12 @@ export default HeroCTASection;
 
 
 
-// // src/components/hero/HeroCTASection.jsx - FINAL PRODUCTION-READY ENTERPRISE-GRADE HERO
+// // src/components/hero/HeroCTASection.jsx - FINAL PRODUCTION-READY professional-grade HERO
 // // Fully complete, visually stunning, performant, and aligned with your exact services:
 // // Proactive IT support for M365, Cloud, Network, Hardware, Software, Systems & Backup
 // // Features:
 // // - Premium staggered heading + underline sweep
-// // - Animated benefits list (SMB challenges → solutions)
+// // - Animated benefits list (SMB challenges ? solutions)
 // // - Wave-reveal icon grid with pulse glow + tooltips
 // // - Fully interconnected, glowing, flowing network diagram with prominent backbone
 // // - All sections complete, no missing imports, no errors
@@ -2067,7 +2067,7 @@ export default HeroCTASection;
 //                 animate={{ opacity: 1, y: 0 }}
 //                 className="inline-block px-4 py-1.5 bg-white/10 rounded-full text-white text-xs sm:text-sm font-semibold backdrop-blur-sm border border-white/20"
 //               >
-//                 🇦🇺 Free IT Health Check & Roadmap
+//                 ???? Free IT Health Check & Roadmap
 //               </motion.div>
 
 //               {/* Heading */}
@@ -2105,7 +2105,7 @@ export default HeroCTASection;
 //                 transition={{ delay: 0.5 }}
 //                 className="text-sm sm:text-base text-slate-300 leading-relaxed max-w-xl"
 //               >
-//                 Proactive, local support for your cloud, M365, networks, hardware, software, systems and backups — keeping your business productive.
+//                 Proactive, local support for your cloud, M365, networks, hardware, software, systems and backups � keeping your business productive.
 //               </motion.p>
 
 //               {/* Animated benefits list */}
@@ -2387,7 +2387,7 @@ export default HeroCTASection;
 //                 <div className="w-3 h-3 rounded-full bg-red-500" />
 //                 <div className="w-3 h-3 rounded-full bg-yellow-500" />
 //                 <div className="w-3 h-3 rounded-full bg-green-500" />
-//                 <span className="text-slate-400 ml-2 text-xs sm:text-sm">terminal@shakilit.au — transformation.sh</span>
+//                 <span className="text-slate-400 ml-2 text-xs sm:text-sm">terminal@Synclineit.au � transformation.sh</span>
 //               </div>
 //               <motion.div
 //                 className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-cyan-400/50 to-transparent"
@@ -2490,7 +2490,7 @@ export default HeroCTASection;
 //             viewport={{ once: true }}
 //             className="text-slate-400 text-base sm:text-lg"
 //           >
-//             ⭐ Trusted by 150+ Victorian & Tasmanian businesses
+//             ? Trusted by 150+ Victorian & Tasmanian businesses
 //           </motion.p>
 //         </div>
 //       </div>
@@ -2572,11 +2572,11 @@ export default HeroCTASection;
 
 //   // Network paths - FIXED coordinates
 //   const networkPaths = [
-//     { x1: 100, y1: 150, x2: 250, y2: 100, color: '#06b6d4' },  // Edge → Firewall
-//     { x1: 250, y1: 100, x2: 400, y2: 150, color: '#3b82f6' },  // Firewall → Monitor
-//     { x1: 400, y1: 150, x2: 600, y2: 100, color: '#8b5cf6' },  // Monitor → Database
-//     { x1: 600, y1: 100, x2: 750, y2: 150, color: '#10b981' },  // Database → Cloud
-//     { x1: 750, y1: 150, x2: 900, y2: 150, color: '#f59e0b' }   // Cloud → AI
+//     { x1: 100, y1: 150, x2: 250, y2: 100, color: '#06b6d4' },  // Edge ? Firewall
+//     { x1: 250, y1: 100, x2: 400, y2: 150, color: '#3b82f6' },  // Firewall ? Monitor
+//     { x1: 400, y1: 150, x2: 600, y2: 100, color: '#8b5cf6' },  // Monitor ? Database
+//     { x1: 600, y1: 100, x2: 750, y2: 150, color: '#10b981' },  // Database ? Cloud
+//     { x1: 750, y1: 150, x2: 900, y2: 150, color: '#f59e0b' }   // Cloud ? AI
 //   ];
 
 //   const networkNodes = [
@@ -2618,7 +2618,7 @@ export default HeroCTASection;
 //                 animate={{ opacity: 1, y: 0 }}
 //                 className="inline-block px-4 py-1.5 bg-white/10 rounded-full text-white text-xs sm:text-sm font-semibold backdrop-blur-sm border border-white/20"
 //               >
-//                 🇦🇺 Free IT Transformation Assessment
+//                 ???? Free IT Transformation Assessment
 //               </motion.div>
 
 //               <motion.h1 
@@ -2639,7 +2639,7 @@ export default HeroCTASection;
 //                 transition={{ delay: 0.2 }}
 //                 className="text-sm sm:text-base text-slate-300 leading-relaxed max-w-xl"
 //               >
-//                 Eliminate downtime, defeat cyber threats, unlock growth — with transparent pricing and proven results.
+//                 Eliminate downtime, defeat cyber threats, unlock growth � with transparent pricing and proven results.
 //               </motion.p>
 
 //               {/* CTAs */}
@@ -2916,7 +2916,7 @@ export default HeroCTASection;
 //                 <div className="w-3 h-3 rounded-full bg-red-500" />
 //                 <div className="w-3 h-3 rounded-full bg-yellow-500" />
 //                 <div className="w-3 h-3 rounded-full bg-green-500" />
-//                 <span className="text-slate-400 ml-2 text-xs sm:text-sm">terminal@shakilit.au — transformation.sh</span>
+//                 <span className="text-slate-400 ml-2 text-xs sm:text-sm">terminal@Synclineit.au � transformation.sh</span>
 //               </div>
 
 //               <motion.div 
@@ -3027,7 +3027,7 @@ export default HeroCTASection;
 //             viewport={{ once: true }}
 //             className="text-slate-400 text-base sm:text-lg"
 //           >
-//             ⭐ Trusted by 150+ Victorian & Tasmanian businesses
+//             ? Trusted by 150+ Victorian & Tasmanian businesses
 //           </motion.p>
 //         </div>
 //       </div>
@@ -3134,7 +3134,7 @@ export default HeroCTASection;
 //               animate={{ opacity: 1, y: 0 }}
 //               className="inline-block px-4 py-1.5 bg-white/10 rounded-full text-white text-xs sm:text-sm font-medium backdrop-blur-sm border border-white/20"
 //             >
-//               🇦🇺 Free IT Transformation Assessment
+//               ???? Free IT Transformation Assessment
 //             </motion.div>
 
 //             {/* Headline - Reduced spacing */}
@@ -3147,7 +3147,7 @@ export default HeroCTASection;
 
 //             {/* Subheadline - More compact */}
 //             <p className="text-sm sm:text-base lg:text-lg text-slate-300 leading-relaxed">
-//               Eliminate downtime, defeat cyber threats, unlock growth — with transparent pricing and proven results.
+//               Eliminate downtime, defeat cyber threats, unlock growth � with transparent pricing and proven results.
 //             </p>
 
 //             {/* CTAs - Prominent */}
@@ -3432,7 +3432,7 @@ export default HeroCTASection;
 //               <div className="w-3 h-3 rounded-full bg-red-500" />
 //               <div className="w-3 h-3 rounded-full bg-yellow-500" />
 //               <div className="w-3 h-3 rounded-full bg-green-500" />
-//               <span className="text-slate-400 ml-2 text-xs sm:text-sm">terminal@shakilit.au — transformation.sh</span>
+//               <span className="text-slate-400 ml-2 text-xs sm:text-sm">terminal@Synclineit.au � transformation.sh</span>
 //             </div>
 
 //             <motion.div 
@@ -3504,7 +3504,7 @@ export default HeroCTASection;
 //             viewport={{ once: true }}
 //             className="text-slate-400 text-sm sm:text-base lg:text-lg mb-6"
 //           >
-//             ⭐ Trusted by 150+ Victorian & Tasmanian businesses
+//             ? Trusted by 150+ Victorian & Tasmanian businesses
 //           </motion.p>
           
 //           <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
@@ -3645,7 +3645,7 @@ export default HeroCTASection;
 //           viewport={{ once: true }}
 //           className="inline-block px-4 sm:px-6 py-2 sm:py-3 bg-white/10 rounded-full text-white text-sm sm:text-base font-medium mb-6 sm:mb-8 backdrop-blur-sm border border-white/20"
 //         >
-//           🇦🇺 Limited-Time Free IT Transformation Assessment
+//           ???? Limited-Time Free IT Transformation Assessment
 //         </motion.div>
 
 //         {/* Headline */}
@@ -3671,7 +3671,7 @@ export default HeroCTASection;
 //           transition={{ delay: 0.3 }}
 //           className="text-base sm:text-lg lg:text-xl text-slate-300 max-w-3xl mx-auto mb-8 sm:mb-12"
 //         >
-//           Australian SMBs trust us to eliminate downtime, defeat cyber threats, and unlock growth — 
+//           Australian SMBs trust us to eliminate downtime, defeat cyber threats, and unlock growth � 
 //           with transparent pricing and proven results.
 //         </motion.p>
 
@@ -3925,7 +3925,7 @@ export default HeroCTASection;
 //               <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-red-500" />
 //               <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-yellow-500" />
 //               <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-green-500" />
-//               <span className="text-slate-400 ml-2 text-xs sm:text-sm">terminal@shakilit.au — transformation.sh</span>
+//               <span className="text-slate-400 ml-2 text-xs sm:text-sm">terminal@Synclineit.au � transformation.sh</span>
 //             </div>
 
 //             <motion.div 
@@ -3991,7 +3991,7 @@ export default HeroCTASection;
 //           {[
 //             { Icon: CheckCircle, text: 'Free in-depth security & performance assessment', color: 'green' },
 //             { Icon: Clock, text: 'Clear report within 48 hours', color: 'blue' },
-//             { Icon: Zap, text: 'No obligation — just actionable insights', color: 'cyan' }
+//             { Icon: Zap, text: 'No obligation � just actionable insights', color: 'cyan' }
 //           ].map((benefit, i) => (
 //             <motion.div
 //               key={i}
@@ -4044,7 +4044,7 @@ export default HeroCTASection;
 //           viewport={{ once: true }}
 //           className="mt-8 sm:mt-12 text-slate-400 text-sm sm:text-base lg:text-lg"
 //         >
-//           ⭐ Trusted by 150+ Victorian & Tasmanian businesses
+//           ? Trusted by 150+ Victorian & Tasmanian businesses
 //         </motion.p>
 //       </div>
 //     </section>
@@ -4157,7 +4157,7 @@ export default HeroCTASection;
 //           viewport={{ once: true }}
 //           className="inline-block px-6 py-3 bg-white/10 rounded-full text-white font-medium mb-8 backdrop-blur-sm border border-white/20"
 //         >
-//           🇦🇺 Limited-Time Free IT Transformation Assessment
+//           ???? Limited-Time Free IT Transformation Assessment
 //         </motion.div>
 
 //         {/* Headline */}
@@ -4186,7 +4186,7 @@ export default HeroCTASection;
 //           transition={{ delay: 0.3 }}
 //           className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto mb-12"
 //         >
-//           Australian SMBs trust us to eliminate downtime, defeat cyber threats, and unlock growth — 
+//           Australian SMBs trust us to eliminate downtime, defeat cyber threats, and unlock growth � 
 //           with transparent pricing and proven results.
 //         </motion.p>
 
@@ -4429,7 +4429,7 @@ export default HeroCTASection;
 //               <div className="w-3 h-3 rounded-full bg-red-500" />
 //               <div className="w-3 h-3 rounded-full bg-yellow-500" />
 //               <div className="w-3 h-3 rounded-full bg-green-500" />
-//               <span className="text-slate-400 ml-2 text-xs sm:text-sm">terminal@shakilit.au — transformation.sh</span>
+//               <span className="text-slate-400 ml-2 text-xs sm:text-sm">terminal@Synclineit.au � transformation.sh</span>
 //             </div>
 
 //             {/* Scanline effect */}
@@ -4507,7 +4507,7 @@ export default HeroCTASection;
 //           {[
 //             { Icon: CheckCircle, text: 'Free in-depth security & performance assessment', color: 'green' },
 //             { Icon: Clock, text: 'Clear report within 48 hours', color: 'blue' },
-//             { Icon: Zap, text: 'No obligation — just actionable insights', color: 'cyan' }
+//             { Icon: Zap, text: 'No obligation � just actionable insights', color: 'cyan' }
 //           ].map((benefit, i) => (
 //             <motion.div
 //               key={i}
@@ -4560,7 +4560,7 @@ export default HeroCTASection;
 //           viewport={{ once: true }}
 //           className="mt-12 text-slate-400 text-base sm:text-lg"
 //         >
-//           ⭐ Trusted by 150+ Victorian & Tasmanian businesses
+//           ? Trusted by 150+ Victorian & Tasmanian businesses
 //         </motion.p>
 //       </div>
 //     </section>
@@ -4568,3 +4568,4 @@ export default HeroCTASection;
 // };
 
 // export default HeroCTASection;
+

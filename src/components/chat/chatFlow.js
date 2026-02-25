@@ -19,7 +19,7 @@ export const chatFlow = {
       contact: ["contact", "email", "phone", "call"],
       emergency: ["emergency", "urgent", "down", "critical"],
       response: ["response", "sla", "time", "speed"],
-      about: ["about", "shakil it", "dedicated partner", "enterprise-grade", "infrastructure architect"],
+      about: ["about", "Syncline it", "dedicated partner", "professional-grade", "infrastructure architect"],
       service_area: ["area", "locations", "vic", "victoria", "coverage", "map", "local it support"],
       custom_it: ["custom", "custom solutions", "bespoke", "tailored", "specialized"]
     };
@@ -65,3 +65,4 @@ export const chatFlow = {
 //     return key ? knowledgeBase[key] : chatFlow.fallback;
 //   },
 // };
+

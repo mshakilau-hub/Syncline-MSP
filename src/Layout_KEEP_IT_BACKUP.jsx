@@ -49,7 +49,7 @@ export default function Layout() {
 // // src/components/Layout.jsx
 // import React from 'react';
 // import { Outlet } from 'react-router-dom';
-// //C:\Projects\Web\shakil-it-solutions_BACKUP_WORKINGON\src\components\navbar\Navbar.jsx
+// //C:\Projects\Web\Syncline-it-solutions_BACKUP_WORKINGON\src\components\navbar\Navbar.jsx
 
 // import Navbar from './components/navbar/Navbar';
 // import Footer from './components/footer/Footer';
@@ -196,3 +196,4 @@ export default function Layout() {
 //     </div>
 //   );  
 // }
+

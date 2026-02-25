@@ -1,4 +1,4 @@
-﻿// src/components/contact/ContactSection.jsx
+// src/components/contact/ContactSection.jsx
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -46,7 +46,7 @@ const ContactSection = () => {
 
   const contactInfo = [
     { icon: Phone, title: 'Phone', content: '1300 XXX XXX', detail: 'Mon-Fri, 8am-6pm AEST' },
-    { icon: Mail, title: 'Email', content: 'info@syncline.com.au', detail: '24hr response guarantee' },
+    { icon: Mail, title: 'Email', content: 'info@syncline.com.au', detail: 'fast response times' },
     { icon: MapPin, title: 'Service Area', content: 'Victoria, Australia', detail: 'Melbourne & Regional VIC' },
     { icon: Clock, title: 'Emergency', content: '24/7 Available', detail: 'For managed clients' }
   ];
@@ -69,7 +69,7 @@ const ContactSection = () => {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
-        {/* Header – fluid responsive sizing */}
+        {/* Header � fluid responsive sizing */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -345,7 +345,7 @@ export default ContactSection;
 
 //   const contactInfo = [
 //     { icon: Phone, title: 'Phone', content: '1300 XXX XXX', detail: 'Mon-Fri, 8am-6pm AEST' },
-//     { icon: Mail, title: 'Email', content: 'info@shakilit.com.au', detail: '24hr response guarantee' },
+//     { icon: Mail, title: 'Email', content: 'info@syncline.com.au', detail: 'fast response times' },
 //     { icon: MapPin, title: 'Service Area', content: 'Victoria, Australia', detail: 'Melbourne & Regional VIC' },
 //     { icon: Clock, title: 'Emergency', content: '24/7 Available', detail: 'For managed clients' }
 //   ];
@@ -645,7 +645,7 @@ export default ContactSection;
 
 //   const contactInfo = [
 //     { icon: Phone, title: 'Phone', content: '1300 XXX XXX', detail: 'Mon-Fri, 8am-6pm AEST' },
-//     { icon: Mail, title: 'Email', content: 'info@shakilit.com.au', detail: '24hr response guarantee' },
+//     { icon: Mail, title: 'Email', content: 'info@syncline.com.au', detail: 'fast response times' },
 //     { icon: MapPin, title: 'Service Area', content: 'Victoria, Australia', detail: 'Melbourne & Regional VIC' },
 //     { icon: Clock, title: 'Emergency', content: '24/7 Available', detail: 'For managed clients' }
 //   ];

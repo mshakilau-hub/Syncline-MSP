@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Shield, Zap, Cloud, Database, CheckCircle, ArrowRight,
@@ -12,7 +12,7 @@ const HeroSection = () => {
 
   const problems = [
     { problem: 'Constant IT Fires?', solution: '24/7 Proactive Monitoring', icon: AlertTriangle, color: 'from-red-500 to-orange-500' },
-    { problem: 'Security Concerns?', solution: 'Enterprise-Grade Protection', icon: Shield, color: 'from-blue-500 to-cyan-500' },
+    { problem: 'Security Concerns?', solution: 'professional-grade Protection', icon: Shield, color: 'from-blue-500 to-cyan-500' },
     { problem: 'Slow Systems?', solution: 'Optimized Performance', icon: Zap, color: 'from-yellow-500 to-amber-500' },
     { problem: 'Data Loss Risk?', solution: 'Automated Backups', icon: Database, color: 'from-green-500 to-emerald-500' }
   ];
@@ -58,7 +58,7 @@ const HeroSection = () => {
               transition={{ delay: 0.2 }}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 mb-8"
             >
-              <span className="text-2xl">🇦🇺</span>
+              <span className="text-2xl">????</span>
               <span className="text-blue-400 font-medium">Victorian SMB Specialists</span>
             </motion.div>
 
@@ -73,7 +73,7 @@ const HeroSection = () => {
 
             {/* Subheadline */}
             <p className="text-base sm:text-lg md:text-xl text-slate-300 max-w-xl mb-6 sm:mb-8 leading-relaxed">
-              Enterprise-grade IT support, security, and automation designed specifically for Victorian small and medium businesses.
+              professional-grade IT support, security, and automation designed specifically for Victorian small and medium businesses.
             </p>
 
             {/* CTAs */}
@@ -266,7 +266,7 @@ export default HeroSection;
 // // Memoized static badge
 // const Badge = memo(() => (
 //   <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-md mx-auto lg:mx-0 text-xs sm:text-sm md:text-base">
-//     <span className="text-xl">🇦🇺</span>
+//     <span className="text-xl">????</span>
 //     <span className="text-blue-400 font-semibold tracking-wide">
 //       Victorian SMB IT Specialists
 //     </span>
@@ -370,7 +370,7 @@ export default HeroSection;
 
 //             {/* Description - static paragraph */}
 //             <p className="max-w-xl lg:max-w-xl text-base sm:text-lg md:text-xl leading-relaxed text-slate-300/90">
-//               Enterprise-grade IT support, cybersecurity, cloud services and automation —
+//               professional-grade IT support, cybersecurity, cloud services and automation �
 //               purpose-built for Victorian small and medium businesses.
 //             </p>
 
@@ -494,7 +494,7 @@ export default HeroSection;
 // import React, { useState, useEffect } from 'react';
 // import { motion, AnimatePresence } from 'framer-motion';
 
-// // Individual Lucide imports (tree-shake friendly + alias) – keep as you have
+// // Individual Lucide imports (tree-shake friendly + alias) � keep as you have
 // import Shield from '@lucide/shield';
 // import Zap from '@lucide/zap';
 // import Database from '@lucide/database';
@@ -584,7 +584,7 @@ export default HeroSection;
 //               transition={{ duration: 0.6 }}
 //               className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-md mx-auto lg:mx-0 text-xs sm:text-sm md:text-base"
 //             >
-//               <span className="text-xl">🇦🇺</span>
+//               <span className="text-xl">????</span>
 //               <span className="text-blue-400 font-semibold tracking-wide">
 //                 Victorian SMB IT Specialists
 //               </span>
@@ -622,7 +622,7 @@ export default HeroSection;
 //               transition={{ delay: 0.3, duration: 0.8 }}
 //               className="max-w-xl mx-auto lg:mx-0 text-base sm:text-lg md:text-xl leading-relaxed text-slate-300/90"
 //             >
-//               Enterprise-grade IT support, cybersecurity, cloud services and automation —
+//               professional-grade IT support, cybersecurity, cloud services and automation �
 //               purpose-built for Victorian small and medium businesses.
 //             </motion.p>
 
@@ -817,7 +817,7 @@ export default HeroSection;
 //               transition={{ duration: 0.6 }}
 //               className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-md mx-auto lg:mx-0"
 //             >
-//               <span className="text-xl">🇦🇺</span>
+//               <span className="text-xl">????</span>
 //               <span className="text-blue-400 text-sm font-semibold tracking-wide">
 //                 Victorian SMB IT Specialists
 //               </span>
@@ -852,7 +852,7 @@ export default HeroSection;
 //               transition={{ duration: 0.8, delay: 0.3 }}
 //               className="max-w-xl text-base sm:text-lg lg:text-xl text-slate-300/90 leading-relaxed mx-auto lg:mx-0"
 //             >
-//               Enterprise-grade IT support, cybersecurity, cloud services and automation —  
+//               professional-grade IT support, cybersecurity, cloud services and automation �  
 //               purpose-built for Victorian small and medium businesses.
 //             </motion.p>
 
@@ -1020,7 +1020,7 @@ export default HeroSection;
 
 //   const problems = [
 //     { problem: 'Constant IT Fires?', solution: '24/7 Proactive Monitoring', icon: AlertTriangle },
-//     { problem: 'Security Concerns?', solution: 'Enterprise-Grade Protection', icon: Shield },
+//     { problem: 'Security Concerns?', solution: 'professional-grade Protection', icon: Shield },
 //     { problem: 'Slow Systems?', solution: 'Performance Optimisation', icon: Zap },
 //     { problem: 'Data Loss Risk?', solution: 'Automated Backups', icon: Database }
 //   ];
@@ -1071,7 +1071,7 @@ export default HeroSection;
 //               transition={{ duration: 0.5 }}
 //               className="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-sm"
 //             >
-//               <span className="text-lg sm:text-xl">🇦🇺</span>
+//               <span className="text-lg sm:text-xl">????</span>
 //               <span className="text-blue-400 text-xs sm:text-sm font-medium">
 //                 Victorian SMB Specialists
 //               </span>
@@ -1097,7 +1097,7 @@ export default HeroSection;
 //               transition={{ duration: 0.5, delay: 0.2 }}
 //               className="max-w-2xl text-slate-300 text-base sm:text-lg lg:text-xl leading-relaxed mx-auto lg:mx-0"
 //             >
-//               Enterprise-grade IT support, security, and automation designed
+//               professional-grade IT support, security, and automation designed
 //               specifically for Victorian small and medium businesses.
 //             </motion.p>
 
@@ -1304,7 +1304,7 @@ export default HeroSection;
 
 //   const problems = [
 //     { problem: 'Constant IT Fires?', solution: '24/7 Proactive Monitoring', icon: AlertTriangle },
-//     { problem: 'Security Concerns?', solution: 'Enterprise-Grade Protection', icon: Shield },
+//     { problem: 'Security Concerns?', solution: 'professional-grade Protection', icon: Shield },
 //     { problem: 'Slow Systems?', solution: 'Performance Optimisation', icon: Zap },
 //     { problem: 'Data Loss Risk?', solution: 'Automated Backups', icon: Database }
 //   ];
@@ -1350,7 +1350,7 @@ export default HeroSection;
 
 //             {/* Badge */}
 //             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20">
-//               <span className="text-xl">🇦🇺</span>
+//               <span className="text-xl">????</span>
 //               <span className="text-blue-400 text-sm font-medium">
 //                 Victorian SMB Specialists
 //               </span>
@@ -1366,7 +1366,7 @@ export default HeroSection;
 
 //             {/* Subheadline */}
 //             <p className="max-w-2xl text-slate-200 text-[clamp(1.1rem,2.2vw,1.35rem)] leading-relaxed mx-auto lg:mx-0">
-//               Enterprise-grade IT support, security, and automation designed
+//               professional-grade IT support, security, and automation designed
 //               specifically for Victorian small and medium businesses.
 //             </p>
 
@@ -1511,7 +1511,7 @@ export default HeroSection;
 
 //   const problems = [
 //     { problem: 'Constant IT Fires?', solution: '24/7 Proactive Monitoring', icon: AlertTriangle, color: 'from-red-500 to-orange-500' },
-//     { problem: 'Security Concerns?', solution: 'Enterprise-Grade Protection', icon: Shield, color: 'from-blue-500 to-cyan-500' },
+//     { problem: 'Security Concerns?', solution: 'professional-grade Protection', icon: Shield, color: 'from-blue-500 to-cyan-500' },
 //     { problem: 'Slow Systems?', solution: 'Optimized Performance', icon: Zap, color: 'from-yellow-500 to-amber-500' },
 //     { problem: 'Data Loss Risk?', solution: 'Automated Backups', icon: Database, color: 'from-green-500 to-emerald-500' }
 //   ];
@@ -1544,15 +1544,15 @@ export default HeroSection;
       
 //       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
 //         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-//           {/* Left Content – Better spacing & font scaling */}
+//           {/* Left Content � Better spacing & font scaling */}
 //           <div className="text-center lg:text-left space-y-8 lg:space-y-10">
 //             {/* Badge */}
 //             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20">
-//               <span className="text-2xl">🇦🇺</span>
+//               <span className="text-2xl">????</span>
 //               <span className="text-blue-400 font-medium text-sm sm:text-base">Victorian SMB Specialists</span>
 //             </div>
 
-//             {/* Headline – Fluid, bold, fills space */}
+//             {/* Headline � Fluid, bold, fills space */}
 //             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-[1.05] tracking-tight">
 //               Stop Fighting IT.<br className="sm:hidden" />
 //               <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -1560,12 +1560,12 @@ export default HeroSection;
 //               </span>
 //             </h1>
 
-//             {/* Subheadline – Larger, better line height */}
+//             {/* Subheadline � Larger, better line height */}
 //             <p className="text-lg sm:text-xl lg:text-2xl text-slate-200 max-w-3xl mx-auto lg:mx-0 leading-relaxed">
-//               Enterprise-grade IT support, security, and automation designed specifically for Victorian small and medium businesses.
+//               professional-grade IT support, security, and automation designed specifically for Victorian small and medium businesses.
 //             </p>
 
-//             {/* CTAs – Bigger, more prominent */}
+//             {/* CTAs � Bigger, more prominent */}
 //             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center lg:justify-start">
 //               <a
 //                 href="#contact"
@@ -1583,7 +1583,7 @@ export default HeroSection;
 //               </a>
 //             </div>
 
-//             {/* Trust Badges – Larger, better spacing */}
+//             {/* Trust Badges � Larger, better spacing */}
 //             <div className="flex flex-wrap justify-center lg:justify-start gap-4 sm:gap-6">
 //               {trustBadges.map((badge, i) => (
 //                 <div
@@ -1597,7 +1597,7 @@ export default HeroSection;
 //             </div>
 //           </div>
 
-//           {/* Right Content – Stats & Problem Card – Better balance */}
+//           {/* Right Content � Stats & Problem Card � Better balance */}
 //           <div className="relative mt-12 lg:mt-0 space-y-8">
 //             {/* Problem-Solution Card */}
 //             <GlassCard className="p-6 sm:p-8" gradient>
@@ -1655,7 +1655,7 @@ export default HeroSection;
 //               </div>
 //             </GlassCard>
 
-//             {/* Stats Grid – Larger, better spacing */}
+//             {/* Stats Grid � Larger, better spacing */}
 //             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
 //               {stats.map((stat, i) => (
 //                 <GlassCard key={i} className="p-5 sm:p-6 text-center group shadow-lg">
@@ -1720,7 +1720,7 @@ export default HeroSection;
 
 //   const problems = [
 //     { problem: 'Constant IT Fires?', solution: '24/7 Proactive Monitoring', icon: AlertTriangle, color: 'from-red-500 to-orange-500' },
-//     { problem: 'Security Concerns?', solution: 'Enterprise-Grade Protection', icon: Shield, color: 'from-blue-500 to-cyan-500' },
+//     { problem: 'Security Concerns?', solution: 'professional-grade Protection', icon: Shield, color: 'from-blue-500 to-cyan-500' },
 //     { problem: 'Slow Systems?', solution: 'Optimized Performance', icon: Zap, color: 'from-yellow-500 to-amber-500' },
 //     { problem: 'Data Loss Risk?', solution: 'Automated Backups', icon: Database, color: 'from-green-500 to-emerald-500' }
 //   ];
@@ -1772,7 +1772,7 @@ export default HeroSection;
 //               transition={{ delay: 0.2, duration: shouldReduceMotion ? 0 : 0.6 }}
 //               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 mb-6 sm:mb-8 mx-auto lg:mx-0"
 //             >
-//               <span className="text-2xl">🇦🇺</span>
+//               <span className="text-2xl">????</span>
 //               <span className="text-blue-400 font-medium text-sm sm:text-base">Victorian SMB Specialists</span>
 //             </motion.div>
 
@@ -1787,7 +1787,7 @@ export default HeroSection;
 
 //             {/* Subheadline */}
 //             <p className="text-lg sm:text-xl lg:text-2xl text-slate-300 max-w-xl mx-auto lg:mx-0 mb-8 lg:mb-10 leading-relaxed">
-//               Enterprise-grade IT support, security, and automation designed specifically for Victorian small and medium businesses.
+//               professional-grade IT support, security, and automation designed specifically for Victorian small and medium businesses.
 //             </p>
 
 //             {/* CTAs - Stacked on mobile, row on desktop */}
@@ -1968,7 +1968,7 @@ export default HeroSection;
 
 //   const problems = [
 //     { problem: 'Constant IT Fires?', solution: '24/7 Proactive Monitoring', icon: AlertTriangle, color: 'from-red-500 to-orange-500' },
-//     { problem: 'Security Concerns?', solution: 'Enterprise-Grade Protection', icon: Shield, color: 'from-blue-500 to-cyan-500' },
+//     { problem: 'Security Concerns?', solution: 'professional-grade Protection', icon: Shield, color: 'from-blue-500 to-cyan-500' },
 //     { problem: 'Slow Systems?', solution: 'Optimized Performance', icon: Zap, color: 'from-yellow-500 to-amber-500' },
 //     { problem: 'Data Loss Risk?', solution: 'Automated Backups', icon: Database, color: 'from-green-500 to-emerald-500' }
 //   ];
@@ -2014,7 +2014,7 @@ export default HeroSection;
 //               transition={{ delay: 0.2 }}
 //               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 mb-8"
 //             >
-//               <span className="text-2xl">🇦🇺</span>
+//               <span className="text-2xl">????</span>
 //               <span className="text-blue-400 font-medium">Victorian SMB Specialists</span>
 //             </motion.div>
 
@@ -2029,7 +2029,7 @@ export default HeroSection;
 
 //             {/* Subheadline */}
 //             <p className="text-lg sm:text-xl text-slate-300 max-w-xl mb-8 leading-relaxed">
-//               Enterprise-grade IT support, security, and automation designed specifically for Victorian small and medium businesses.
+//               professional-grade IT support, security, and automation designed specifically for Victorian small and medium businesses.
 //             </p>
 
 //             {/* CTAs */}
@@ -2207,7 +2207,7 @@ export default HeroSection;
 
 //   const problems = [
 //     { problem: 'Constant IT Fires?', solution: '24/7 Proactive Monitoring', icon: AlertTriangle, color: 'from-red-500 to-orange-500' },
-//     { problem: 'Security Concerns?', solution: 'Enterprise-Grade Protection', icon: Shield, color: 'from-blue-500 to-cyan-500' },
+//     { problem: 'Security Concerns?', solution: 'professional-grade Protection', icon: Shield, color: 'from-blue-500 to-cyan-500' },
 //     { problem: 'Slow Systems?', solution: 'Optimized Performance', icon: Zap, color: 'from-yellow-500 to-amber-500' },
 //     { problem: 'Data Loss Risk?', solution: 'Automated Backups', icon: Database, color: 'from-green-500 to-emerald-500' }
 //   ];
@@ -2253,7 +2253,7 @@ export default HeroSection;
 //               transition={{ delay: 0.2 }}
 //               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 mb-8"
 //             >
-//               <span className="text-2xl">🇦🇺</span>
+//               <span className="text-2xl">????</span>
 //               <span className="text-blue-400 font-medium">Victorian SMB Specialists</span>
 //             </motion.div>
 
@@ -2268,7 +2268,7 @@ export default HeroSection;
 
 //             {/* Subheadline */}
 //             <p className="text-lg sm:text-xl text-slate-300 max-w-xl mb-8 leading-relaxed">
-//               Enterprise-grade IT support, security, and automation designed specifically for Victorian small and medium businesses.
+//               professional-grade IT support, security, and automation designed specifically for Victorian small and medium businesses.
 //             </p>
 
 //             {/* CTAs */}

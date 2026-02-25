@@ -146,7 +146,7 @@ export default function Home() {
 
 // const CaseStudies = lazy(() => import('./CaseStudies'));
 // const ITHealthCheck = lazy(() => import('./ITHealthCheck'));
-// const AboutShakil = lazy(() => import('./AboutShakil'));
+// const AboutSyncline = lazy(() => import('./AboutSyncline'));
 // const CustomerPortal = lazy(() => import('./CustomerPortal'));
 
 
@@ -273,4 +273,5 @@ export default function Home() {
 //     </div>
 //   );
 // }
+
 

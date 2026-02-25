@@ -1,4 +1,4 @@
-Ôªø// src/components/cta/CTASection.jsx
+// src/components/cta/CTASection.jsx
 import React, { useEffect, useRef, useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { gsap } from 'gsap';
@@ -56,7 +56,7 @@ const CTASection = () => {
   // Master GSAP Context
   useEffect(() => {
     const ctx = gsap.context((self) => {
-      // Smooth whole-text fade entrance (no char stagger ‚Äì better for script fonts)
+      // Smooth whole-text fade entrance (no char stagger ñ better for script fonts)
       const rotatingBlocks = self.selector('.rotating-block');
 
       gsap.fromTo(rotatingBlocks,
@@ -78,7 +78,7 @@ const CTASection = () => {
         ease: 'none'
       });
 
-      // Flame ‚Üí Shield Morph (free approximation)
+      // Flame ? Shield Morph (free approximation)
       const broken = self.selector('.morph-broken');
       const solid = self.selector('.morph-solid');
       gsap.to(broken, { opacity: 0, scale: 0.7, rotation: -45, duration: 1.6, ease: 'power2.in' });
@@ -156,7 +156,7 @@ const CTASection = () => {
     return () => ctx.revert();
   }, []);
 
-  // Smooth fade on rotate (no char stagger or glitch ‚Äì clean & elegant for script fonts)
+  // Smooth fade on rotate (no char stagger or glitch ñ clean & elegant for script fonts)
   useEffect(() => {
     gsap.fromTo('.rotating-block',
       { opacity: 0, y: 60 },
@@ -221,10 +221,10 @@ const CTASection = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 text-center">
         {/* Compact proactive badge */}
         <div className="inline-block px-10 py-5 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full text-white font-bold text-xl mb-12 border-2 border-cyan-400/40 backdrop-blur-md">
-          üá¶üá∫ Free Proactive IT Transformation Assessment ‚Äî Limited Time
+          ???? Free Proactive IT Transformation Assessment ó Limited Time
         </div>
 
-        {/* Clean Rotating Headline ‚Äì Whole text fade, no char stagger (perfect for script fonts) */}
+        {/* Clean Rotating Headline ñ Whole text fade, no char stagger (perfect for script fonts) */}
         <h2 ref={headlineRef} className="rotating-headline text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-tight tracking-tight mb-20 bg-gradient-to-r from-cyan-300 via-emerald-300 to-purple-300 bg-clip-text text-transparent bg-size-200">
           <div ref={rotatingRef} className="relative h-32 lg:h-40">
             {rotatingTexts.map((item, i) => (
@@ -291,7 +291,7 @@ const CTASection = () => {
               <div className="w-6 h-6 rounded-full bg-red-500" />
               <div className="w-6 h-6 rounded-full bg-yellow-500" />
               <div className="w-6 h-6 rounded-full bg-green-500" />
-              <span className="text-slate-200 text-xl">shakilit.au ‚Äî proactive-mode.sh</span>
+              <span className="text-slate-200 text-xl">Synclineit.au ó proactive-mode.sh</span>
             </div>
             {[
               '> Initializing zero-trust...',
@@ -332,7 +332,7 @@ const CTASection = () => {
           {[
             'Free Proactive Assessment',
             '48-Hour Detailed Report',
-            'No Obligation ‚Äî Just Results'
+            'No Obligation ó Just Results'
           ].map((text, i) => (
             <div key={i} className="benefit-item p-12 bg-white/10 rounded-3xl border-2 border-white/20 backdrop-blur-xl">
               <CheckCircle className="w-20 h-20 text-emerald-400 mx-auto mb-8" />
@@ -840,7 +840,7 @@ export default CTASection;
 //       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 //         {/* Badge */}
 //         <div className="inline-block px-6 py-3 bg-white/10 rounded-full text-white font-medium mb-8 backdrop-blur-sm border border-white/20">
-//           üá¶üá∫ Limited-Time Free IT Transformation Assessment
+//           ???? Limited-Time Free IT Transformation Assessment
 //         </div>
 
 //         {/* Headline */}
@@ -868,7 +868,7 @@ export default CTASection;
 //         </h2>
 
 //         <p className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto mb-12">
-//           Australian SMBs trust us to eliminate downtime, defeat cyber threats, and unlock growth ‚Äî 
+//           Australian SMBs trust us to eliminate downtime, defeat cyber threats, and unlock growth ó 
 //           with transparent pricing and proven results.
 //         </p>
 
@@ -1102,7 +1102,7 @@ export default CTASection;
 //               <div className="w-3 h-3 rounded-full bg-red-500" />
 //               <div className="w-3 h-3 rounded-full bg-yellow-500" />
 //               <div className="w-3 h-3 rounded-full bg-green-500" />
-//               <span className="text-slate-400 ml-2 text-xs sm:text-sm">terminal@shakilit.au ‚Äî transformation.sh</span>
+//               <span className="text-slate-400 ml-2 text-xs sm:text-sm">terminal@Synclineit.au ó transformation.sh</span>
 //             </div>
 
 //             <div className="terminal-scanline absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-cyan-400/50 to-transparent pointer-events-none" />
@@ -1167,7 +1167,7 @@ export default CTASection;
 //           </div>
 //           <div className="benefit-item flex items-center gap-3 sm:gap-4 text-white text-sm sm:text-base lg:text-lg backdrop-blur-sm bg-white/5 px-4 sm:px-6 py-3 sm:py-4 rounded-xl border border-white/10">
 //             <Zap className="w-6 h-6 sm:w-8 sm:h-8 text-cyan-400 flex-shrink-0" />
-//             <span>No obligation ‚Äî just actionable insights</span>
+//             <span>No obligation ó just actionable insights</span>
 //           </div>
 //         </div>
 
@@ -1195,7 +1195,7 @@ export default CTASection;
 //         </div>
 
 //         <p className="mt-12 text-slate-400 text-base sm:text-lg">
-//           ‚≠ê Trusted by 150+ Victorian & Tasmanian businesses
+//           ? Trusted by 150+ Victorian & Tasmanian businesses
 //         </p>
 //       </div>
 //     </section>
@@ -1314,10 +1314,10 @@ export default CTASection;
 //           {/* Subheadline */}
 //           <p className="text-xl text-white/90 max-w-2xl mx-auto mb-8">
 //             Discover vulnerabilities, inefficiencies, and opportunities in your current IT setup. 
-//             No cost, no obligation ‚Äì just clarity.
+//             No cost, no obligation ñ just clarity.
 //           </p>
 
-//           {/* Rotating text ‚Äì simple fade, no Typed.js */}
+//           {/* Rotating text ñ simple fade, no Typed.js */}
 //           <AnimatePresence mode="wait">
 //             <motion.p
 //               key={currentText}
@@ -1333,7 +1333,7 @@ export default CTASection;
 //             </motion.p>
 //           </AnimatePresence>
 
-//           {/* Metrics ‚Äì CountUp only when in view */}
+//           {/* Metrics ñ CountUp only when in view */}
 //           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
 //             {metrics.map((metric, i) => (
 //               <div key={i} className="p-6 bg-white/5 rounded-2xl border border-white/10">
@@ -1358,7 +1358,7 @@ export default CTASection;
 //             ))}
 //           </div>
 
-//           {/* Lottie ‚Äì zoomed out */}
+//           {/* Lottie ñ zoomed out */}
 //           <div className="
 //             relative w-full aspect-[4/3] max-h-[380px] lg:max-h-[440px] mx-auto
 //             overflow-hidden rounded-2xl border border-white/10 shadow-2xl
@@ -1391,7 +1391,7 @@ export default CTASection;
 //           {/* CTAs */}
 //           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
 
-//             {/* Primary CTA ‚Äì MotionLink */}
+//             {/* Primary CTA ñ MotionLink */}
 //             <MotionLink
 //               to="/contact"
 //               whileHover={{ scale: 1.06, y: -3 }}
@@ -1430,7 +1430,7 @@ export default CTASection;
 //               ></span>
 //             </MotionLink>
 
-//             {/* Secondary CTA ‚Äì Phone */}
+//             {/* Secondary CTA ñ Phone */}
 //             <motion.a
 //               href="tel:1300000000"
 //               whileHover={{ scale: 1.05, y: -2 }}

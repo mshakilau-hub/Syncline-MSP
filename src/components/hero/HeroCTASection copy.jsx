@@ -1,4 +1,4 @@
-ï»¿// // src/components/hero/HeroCTASection.jsx - COMPACT ABOVE-THE-FOLD VERSION
+// // src/components/hero/HeroCTASection.jsx - COMPACT ABOVE-THE-FOLD VERSION
 // import React, { useState, useEffect } from 'react';
 // import { Link as RouterLink } from 'react-router-dom';
 // import { motion, AnimatePresence, useInView } from 'framer-motion';
@@ -66,7 +66,7 @@
 //               animate={{ opacity: 1, y: 0 }}
 //               className="inline-block px-4 py-1.5 bg-white/10 rounded-full text-white text-xs sm:text-sm font-semibold backdrop-blur-sm border border-white/20"
 //             >
-//               ğŸ‡¦ğŸ‡º Free IT Transformation Assessment
+//               ???? Free IT Transformation Assessment
 //             </motion.div>
 
 //             {/* Headline - Compact */}
@@ -90,7 +90,7 @@
 //               transition={{ delay: 0.2 }}
 //               className="text-sm sm:text-base text-slate-300 leading-relaxed max-w-xl"
 //             >
-//               Eliminate downtime, defeat cyber threats, unlock growth â€” with transparent pricing and proven results.
+//               Eliminate downtime, defeat cyber threats, unlock growth — with transparent pricing and proven results.
 //             </motion.p>
 
 //             {/* Rotating Text - Minimal height */}
@@ -380,21 +380,21 @@
 
 //   return (
 //     <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-950 via-blue-950/90 to-cyan-950/80">
-//       {/* Single unified background gradient â€“ no section breaks */}
+//       {/* Single unified background gradient – no section breaks */}
 
 //       {/* Subtle background orbs */}
 //       <motion.div animate={{ x: [0, 120, 0], y: [0, -80, 0] }} transition={{ duration: 30, repeat: Infinity }} className="absolute top-10 left-10 w-96 h-96 bg-blue-600/15 rounded-full blur-3xl opacity-60" />
 //       <motion.div animate={{ x: [0, -100, 0], y: [0, 90, 0] }} transition={{ duration: 35, repeat: Infinity, delay: 2 }} className="absolute bottom-10 right-10 w-80 h-80 bg-cyan-600/15 rounded-full blur-3xl opacity-60" />
 
 //       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-24 lg:py-32 flex flex-col justify-between min-h-screen">
-//         {/* Main Hero Content â€“ Above the fold */}
+//         {/* Main Hero Content – Above the fold */}
 //         <div className="space-y-16 lg:space-y-20">
 //           {/* Badge + Headline + Subheadline + Rotating Text */}
 //           <div className="text-center space-y-8">
 //             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}
 //               className="inline-block px-8 py-4 bg-white/10 rounded-full text-white font-bold text-lg backdrop-blur-md border border-white/20"
 //             >
-//               ğŸ‡¦ğŸ‡º Limited-Time Free IT Transformation Assessment
+//               ???? Limited-Time Free IT Transformation Assessment
 //             </motion.div>
 
 //             <motion.h1 initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9 }}
@@ -409,7 +409,7 @@
 //             <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}
 //               className="text-lg lg:text-xl text-slate-300 max-w-3xl mx-auto font-light italic"
 //             >
-//               Eliminate downtime, defeat cyber threats, unlock growth â€” with transparent pricing and proven results.
+//               Eliminate downtime, defeat cyber threats, unlock growth — with transparent pricing and proven results.
 //             </motion.p>
 
 //             {/* Rotating Texts */}
@@ -465,7 +465,7 @@
 //             </div>
 //           </div>
 
-//           {/* Live Data Flow â€“ Fully visible in default view, no gaps */}
+//           {/* Live Data Flow – Fully visible in default view, no gaps */}
 //           <div ref={networkRef} className="mt-16 lg:mt-20">
 //             <h3 className="text-2xl sm:text-3xl font-black text-white mb-10 text-center font-serif italic drop-shadow-lg">
 //               Live Data Flow & Monitoring Network
@@ -522,7 +522,7 @@
 //           </div>
 //         </div>
 
-//         {/* Final CTA â€“ No gaps, pinned near bottom */}
+//         {/* Final CTA – No gaps, pinned near bottom */}
 //         <div className="mt-16 lg:mt-20 text-center">
 //           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.8 }}
 //             className="space-y-6"
@@ -544,7 +544,7 @@
 //                 Call 1300 XXX XXX
 //               </a>
 //             </div>
-//             <p className="text-slate-400">Limited-time offer â€¢ No obligation â€¢ Results in 48 hours</p>
+//             <p className="text-slate-400">Limited-time offer • No obligation • Results in 48 hours</p>
 //           </motion.div>
 //         </div>
 
@@ -665,7 +665,7 @@ const HeroCTASection = () => {
               animate={{ opacity: 1, y: 0 }}
               className="inline-block px-4 py-1.5 bg-white/10 rounded-full text-white text-xs sm:text-sm font-medium backdrop-blur-sm border border-white/20"
             >
-              ğŸ‡¦ğŸ‡º Free IT Transformation Assessment
+              ???? Free IT Transformation Assessment
             </motion.div>
 
             {/* Headline - Reduced spacing */}
@@ -678,7 +678,7 @@ const HeroCTASection = () => {
 
             {/* Subheadline - More compact */}
             <p className="text-sm sm:text-base lg:text-lg text-slate-300 leading-relaxed">
-              Eliminate downtime, defeat cyber threats, unlock growth â€” with transparent pricing and proven results.
+              Eliminate downtime, defeat cyber threats, unlock growth — with transparent pricing and proven results.
             </p>
 
             {/* CTAs - Prominent */}
@@ -963,7 +963,7 @@ const HeroCTASection = () => {
               <div className="w-3 h-3 rounded-full bg-red-500" />
               <div className="w-3 h-3 rounded-full bg-yellow-500" />
               <div className="w-3 h-3 rounded-full bg-green-500" />
-              <span className="text-slate-400 ml-2 text-xs sm:text-sm">terminal@shakilit.au â€” transformation.sh</span>
+              <span className="text-slate-400 ml-2 text-xs sm:text-sm">terminal@Synclineit.au — transformation.sh</span>
             </div>
 
             <motion.div 
@@ -1035,7 +1035,7 @@ const HeroCTASection = () => {
             viewport={{ once: true }}
             className="text-slate-400 text-sm sm:text-base lg:text-lg mb-6"
           >
-            â­ Trusted by 150+ Victorian & Tasmanian businesses
+            ? Trusted by 150+ Victorian & Tasmanian businesses
           </motion.p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
@@ -1176,7 +1176,7 @@ export default HeroCTASection;
 //           viewport={{ once: true }}
 //           className="inline-block px-4 sm:px-6 py-2 sm:py-3 bg-white/10 rounded-full text-white text-sm sm:text-base font-medium mb-6 sm:mb-8 backdrop-blur-sm border border-white/20"
 //         >
-//           ğŸ‡¦ğŸ‡º Limited-Time Free IT Transformation Assessment
+//           ???? Limited-Time Free IT Transformation Assessment
 //         </motion.div>
 
 //         {/* Headline */}
@@ -1202,7 +1202,7 @@ export default HeroCTASection;
 //           transition={{ delay: 0.3 }}
 //           className="text-base sm:text-lg lg:text-xl text-slate-300 max-w-3xl mx-auto mb-8 sm:mb-12"
 //         >
-//           Australian SMBs trust us to eliminate downtime, defeat cyber threats, and unlock growth â€” 
+//           Australian SMBs trust us to eliminate downtime, defeat cyber threats, and unlock growth — 
 //           with transparent pricing and proven results.
 //         </motion.p>
 
@@ -1456,7 +1456,7 @@ export default HeroCTASection;
 //               <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-red-500" />
 //               <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-yellow-500" />
 //               <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-green-500" />
-//               <span className="text-slate-400 ml-2 text-xs sm:text-sm">terminal@shakilit.au â€” transformation.sh</span>
+//               <span className="text-slate-400 ml-2 text-xs sm:text-sm">terminal@Synclineit.au — transformation.sh</span>
 //             </div>
 
 //             <motion.div 
@@ -1522,7 +1522,7 @@ export default HeroCTASection;
 //           {[
 //             { Icon: CheckCircle, text: 'Free in-depth security & performance assessment', color: 'green' },
 //             { Icon: Clock, text: 'Clear report within 48 hours', color: 'blue' },
-//             { Icon: Zap, text: 'No obligation â€” just actionable insights', color: 'cyan' }
+//             { Icon: Zap, text: 'No obligation — just actionable insights', color: 'cyan' }
 //           ].map((benefit, i) => (
 //             <motion.div
 //               key={i}
@@ -1575,7 +1575,7 @@ export default HeroCTASection;
 //           viewport={{ once: true }}
 //           className="mt-8 sm:mt-12 text-slate-400 text-sm sm:text-base lg:text-lg"
 //         >
-//           â­ Trusted by 150+ Victorian & Tasmanian businesses
+//           ? Trusted by 150+ Victorian & Tasmanian businesses
 //         </motion.p>
 //       </div>
 //     </section>
@@ -1688,7 +1688,7 @@ export default HeroCTASection;
 //           viewport={{ once: true }}
 //           className="inline-block px-6 py-3 bg-white/10 rounded-full text-white font-medium mb-8 backdrop-blur-sm border border-white/20"
 //         >
-//           ğŸ‡¦ğŸ‡º Limited-Time Free IT Transformation Assessment
+//           ???? Limited-Time Free IT Transformation Assessment
 //         </motion.div>
 
 //         {/* Headline */}
@@ -1717,7 +1717,7 @@ export default HeroCTASection;
 //           transition={{ delay: 0.3 }}
 //           className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto mb-12"
 //         >
-//           Australian SMBs trust us to eliminate downtime, defeat cyber threats, and unlock growth â€” 
+//           Australian SMBs trust us to eliminate downtime, defeat cyber threats, and unlock growth — 
 //           with transparent pricing and proven results.
 //         </motion.p>
 
@@ -1960,7 +1960,7 @@ export default HeroCTASection;
 //               <div className="w-3 h-3 rounded-full bg-red-500" />
 //               <div className="w-3 h-3 rounded-full bg-yellow-500" />
 //               <div className="w-3 h-3 rounded-full bg-green-500" />
-//               <span className="text-slate-400 ml-2 text-xs sm:text-sm">terminal@shakilit.au â€” transformation.sh</span>
+//               <span className="text-slate-400 ml-2 text-xs sm:text-sm">terminal@Synclineit.au — transformation.sh</span>
 //             </div>
 
 //             {/* Scanline effect */}
@@ -2038,7 +2038,7 @@ export default HeroCTASection;
 //           {[
 //             { Icon: CheckCircle, text: 'Free in-depth security & performance assessment', color: 'green' },
 //             { Icon: Clock, text: 'Clear report within 48 hours', color: 'blue' },
-//             { Icon: Zap, text: 'No obligation â€” just actionable insights', color: 'cyan' }
+//             { Icon: Zap, text: 'No obligation — just actionable insights', color: 'cyan' }
 //           ].map((benefit, i) => (
 //             <motion.div
 //               key={i}
@@ -2091,7 +2091,7 @@ export default HeroCTASection;
 //           viewport={{ once: true }}
 //           className="mt-12 text-slate-400 text-base sm:text-lg"
 //         >
-//           â­ Trusted by 150+ Victorian & Tasmanian businesses
+//           ? Trusted by 150+ Victorian & Tasmanian businesses
 //         </motion.p>
 //       </div>
 //     </section>
@@ -2099,3 +2099,4 @@ export default HeroCTASection;
 // };
 
 // export default HeroCTASection;
+

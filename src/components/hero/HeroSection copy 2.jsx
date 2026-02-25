@@ -1,4 +1,4 @@
-﻿// src/components/hero/HeroSection.jsx
+// src/components/hero/HeroSection.jsx
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Typed from 'typed.js';
@@ -14,21 +14,21 @@ const HeroSection = () => {
   const typedRef = useRef(null);
   const hasSeenTyped = localStorage.getItem('heroTypedSeen') === 'true';
 
-  // ──────────────────────────────────────────────────────────────
-  // Pain points – realistic SMB owner language
-  // ──────────────────────────────────────────────────────────────
+  // --------------------------------------------------------------
+  // Pain points � realistic SMB owner language
+  // --------------------------------------------------------------
   const problems = [
     { problem: 'Constant IT downtime costing you money?', solution: 'Proactive 24/7 monitoring & instant fixes', icon: AlertTriangle, color: 'from-red-500 to-orange-500' },
     { problem: 'Worried about ransomware or data breaches?', solution: 'Enterprise zero-trust security & rapid response', icon: Shield, color: 'from-blue-600 to-cyan-600' },
     { problem: 'Frustrated with slow, unreliable systems?', solution: 'Performance tuning & cloud optimisation', icon: Zap, color: 'from-yellow-500 to-amber-500' },
     { problem: 'Afraid of losing critical business data?', solution: 'Automated encrypted backups & fast recovery', icon: Database, color: 'from-green-500 to-emerald-500' },
-    { problem: 'Tired of managing IT yourself?', solution: 'Fully managed IT – we take it off your plate', icon: Server, color: 'from-indigo-500 to-violet-500' },
+    { problem: 'Tired of managing IT yourself?', solution: 'Fully managed IT � we take it off your plate', icon: Server, color: 'from-indigo-500 to-violet-500' },
     { problem: 'Surprise IT bills & hidden costs?', solution: 'Transparent fixed pricing & no surprises', icon: Lock, color: 'from-purple-500 to-pink-500' }
   ];
 
-  // ──────────────────────────────────────────────────────────────
-  // Credibility stats – long-term trust focus
-  // ──────────────────────────────────────────────────────────────
+  // --------------------------------------------------------------
+  // Credibility stats � long-term trust focus
+  // --------------------------------------------------------------
   const stats = [
     { value: '150+', label: 'Victorian & Tasmanian SMBs trust us long-term', icon: Users },
     { value: '99.9%', label: 'Guaranteed uptime SLA', icon: TrendingUp },
@@ -38,27 +38,27 @@ const HeroSection = () => {
     { value: '10+', label: 'Years building lasting partnerships', icon: Clock }
   ];
 
-  // ──────────────────────────────────────────────────────────────
-  // Trust badges – relationship-oriented messaging
-  // ──────────────────────────────────────────────────────────────
+  // --------------------------------------------------------------
+  // Trust badges � relationship-oriented messaging
+  // --------------------------------------------------------------
   const trustBadges = [
-    { icon: CheckCircle, text: '99.9% uptime – we stand behind our SLA' },
-    { icon: Clock, text: '<2hr response – because your business can’t wait' },
-    { icon: Shield, text: 'Zero-trust security – your data stays protected' },
-    { icon: Users, text: 'Long-term partner – not just another vendor' },
-    { icon: TrendingUp, text: 'Proven results – real growth for real businesses' }
+    { icon: CheckCircle, text: '99.9% uptime � we stand behind our SLA' },
+    { icon: Clock, text: '<2hr response � because your business can�t wait' },
+    { icon: Shield, text: 'Zero-trust security � your data stays protected' },
+    { icon: Users, text: 'Long-term partner � not just another vendor' },
+    { icon: TrendingUp, text: 'Proven results � real growth for real businesses' }
   ];
 
-  // ──────────────────────────────────────────────────────────────
+  // --------------------------------------------------------------
   // Rotating benefit lines (after Typed.js)
-  // ──────────────────────────────────────────────────────────────
+  // --------------------------------------------------------------
   const rotatingBenefits = [
     "Stop losing revenue to IT downtime.",
     "Stop fearing ransomware attacks.",
     "Stop paying for IT problems you can't see.",
-    "Stop managing IT — let experts handle it.",
+    "Stop managing IT � let experts handle it.",
     "Stop settling for slow support.",
-    "Stop reacting — start preventing.",
+    "Stop reacting � start preventing.",
     "Stop worrying about data loss.",
     "Stop wasting time on IT fires."
   ];
@@ -74,9 +74,9 @@ const HeroSection = () => {
     '/assets/lottie/animation3_CyberSecurity.json',
   ];
 
-  // ──────────────────────────────────────────────────────────────
-  // Typed.js – only on first visit
-  // ──────────────────────────────────────────────────────────────
+  // --------------------------------------------------------------
+  // Typed.js � only on first visit
+  // --------------------------------------------------------------
   useEffect(() => {
     if (!hasSeenTyped && typedRef.current) {
       const typed = new Typed(typedRef.current, {
@@ -118,7 +118,7 @@ const HeroSection = () => {
     return () => clearInterval(interval);
   }, [problems.length]);
 
-  // Rotate Lotties – slower cycle, longer fade
+  // Rotate Lotties � slower cycle, longer fade
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentLottie(prev => (prev + 1) % lotties.length);
@@ -139,9 +139,9 @@ const HeroSection = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-16 lg:py-24">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* ──────────────────────────────────────────────────────────────
-              LEFT COLUMN – Emotional headline + trust
-          ────────────────────────────────────────────────────────────── */}
+          {/* --------------------------------------------------------------
+              LEFT COLUMN � Emotional headline + trust
+          -------------------------------------------------------------- */}
           <div className="text-center lg:text-left space-y-8 lg:space-y-10">
             {/* Badge */}
             <motion.div
@@ -150,7 +150,7 @@ const HeroSection = () => {
               transition={{ duration: 0.6 }}
               className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-blue-600/10 border border-blue-500/20 backdrop-blur-sm mx-auto lg:mx-0"
             >
-              <span className="text-2xl sm:text-3xl">🇦🇺</span>
+              <span className="text-2xl sm:text-3xl">????</span>
               <span className="text-blue-300 font-semibold text-sm sm:text-base">
                 Trusted IT Partner for Tasmanian & Victorian Small & Medium Businesses
               </span>
@@ -182,7 +182,7 @@ const HeroSection = () => {
                 transition={{ duration: 0.7 }}
                 className="text-lg sm:text-xl lg:text-2xl text-slate-200 max-w-3xl mx-auto lg:mx-0 leading-relaxed"
               >
-                {hasSeenTyped ? rotatingBenefits[currentBenefit] : "Enterprise-grade IT support, security & automation — purpose-built for Victorian small and medium businesses."}
+                {hasSeenTyped ? rotatingBenefits[currentBenefit] : "professional-grade IT support, security & automation � purpose-built for Victorian small and medium businesses."}
               </motion.p>
             </AnimatePresence>
 
@@ -228,16 +228,16 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* ──────────────────────────────────────────────────────────────
-              RIGHT COLUMN – Lottie showcase + credibility stats
-          ────────────────────────────────────────────────────────────── */}
+          {/* --------------------------------------------------------------
+              RIGHT COLUMN � Lottie showcase + credibility stats
+          -------------------------------------------------------------- */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             className="relative mt-12 lg:mt-0 space-y-8 lg:space-y-10"
           >
-            {/* Lottie Rotator – clean container */}
+            {/* Lottie Rotator � clean container */}
             <div className="
               relative w-full 
               aspect-[4/3] lg:aspect-video
@@ -262,14 +262,14 @@ const HeroSection = () => {
                     src={lotties[currentLottie]}
                     autoplay={true}
                     loop={false}
-                    speed={0.65}                    // slightly slower – feels premium
+                    speed={0.65}                    // slightly slower � feels premium
                     className="w-[90%] h-[90%] max-w-full max-h-full object-contain"
                   />
                 </motion.div>
               </AnimatePresence>
             </div>
 
-            {/* Stats Grid – high credibility */}
+            {/* Stats Grid � high credibility */}
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
               {stats.map((stat, i) => (
                 <GlassCard key={i} className="p-5 sm:p-6 text-center">
@@ -312,21 +312,21 @@ export default HeroSection;
 //   const typedRef = useRef(null);
 //   const hasSeenTyped = localStorage.getItem('heroTypedSeen') === 'true';
 
-//   // ──────────────────────────────────────────────────────────────
-//   // Pain points – realistic SMB owner language
-//   // ──────────────────────────────────────────────────────────────
+//   // --------------------------------------------------------------
+//   // Pain points � realistic SMB owner language
+//   // --------------------------------------------------------------
 //   const problems = [
 //     { problem: 'Constant IT downtime costing you money?', solution: 'Proactive 24/7 monitoring & instant fixes', icon: AlertTriangle, color: 'from-red-500 to-orange-500' },
 //     { problem: 'Worried about ransomware or data breaches?', solution: 'Enterprise zero-trust security & rapid response', icon: Shield, color: 'from-blue-600 to-cyan-600' },
 //     { problem: 'Frustrated with slow, unreliable systems?', solution: 'Performance tuning & cloud optimisation', icon: Zap, color: 'from-yellow-500 to-amber-500' },
 //     { problem: 'Afraid of losing critical business data?', solution: 'Automated encrypted backups & fast recovery', icon: Database, color: 'from-green-500 to-emerald-500' },
-//     { problem: 'Tired of managing IT yourself?', solution: 'Fully managed IT – we take it off your plate', icon: Server, color: 'from-indigo-500 to-violet-500' },
+//     { problem: 'Tired of managing IT yourself?', solution: 'Fully managed IT � we take it off your plate', icon: Server, color: 'from-indigo-500 to-violet-500' },
 //     { problem: 'Surprise IT bills & hidden costs?', solution: 'Transparent fixed pricing & no surprises', icon: Lock, color: 'from-purple-500 to-pink-500' }
 //   ];
 
-//   // ──────────────────────────────────────────────────────────────
-//   // Credibility stats – long-term trust focus
-//   // ──────────────────────────────────────────────────────────────
+//   // --------------------------------------------------------------
+//   // Credibility stats � long-term trust focus
+//   // --------------------------------------------------------------
 //   const stats = [
 //     { value: '150+', label: 'Victorian & Tasmanian SMBs trust us long-term', icon: Users },
 //     { value: '99.9%', label: 'Guaranteed uptime SLA', icon: TrendingUp },
@@ -336,27 +336,27 @@ export default HeroSection;
 //     { value: '10+', label: 'Years building lasting partnerships', icon: Clock }
 //   ];
 
-//   // ──────────────────────────────────────────────────────────────
-//   // Trust badges – relationship-oriented messaging
-//   // ──────────────────────────────────────────────────────────────
+//   // --------------------------------------------------------------
+//   // Trust badges � relationship-oriented messaging
+//   // --------------------------------------------------------------
 //   const trustBadges = [
-//     { icon: CheckCircle, text: '99.9% uptime – we stand behind our SLA' },
-//     { icon: Clock, text: '<2hr response – because your business can’t wait' },
-//     { icon: Shield, text: 'Zero-trust security – your data stays protected' },
-//     { icon: Users, text: 'Long-term partner – not just another vendor' },
-//     { icon: TrendingUp, text: 'Proven results – real growth for real businesses' }
+//     { icon: CheckCircle, text: '99.9% uptime � we stand behind our SLA' },
+//     { icon: Clock, text: '<2hr response � because your business can�t wait' },
+//     { icon: Shield, text: 'Zero-trust security � your data stays protected' },
+//     { icon: Users, text: 'Long-term partner � not just another vendor' },
+//     { icon: TrendingUp, text: 'Proven results � real growth for real businesses' }
 //   ];
 
-//   // ──────────────────────────────────────────────────────────────
+//   // --------------------------------------------------------------
 //   // Rotating benefit lines (after Typed.js)
-//   // ──────────────────────────────────────────────────────────────
+//   // --------------------------------------------------------------
 //   const rotatingBenefits = [
 //     "Stop losing revenue to IT downtime.",
 //     "Stop fearing ransomware attacks.",
 //     "Stop paying for IT problems you can't see.",
-//     "Stop managing IT — let experts handle it.",
+//     "Stop managing IT � let experts handle it.",
 //     "Stop settling for slow support.",
-//     "Stop reacting — start preventing.",
+//     "Stop reacting � start preventing.",
 //     "Stop worrying about data loss.",
 //     "Stop wasting time on IT fires."
 //   ];
@@ -372,9 +372,9 @@ export default HeroSection;
 //     '/assets/lottie/animation3_CyberSecurity.json',
 //   ];
 
-//   // ──────────────────────────────────────────────────────────────
-//   // Typed.js – only on first visit
-//   // ──────────────────────────────────────────────────────────────
+//   // --------------------------------------------------------------
+//   // Typed.js � only on first visit
+//   // --------------------------------------------------------------
 //   useEffect(() => {
 //     if (!hasSeenTyped && typedRef.current) {
 //       const typed = new Typed(typedRef.current, {
@@ -416,7 +416,7 @@ export default HeroSection;
 //     return () => clearInterval(interval);
 //   }, [problems.length]);
 
-//   // Rotate Lotties – slower cycle, longer fade
+//   // Rotate Lotties � slower cycle, longer fade
 //   useEffect(() => {
 //     const interval = setInterval(() => {
 //       setCurrentLottie(prev => (prev + 1) % lotties.length);
@@ -437,9 +437,9 @@ export default HeroSection;
 
 //       <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-16 lg:py-24">
 //         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-//           {/* ──────────────────────────────────────────────────────────────
-//               LEFT COLUMN – Emotional headline + trust
-//           ────────────────────────────────────────────────────────────── */}
+//           {/* --------------------------------------------------------------
+//               LEFT COLUMN � Emotional headline + trust
+//           -------------------------------------------------------------- */}
 //           <div className="text-center lg:text-left space-y-8 lg:space-y-10">
 //             {/* Badge */}
 //             <motion.div
@@ -448,7 +448,7 @@ export default HeroSection;
 //               transition={{ duration: 0.6 }}
 //               className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-blue-600/10 border border-blue-500/20 backdrop-blur-sm mx-auto lg:mx-0"
 //             >
-//               <span className="text-2xl sm:text-3xl">🇦🇺</span>
+//               <span className="text-2xl sm:text-3xl">????</span>
 //               <span className="text-blue-300 font-semibold text-sm sm:text-base">
 //                 Trusted IT Partner for Tasmanian & Victorian Small & Medium Businesses
 //               </span>
@@ -480,7 +480,7 @@ export default HeroSection;
 //                 transition={{ duration: 0.7 }}
 //                 className="text-lg sm:text-xl lg:text-2xl text-slate-200 max-w-3xl mx-auto lg:mx-0 leading-relaxed"
 //               >
-//                 {hasSeenTyped ? rotatingBenefits[currentBenefit] : "Enterprise-grade IT support, security & automation — purpose-built for Victorian small and medium businesses."}
+//                 {hasSeenTyped ? rotatingBenefits[currentBenefit] : "professional-grade IT support, security & automation � purpose-built for Victorian small and medium businesses."}
 //               </motion.p>
 //             </AnimatePresence>
 
@@ -526,16 +526,16 @@ export default HeroSection;
 //             </div>
 //           </div>
 
-//           {/* ──────────────────────────────────────────────────────────────
-//               RIGHT COLUMN – Lottie showcase + credibility stats
-//           ────────────────────────────────────────────────────────────── */}
+//           {/* --------------------------------------------------------------
+//               RIGHT COLUMN � Lottie showcase + credibility stats
+//           -------------------------------------------------------------- */}
 //           <motion.div
 //             initial={{ opacity: 0, x: 50 }}
 //             animate={{ opacity: 1, x: 0 }}
 //             transition={{ duration: 0.8, delay: 0.3 }}
 //             className="relative mt-12 lg:mt-0 space-y-8 lg:space-y-10"
 //           >
-//             {/* Lottie Rotator – clean container */}
+//             {/* Lottie Rotator � clean container */}
 //             <div className="
 //               relative w-full 
 //               aspect-[4/3] lg:aspect-video
@@ -560,14 +560,14 @@ export default HeroSection;
 //                     src={lotties[currentLottie]}
 //                     autoplay={true}
 //                     loop={false}
-//                     speed={0.65}                    // slightly slower – feels premium
+//                     speed={0.65}                    // slightly slower � feels premium
 //                     className="w-[90%] h-[90%] max-w-full max-h-full object-contain"
 //                   />
 //                 </motion.div>
 //               </AnimatePresence>
 //             </div>
 
-//             {/* Stats Grid – high credibility */}
+//             {/* Stats Grid � high credibility */}
 //             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
 //               {stats.map((stat, i) => (
 //                 <GlassCard key={i} className="p-5 sm:p-6 text-center">
@@ -613,13 +613,13 @@ export default HeroSection;
 //   const typedRef = useRef(null);
 //   const hasSeenTyped = localStorage.getItem('heroTypedSeen') === 'true';
 
-//   // Pain points – real SMB owner language
+//   // Pain points � real SMB owner language
 //   const problems = [
 //     { problem: 'Constant IT downtime costing you money?', solution: 'Proactive 24/7 monitoring & instant fixes', icon: AlertTriangle, color: 'from-red-500 to-orange-500' },
 //     { problem: 'Worried about ransomware or data breaches?', solution: 'Enterprise zero-trust security & rapid response', icon: Shield, color: 'from-blue-600 to-cyan-600' },
 //     { problem: 'Frustrated with slow, unreliable systems?', solution: 'Performance tuning & cloud optimisation', icon: Zap, color: 'from-yellow-500 to-amber-500' },
 //     { problem: 'Afraid of losing critical business data?', solution: 'Automated encrypted backups & fast recovery', icon: Database, color: 'from-green-500 to-emerald-500' },
-//     { problem: 'Tired of managing IT yourself?', solution: 'Fully managed IT – we take it off your plate', icon: Server, color: 'from-indigo-500 to-violet-500' },
+//     { problem: 'Tired of managing IT yourself?', solution: 'Fully managed IT � we take it off your plate', icon: Server, color: 'from-indigo-500 to-violet-500' },
 //     { problem: 'Surprise IT bills & hidden costs?', solution: 'Transparent fixed pricing & no surprises', icon: Lock, color: 'from-purple-500 to-pink-500' }
 //   ];
 
@@ -633,11 +633,11 @@ export default HeroSection;
 //   ];
 
 //   const trustBadges = [
-//     { icon: CheckCircle, text: '99.9% uptime – we stand behind our SLA' },
-//     { icon: Clock, text: '<2hr response – because your business can’t wait' },
-//     { icon: Shield, text: 'Zero-trust security – your data stays protected' },
-//     { icon: Users, text: 'Long-term partner – not just another vendor' },
-//     { icon: TrendingUp, text: 'Proven results – real growth for real businesses' }
+//     { icon: CheckCircle, text: '99.9% uptime � we stand behind our SLA' },
+//     { icon: Clock, text: '<2hr response � because your business can�t wait' },
+//     { icon: Shield, text: 'Zero-trust security � your data stays protected' },
+//     { icon: Users, text: 'Long-term partner � not just another vendor' },
+//     { icon: TrendingUp, text: 'Proven results � real growth for real businesses' }
 //   ];
 
 //   // Rotating benefit lines after Typed.js
@@ -645,9 +645,9 @@ export default HeroSection;
 //     "Stop losing revenue to IT downtime.",
 //     "Stop fearing ransomware attacks.",
 //     "Stop paying for IT problems you can't see.",
-//     "Stop managing IT — let experts handle it.",
+//     "Stop managing IT � let experts handle it.",
 //     "Stop settling for slow support.",
-//     "Stop reacting — start preventing.",
+//     "Stop reacting � start preventing.",
 //     "Stop worrying about data loss.",
 //     "Stop wasting time on IT fires."
 //   ];
@@ -662,7 +662,7 @@ export default HeroSection;
 //     '/assets/lottie/animation3_CyberSecurity.json',
 //   ];
 
-//   // Typed.js – only first time
+//   // Typed.js � only first time
 //   useEffect(() => {
 //     if (!hasSeenTyped && typedRef.current) {
 //       const typed = new Typed(typedRef.current, {
@@ -724,7 +724,7 @@ export default HeroSection;
 
 //       <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-16 lg:py-24">
 //         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-//           {/* LEFT – Main message */}
+//           {/* LEFT � Main message */}
 //           <div className="text-center lg:text-left space-y-8 lg:space-y-10">
 //             {/* Badge */}
 //             <motion.div
@@ -733,7 +733,7 @@ export default HeroSection;
 //               transition={{ duration: 0.6 }}
 //               className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-blue-600/10 border border-blue-500/20 backdrop-blur-sm mx-auto lg:mx-0"
 //             >
-//               <span className="text-2xl sm:text-3xl">🇦🇺</span>
+//               <span className="text-2xl sm:text-3xl">????</span>
 //               <span className="text-blue-300 font-semibold text-sm sm:text-base">
 //                 Trusted IT Partner for Tasmanian & Victorian Small & Medium Businesses
 //               </span>
@@ -764,7 +764,7 @@ export default HeroSection;
 //                 transition={{ duration: 0.6 }}
 //                 className="text-lg sm:text-xl lg:text-2xl text-slate-200 max-w-3xl mx-auto lg:mx-0 leading-relaxed"
 //               >
-//                 {hasSeenTyped ? rotatingBenefits[currentBenefit] : "Enterprise-grade IT support, security & automation — built just for Victorian small and medium businesses."}
+//                 {hasSeenTyped ? rotatingBenefits[currentBenefit] : "professional-grade IT support, security & automation � built just for Victorian small and medium businesses."}
 //               </motion.p>
 //             </AnimatePresence>
 
@@ -808,7 +808,7 @@ export default HeroSection;
 //             </div>
 //           </div>
 
-//           {/* RIGHT COLUMN – Lottie + Stats */}
+//           {/* RIGHT COLUMN � Lottie + Stats */}
 //           <motion.div
 //             initial={{ opacity: 0, x: 50 }}
 //             animate={{ opacity: 1, x: 0 }}
@@ -886,11 +886,11 @@ export default HeroSection;
 //     { problem: 'Worried about ransomware or data breaches?', solution: 'Enterprise zero-trust security & rapid response', icon: Shield, color: 'from-blue-600 to-cyan-600' },
 //     { problem: 'Frustrated with slow, unreliable systems?', solution: 'Performance tuning & cloud optimisation', icon: Zap, color: 'from-yellow-500 to-amber-500' },
 //     { problem: 'Afraid of losing critical business data?', solution: 'Automated encrypted backups & fast recovery', icon: Database, color: 'from-green-500 to-emerald-500' },
-//     { problem: 'Tired of managing IT yourself?', solution: 'Fully managed IT – we take it off your plate', icon: Server, color: 'from-indigo-500 to-violet-500' },
+//     { problem: 'Tired of managing IT yourself?', solution: 'Fully managed IT � we take it off your plate', icon: Server, color: 'from-indigo-500 to-violet-500' },
 //     { problem: 'Surprise IT bills & hidden costs?', solution: 'Transparent fixed pricing & no surprises', icon: Lock, color: 'from-purple-500 to-pink-500' }
 //   ];
 
-//   // Trust stats – expanded with relationship focus
+//   // Trust stats � expanded with relationship focus
 //   const stats = [
 //     { value: '150+', label: 'Victorian SMBs trust us long-term', icon: Users },
 //     { value: '99.9%', label: 'Guaranteed uptime SLA', icon: TrendingUp },
@@ -900,13 +900,13 @@ export default HeroSection;
 //     { value: '10+', label: 'Years building lasting partnerships', icon: Clock }
 //   ];
 
-//   // Trust badges – long-term relationship & value focused
+//   // Trust badges � long-term relationship & value focused
 //   const trustBadges = [
-//     { icon: CheckCircle, text: '99.9% uptime – we stand behind our SLA' },
-//     { icon: Clock, text: '<2hr response – because your business can’t wait' },
-//     { icon: Shield, text: 'Zero-trust security – your data stays protected' },
-//     { icon: Users, text: 'Long-term partner – not just another vendor' },
-//     { icon: TrendingUp, text: 'Proven results – real growth for real businesses' }
+//     { icon: CheckCircle, text: '99.9% uptime � we stand behind our SLA' },
+//     { icon: Clock, text: '<2hr response � because your business can�t wait' },
+//     { icon: Shield, text: 'Zero-trust security � your data stays protected' },
+//     { icon: Users, text: 'Long-term partner � not just another vendor' },
+//     { icon: TrendingUp, text: 'Proven results � real growth for real businesses' }
 //   ];
 
 //   // Rotating benefit lines after first load
@@ -914,9 +914,9 @@ export default HeroSection;
 //     "Stop losing revenue to IT downtime.",
 //     "Stop fearing ransomware attacks.",
 //     "Stop paying for IT problems you can't see.",
-//     "Stop managing IT — let experts handle it.",
+//     "Stop managing IT � let experts handle it.",
 //     "Stop settling for slow support.",
-//     "Stop reacting — start preventing.",
+//     "Stop reacting � start preventing.",
 //     "Stop worrying about data loss.",
 //     "Stop wasting time on IT fires."
 //   ];
@@ -931,7 +931,7 @@ export default HeroSection;
 //   ];
 //   const [currentLottie, setCurrentLottie] = useState(0);
 
-//   // Typed.js – only first time
+//   // Typed.js � only first time
 //   useEffect(() => {
 //     if (!hasSeenTyped && typedRef.current) {
 //       const typed = new Typed(typedRef.current, {
@@ -985,7 +985,7 @@ export default HeroSection;
 
 //       <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-16 lg:py-24">
 //         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-//           {/* LEFT COLUMN – Emotional & benefit-first */}
+//           {/* LEFT COLUMN � Emotional & benefit-first */}
 //           <div className="text-center lg:text-left space-y-8 lg:space-y-10">
 //             {/* Badge */}
 //             <motion.div
@@ -994,7 +994,7 @@ export default HeroSection;
 //               transition={{ duration: 0.6 }}
 //               className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-blue-600/10 border border-blue-500/20 backdrop-blur-sm mx-auto lg:mx-0"
 //             >
-//               <span className="text-2xl sm:text-3xl">🇦🇺</span>
+//               <span className="text-2xl sm:text-3xl">????</span>
 //               <span className="text-blue-300 font-semibold text-sm sm:text-base">
 //                 Trusted IT Partner for Tasmanian & Victorian Small & Medium Businesses
 //               </span>
@@ -1025,7 +1025,7 @@ export default HeroSection;
 //                 transition={{ duration: 0.6 }}
 //                 className="text-lg sm:text-xl lg:text-2xl text-slate-200 max-w-3xl mx-auto lg:mx-0 leading-relaxed"
 //               >
-//                 {hasSeenTyped ? rotatingBenefits[currentBenefit] : "Enterprise-grade IT support, security & automation — built just for Victorian small and medium businesses."}
+//                 {hasSeenTyped ? rotatingBenefits[currentBenefit] : "professional-grade IT support, security & automation � built just for Victorian small and medium businesses."}
 //               </motion.p>
 //             </AnimatePresence>
 
@@ -1069,14 +1069,14 @@ export default HeroSection;
 //             </div>
 //           </div>
 
-//           {/* RIGHT COLUMN – Lottie Showcase + Stats */}
+//           {/* RIGHT COLUMN � Lottie Showcase + Stats */}
 //           <motion.div
 //             initial={{ opacity: 0, x: 50 }}
 //             animate={{ opacity: 1, x: 0 }}
 //             transition={{ duration: 0.8, delay: 0.3 }}
 //             className="relative mt-12 lg:mt-0 space-y-8 lg:space-y-10"
 //           >
-//             {/* Lottie Animations – rotating with cross-fade */}
+//             {/* Lottie Animations � rotating with cross-fade */}
 //             <div className="relative w-full aspect-video lg:aspect-[4/3] max-h-[420px] mx-auto overflow-hidden rounded-2xl border border-white/10 shadow-2xl">
 //               <AnimatePresence mode="wait">
 //                 <motion.div
@@ -1097,7 +1097,7 @@ export default HeroSection;
 //               </AnimatePresence>
 //             </div>
 
-//             {/* Stats – always visible */}
+//             {/* Stats � always visible */}
 //             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
 //               {stats.map((stat, i) => (
 //                 <GlassCard key={i} className="p-5 sm:p-6 text-center">
@@ -1137,7 +1137,7 @@ export default HeroSection;
 // const HeroSection = () => {
 //   const [currentProblem, setCurrentProblem] = useState(0);
 
-//   // Expanded & realistic SMB pain points – speaks to real fears & frustrations
+//   // Expanded & realistic SMB pain points � speaks to real fears & frustrations
 //   const problems = [
 //     { 
 //       problem: 'Constant IT fires & downtime?', 
@@ -1165,7 +1165,7 @@ export default HeroSection;
 //     },
 //     { 
 //       problem: 'Tired of managing IT yourself?', 
-//       solution: 'Fully managed IT – we handle everything', 
+//       solution: 'Fully managed IT � we handle everything', 
 //       icon: Server, 
 //       color: 'from-indigo-500 to-violet-500' 
 //     },
@@ -1177,7 +1177,7 @@ export default HeroSection;
 //     }
 //   ];
 
-//   // Expanded stats – more trustworthy & meaningful
+//   // Expanded stats � more trustworthy & meaningful
 //   const stats = [
 //     { value: '150+', label: 'Victorian SMBs trust us long-term', icon: Users },
 //     { value: '99.9%', label: 'Guaranteed uptime SLA', icon: TrendingUp },
@@ -1187,19 +1187,19 @@ export default HeroSection;
 //     { value: '10+', label: 'Years helping Tasmanian & Victorian businesses grow', icon: Clock }
 //   ];
 
-//   // Expanded trust badges – relationship & value focused
+//   // Expanded trust badges � relationship & value focused
 //   const trustBadges = [
-//     { icon: CheckCircle, text: '99.9% uptime – we stand behind our SLA' },
-//     { icon: Clock, text: '<2hr response – because your business can’t wait' },
-//     { icon: Shield, text: 'Zero-trust security – your data stays protected' },
-//     { icon: Users, text: 'Long-term partner – not just another vendor' },
-//     { icon: TrendingUp, text: 'Proven results – real growth for real businesses' }
+//     { icon: CheckCircle, text: '99.9% uptime � we stand behind our SLA' },
+//     { icon: Clock, text: '<2hr response � because your business can�t wait' },
+//     { icon: Shield, text: 'Zero-trust security � your data stays protected' },
+//     { icon: Users, text: 'Long-term partner � not just another vendor' },
+//     { icon: TrendingUp, text: 'Proven results � real growth for real businesses' }
 //   ];
 
 //   useEffect(() => {
 //     const interval = setInterval(() => {
 //       setCurrentProblem(prev => (prev + 1) % problems.length);
-//     }, 5000); // slightly longer cycle – gives time to read
+//     }, 5000); // slightly longer cycle � gives time to read
 
 //     return () => clearInterval(interval);
 //   }, []);
@@ -1215,22 +1215,22 @@ export default HeroSection;
 
 //       <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-16 lg:py-24">
 //         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-//           {/* LEFT COLUMN – Emotional & benefit-first */}
+//           {/* LEFT COLUMN � Emotional & benefit-first */}
 //           <div className="text-center lg:text-left space-y-8 lg:space-y-10">
-//             {/* Badge – more trustworthy */}
+//             {/* Badge � more trustworthy */}
 //             <motion.div
 //               initial={{ opacity: 0, y: 30 }}
 //               animate={{ opacity: 1, y: 0 }}
 //               transition={{ duration: 0.6 }}
 //               className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-blue-600/10 border border-blue-500/20 backdrop-blur-sm mx-auto lg:mx-0"
 //             >
-//               <span className="text-2xl sm:text-3xl">🇦🇺</span>
+//               <span className="text-2xl sm:text-3xl">????</span>
 //               <span className="text-blue-300 font-semibold text-sm sm:text-base">
 //                 Trusted IT Partner for Tasmanian & Victorian Small & Medium Businesses
 //               </span>
 //             </motion.div>
 
-//             {/* Headline – bigger impact */}
+//             {/* Headline � bigger impact */}
 //             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-[1.05] tracking-tight">
 //               Stop Fighting IT.<br className="sm:hidden" />
 //               <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -1238,12 +1238,12 @@ export default HeroSection;
 //               </span>
 //             </h1>
 
-//             {/* Subheadline – speaks to owner’s goals */}
+//             {/* Subheadline � speaks to owner�s goals */}
 //             <p className="text-lg sm:text-xl lg:text-2xl text-slate-200 max-w-3xl mx-auto lg:mx-0 leading-relaxed">
-//               We take the stress out of IT so you can focus on what matters — growing your business with confidence.
+//               We take the stress out of IT so you can focus on what matters � growing your business with confidence.
 //             </p>
 
-//             {/* CTAs – stronger, more urgent */}
+//             {/* CTAs � stronger, more urgent */}
 //             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center lg:justify-start pt-4">
 //               <motion.a
 //                 href="#contact"
@@ -1266,7 +1266,7 @@ export default HeroSection;
 //               </motion.a>
 //             </div>
 
-//             {/* Trust badges – longer, relationship-focused */}
+//             {/* Trust badges � longer, relationship-focused */}
 //             <div className="flex flex-wrap justify-center lg:justify-start gap-4 sm:gap-6 pt-6">
 //               {trustBadges.map((badge, i) => (
 //                 <motion.div
@@ -1283,7 +1283,7 @@ export default HeroSection;
 //             </div>
 //           </div>
 
-//           {/* RIGHT COLUMN – Problem/Solution + Stats */}
+//           {/* RIGHT COLUMN � Problem/Solution + Stats */}
 //           <motion.div
 //             initial={{ opacity: 0, x: 50 }}
 //             animate={{ opacity: 1, x: 0 }}
@@ -1348,7 +1348,7 @@ export default HeroSection;
 //               </div>
 //             </GlassCard>
 
-//             {/* Stats – expanded & trustworthy */}
+//             {/* Stats � expanded & trustworthy */}
 //             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
 //               {stats.map((stat, i) => (
 //                 <GlassCard key={i} className="p-5 sm:p-6 text-center">
@@ -1388,7 +1388,7 @@ export default HeroSection;
 
 //   const problems = [
 //     { problem: 'Constant IT Fires?', solution: '24/7 Proactive Monitoring', icon: AlertTriangle, color: 'from-red-500 to-orange-500' },
-//     { problem: 'Security Concerns?', solution: 'Enterprise-Grade Protection', icon: Shield, color: 'from-blue-500 to-cyan-500' },
+//     { problem: 'Security Concerns?', solution: 'professional-grade Protection', icon: Shield, color: 'from-blue-500 to-cyan-500' },
 //     { problem: 'Slow Systems?', solution: 'Optimized Performance', icon: Zap, color: 'from-yellow-500 to-amber-500' },
 //     { problem: 'Data Loss Risk?', solution: 'Automated Backups', icon: Database, color: 'from-green-500 to-emerald-500' }
 //   ];
@@ -1434,7 +1434,7 @@ export default HeroSection;
 //               transition={{ delay: 0.2 }}
 //               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 mb-8"
 //             >
-//               <span className="text-2xl">🇦🇺</span>
+//               <span className="text-2xl">????</span>
 //               <span className="text-blue-400 font-medium">Victorian SMB Specialists</span>
 //             </motion.div>
 
@@ -1449,7 +1449,7 @@ export default HeroSection;
 
 //             {/* Subheadline */}
 //             <p className="text-base sm:text-lg md:text-xl text-slate-300 max-w-xl mb-6 sm:mb-8 leading-relaxed">
-//               Enterprise-grade IT support, security, and automation designed specifically for Victorian small and medium businesses.
+//               professional-grade IT support, security, and automation designed specifically for Victorian small and medium businesses.
 //             </p>
 
 //             {/* CTAs */}
@@ -1642,7 +1642,7 @@ export default HeroSection;
 // // Memoized static badge
 // const Badge = memo(() => (
 //   <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-md mx-auto lg:mx-0 text-xs sm:text-sm md:text-base">
-//     <span className="text-xl">🇦🇺</span>
+//     <span className="text-xl">????</span>
 //     <span className="text-blue-400 font-semibold tracking-wide">
 //       Victorian SMB IT Specialists
 //     </span>
@@ -1746,7 +1746,7 @@ export default HeroSection;
 
 //             {/* Description - static paragraph */}
 //             <p className="max-w-xl lg:max-w-xl text-base sm:text-lg md:text-xl leading-relaxed text-slate-300/90">
-//               Enterprise-grade IT support, cybersecurity, cloud services and automation —
+//               professional-grade IT support, cybersecurity, cloud services and automation �
 //               purpose-built for Victorian small and medium businesses.
 //             </p>
 
@@ -1870,7 +1870,7 @@ export default HeroSection;
 // import React, { useState, useEffect } from 'react';
 // import { motion, AnimatePresence } from 'framer-motion';
 
-// // Individual Lucide imports (tree-shake friendly + alias) – keep as you have
+// // Individual Lucide imports (tree-shake friendly + alias) � keep as you have
 // import Shield from '@lucide/shield';
 // import Zap from '@lucide/zap';
 // import Database from '@lucide/database';
@@ -1960,7 +1960,7 @@ export default HeroSection;
 //               transition={{ duration: 0.6 }}
 //               className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-md mx-auto lg:mx-0 text-xs sm:text-sm md:text-base"
 //             >
-//               <span className="text-xl">🇦🇺</span>
+//               <span className="text-xl">????</span>
 //               <span className="text-blue-400 font-semibold tracking-wide">
 //                 Victorian SMB IT Specialists
 //               </span>
@@ -1998,7 +1998,7 @@ export default HeroSection;
 //               transition={{ delay: 0.3, duration: 0.8 }}
 //               className="max-w-xl mx-auto lg:mx-0 text-base sm:text-lg md:text-xl leading-relaxed text-slate-300/90"
 //             >
-//               Enterprise-grade IT support, cybersecurity, cloud services and automation —
+//               professional-grade IT support, cybersecurity, cloud services and automation �
 //               purpose-built for Victorian small and medium businesses.
 //             </motion.p>
 
@@ -2193,7 +2193,7 @@ export default HeroSection;
 //               transition={{ duration: 0.6 }}
 //               className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-md mx-auto lg:mx-0"
 //             >
-//               <span className="text-xl">🇦🇺</span>
+//               <span className="text-xl">????</span>
 //               <span className="text-blue-400 text-sm font-semibold tracking-wide">
 //                 Victorian SMB IT Specialists
 //               </span>
@@ -2228,7 +2228,7 @@ export default HeroSection;
 //               transition={{ duration: 0.8, delay: 0.3 }}
 //               className="max-w-xl text-base sm:text-lg lg:text-xl text-slate-300/90 leading-relaxed mx-auto lg:mx-0"
 //             >
-//               Enterprise-grade IT support, cybersecurity, cloud services and automation —  
+//               professional-grade IT support, cybersecurity, cloud services and automation �  
 //               purpose-built for Victorian small and medium businesses.
 //             </motion.p>
 
@@ -2396,7 +2396,7 @@ export default HeroSection;
 
 //   const problems = [
 //     { problem: 'Constant IT Fires?', solution: '24/7 Proactive Monitoring', icon: AlertTriangle },
-//     { problem: 'Security Concerns?', solution: 'Enterprise-Grade Protection', icon: Shield },
+//     { problem: 'Security Concerns?', solution: 'professional-grade Protection', icon: Shield },
 //     { problem: 'Slow Systems?', solution: 'Performance Optimisation', icon: Zap },
 //     { problem: 'Data Loss Risk?', solution: 'Automated Backups', icon: Database }
 //   ];
@@ -2447,7 +2447,7 @@ export default HeroSection;
 //               transition={{ duration: 0.5 }}
 //               className="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-sm"
 //             >
-//               <span className="text-lg sm:text-xl">🇦🇺</span>
+//               <span className="text-lg sm:text-xl">????</span>
 //               <span className="text-blue-400 text-xs sm:text-sm font-medium">
 //                 Victorian SMB Specialists
 //               </span>
@@ -2473,7 +2473,7 @@ export default HeroSection;
 //               transition={{ duration: 0.5, delay: 0.2 }}
 //               className="max-w-2xl text-slate-300 text-base sm:text-lg lg:text-xl leading-relaxed mx-auto lg:mx-0"
 //             >
-//               Enterprise-grade IT support, security, and automation designed
+//               professional-grade IT support, security, and automation designed
 //               specifically for Victorian small and medium businesses.
 //             </motion.p>
 
@@ -2680,7 +2680,7 @@ export default HeroSection;
 
 //   const problems = [
 //     { problem: 'Constant IT Fires?', solution: '24/7 Proactive Monitoring', icon: AlertTriangle },
-//     { problem: 'Security Concerns?', solution: 'Enterprise-Grade Protection', icon: Shield },
+//     { problem: 'Security Concerns?', solution: 'professional-grade Protection', icon: Shield },
 //     { problem: 'Slow Systems?', solution: 'Performance Optimisation', icon: Zap },
 //     { problem: 'Data Loss Risk?', solution: 'Automated Backups', icon: Database }
 //   ];
@@ -2726,7 +2726,7 @@ export default HeroSection;
 
 //             {/* Badge */}
 //             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20">
-//               <span className="text-xl">🇦🇺</span>
+//               <span className="text-xl">????</span>
 //               <span className="text-blue-400 text-sm font-medium">
 //                 Victorian SMB Specialists
 //               </span>
@@ -2742,7 +2742,7 @@ export default HeroSection;
 
 //             {/* Subheadline */}
 //             <p className="max-w-2xl text-slate-200 text-[clamp(1.1rem,2.2vw,1.35rem)] leading-relaxed mx-auto lg:mx-0">
-//               Enterprise-grade IT support, security, and automation designed
+//               professional-grade IT support, security, and automation designed
 //               specifically for Victorian small and medium businesses.
 //             </p>
 
@@ -2887,7 +2887,7 @@ export default HeroSection;
 
 //   const problems = [
 //     { problem: 'Constant IT Fires?', solution: '24/7 Proactive Monitoring', icon: AlertTriangle, color: 'from-red-500 to-orange-500' },
-//     { problem: 'Security Concerns?', solution: 'Enterprise-Grade Protection', icon: Shield, color: 'from-blue-500 to-cyan-500' },
+//     { problem: 'Security Concerns?', solution: 'professional-grade Protection', icon: Shield, color: 'from-blue-500 to-cyan-500' },
 //     { problem: 'Slow Systems?', solution: 'Optimized Performance', icon: Zap, color: 'from-yellow-500 to-amber-500' },
 //     { problem: 'Data Loss Risk?', solution: 'Automated Backups', icon: Database, color: 'from-green-500 to-emerald-500' }
 //   ];
@@ -2920,15 +2920,15 @@ export default HeroSection;
       
 //       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
 //         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-//           {/* Left Content – Better spacing & font scaling */}
+//           {/* Left Content � Better spacing & font scaling */}
 //           <div className="text-center lg:text-left space-y-8 lg:space-y-10">
 //             {/* Badge */}
 //             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20">
-//               <span className="text-2xl">🇦🇺</span>
+//               <span className="text-2xl">????</span>
 //               <span className="text-blue-400 font-medium text-sm sm:text-base">Victorian SMB Specialists</span>
 //             </div>
 
-//             {/* Headline – Fluid, bold, fills space */}
+//             {/* Headline � Fluid, bold, fills space */}
 //             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-[1.05] tracking-tight">
 //               Stop Fighting IT.<br className="sm:hidden" />
 //               <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -2936,12 +2936,12 @@ export default HeroSection;
 //               </span>
 //             </h1>
 
-//             {/* Subheadline – Larger, better line height */}
+//             {/* Subheadline � Larger, better line height */}
 //             <p className="text-lg sm:text-xl lg:text-2xl text-slate-200 max-w-3xl mx-auto lg:mx-0 leading-relaxed">
-//               Enterprise-grade IT support, security, and automation designed specifically for Victorian small and medium businesses.
+//               professional-grade IT support, security, and automation designed specifically for Victorian small and medium businesses.
 //             </p>
 
-//             {/* CTAs – Bigger, more prominent */}
+//             {/* CTAs � Bigger, more prominent */}
 //             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center lg:justify-start">
 //               <a
 //                 href="#contact"
@@ -2959,7 +2959,7 @@ export default HeroSection;
 //               </a>
 //             </div>
 
-//             {/* Trust Badges – Larger, better spacing */}
+//             {/* Trust Badges � Larger, better spacing */}
 //             <div className="flex flex-wrap justify-center lg:justify-start gap-4 sm:gap-6">
 //               {trustBadges.map((badge, i) => (
 //                 <div
@@ -2973,7 +2973,7 @@ export default HeroSection;
 //             </div>
 //           </div>
 
-//           {/* Right Content – Stats & Problem Card – Better balance */}
+//           {/* Right Content � Stats & Problem Card � Better balance */}
 //           <div className="relative mt-12 lg:mt-0 space-y-8">
 //             {/* Problem-Solution Card */}
 //             <GlassCard className="p-6 sm:p-8" gradient>
@@ -3031,7 +3031,7 @@ export default HeroSection;
 //               </div>
 //             </GlassCard>
 
-//             {/* Stats Grid – Larger, better spacing */}
+//             {/* Stats Grid � Larger, better spacing */}
 //             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
 //               {stats.map((stat, i) => (
 //                 <GlassCard key={i} className="p-5 sm:p-6 text-center group shadow-lg">
@@ -3096,7 +3096,7 @@ export default HeroSection;
 
 //   const problems = [
 //     { problem: 'Constant IT Fires?', solution: '24/7 Proactive Monitoring', icon: AlertTriangle, color: 'from-red-500 to-orange-500' },
-//     { problem: 'Security Concerns?', solution: 'Enterprise-Grade Protection', icon: Shield, color: 'from-blue-500 to-cyan-500' },
+//     { problem: 'Security Concerns?', solution: 'professional-grade Protection', icon: Shield, color: 'from-blue-500 to-cyan-500' },
 //     { problem: 'Slow Systems?', solution: 'Optimized Performance', icon: Zap, color: 'from-yellow-500 to-amber-500' },
 //     { problem: 'Data Loss Risk?', solution: 'Automated Backups', icon: Database, color: 'from-green-500 to-emerald-500' }
 //   ];
@@ -3148,7 +3148,7 @@ export default HeroSection;
 //               transition={{ delay: 0.2, duration: shouldReduceMotion ? 0 : 0.6 }}
 //               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 mb-6 sm:mb-8 mx-auto lg:mx-0"
 //             >
-//               <span className="text-2xl">🇦🇺</span>
+//               <span className="text-2xl">????</span>
 //               <span className="text-blue-400 font-medium text-sm sm:text-base">Victorian SMB Specialists</span>
 //             </motion.div>
 
@@ -3163,7 +3163,7 @@ export default HeroSection;
 
 //             {/* Subheadline */}
 //             <p className="text-lg sm:text-xl lg:text-2xl text-slate-300 max-w-xl mx-auto lg:mx-0 mb-8 lg:mb-10 leading-relaxed">
-//               Enterprise-grade IT support, security, and automation designed specifically for Victorian small and medium businesses.
+//               professional-grade IT support, security, and automation designed specifically for Victorian small and medium businesses.
 //             </p>
 
 //             {/* CTAs - Stacked on mobile, row on desktop */}
@@ -3344,7 +3344,7 @@ export default HeroSection;
 
 //   const problems = [
 //     { problem: 'Constant IT Fires?', solution: '24/7 Proactive Monitoring', icon: AlertTriangle, color: 'from-red-500 to-orange-500' },
-//     { problem: 'Security Concerns?', solution: 'Enterprise-Grade Protection', icon: Shield, color: 'from-blue-500 to-cyan-500' },
+//     { problem: 'Security Concerns?', solution: 'professional-grade Protection', icon: Shield, color: 'from-blue-500 to-cyan-500' },
 //     { problem: 'Slow Systems?', solution: 'Optimized Performance', icon: Zap, color: 'from-yellow-500 to-amber-500' },
 //     { problem: 'Data Loss Risk?', solution: 'Automated Backups', icon: Database, color: 'from-green-500 to-emerald-500' }
 //   ];
@@ -3390,7 +3390,7 @@ export default HeroSection;
 //               transition={{ delay: 0.2 }}
 //               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 mb-8"
 //             >
-//               <span className="text-2xl">🇦🇺</span>
+//               <span className="text-2xl">????</span>
 //               <span className="text-blue-400 font-medium">Victorian SMB Specialists</span>
 //             </motion.div>
 
@@ -3405,7 +3405,7 @@ export default HeroSection;
 
 //             {/* Subheadline */}
 //             <p className="text-lg sm:text-xl text-slate-300 max-w-xl mb-8 leading-relaxed">
-//               Enterprise-grade IT support, security, and automation designed specifically for Victorian small and medium businesses.
+//               professional-grade IT support, security, and automation designed specifically for Victorian small and medium businesses.
 //             </p>
 
 //             {/* CTAs */}
@@ -3583,7 +3583,7 @@ export default HeroSection;
 
 //   const problems = [
 //     { problem: 'Constant IT Fires?', solution: '24/7 Proactive Monitoring', icon: AlertTriangle, color: 'from-red-500 to-orange-500' },
-//     { problem: 'Security Concerns?', solution: 'Enterprise-Grade Protection', icon: Shield, color: 'from-blue-500 to-cyan-500' },
+//     { problem: 'Security Concerns?', solution: 'professional-grade Protection', icon: Shield, color: 'from-blue-500 to-cyan-500' },
 //     { problem: 'Slow Systems?', solution: 'Optimized Performance', icon: Zap, color: 'from-yellow-500 to-amber-500' },
 //     { problem: 'Data Loss Risk?', solution: 'Automated Backups', icon: Database, color: 'from-green-500 to-emerald-500' }
 //   ];
@@ -3629,7 +3629,7 @@ export default HeroSection;
 //               transition={{ delay: 0.2 }}
 //               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 mb-8"
 //             >
-//               <span className="text-2xl">🇦🇺</span>
+//               <span className="text-2xl">????</span>
 //               <span className="text-blue-400 font-medium">Victorian SMB Specialists</span>
 //             </motion.div>
 
@@ -3644,7 +3644,7 @@ export default HeroSection;
 
 //             {/* Subheadline */}
 //             <p className="text-lg sm:text-xl text-slate-300 max-w-xl mb-8 leading-relaxed">
-//               Enterprise-grade IT support, security, and automation designed specifically for Victorian small and medium businesses.
+//               professional-grade IT support, security, and automation designed specifically for Victorian small and medium businesses.
 //             </p>
 
 //             {/* CTAs */}

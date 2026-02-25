@@ -5,7 +5,7 @@ export const initialState = {
     {
       id: `init-${Date.now()}`,
       type: "bot",
-      text: "Welcome to Shakil IT Solutions! I can help you with services, security, monitoring, or contacting our team.",
+      text: "Welcome to Syncline IT Solutions! I can help you with services, security, monitoring, or contacting our team.",
       timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
     },
   ],
@@ -79,7 +79,7 @@ export const chatReducer = (state, action) => {
 //     {
 //       id: 1,
 //       type: "bot",
-//       text: "Welcome to Shakil IT Solutions. I can help you with services, security, monitoring, or contacting our team.",
+//       text: "Welcome to Syncline IT Solutions. I can help you with services, security, monitoring, or contacting our team.",
 //     },
 //   ],
 //   showNamePrompt: true,
@@ -131,3 +131,4 @@ export const chatReducer = (state, action) => {
 //       return state;
 //   }
 // };
+

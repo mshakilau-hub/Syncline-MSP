@@ -1,4 +1,4 @@
-﻿// src/components/cta/CTASection.jsx
+// src/components/cta/CTASection.jsx
 import React, { useEffect, useRef, useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
@@ -98,7 +98,7 @@ const CTASection = () => {
           viewport={{ once: true }}
           className="inline-block px-6 py-3 bg-white/10 rounded-full text-white font-medium mb-8 backdrop-blur-sm border border-white/20"
         >
-          🇦🇺 Limited-Time Free IT Transformation Assessment
+          ???? Limited-Time Free IT Transformation Assessment
         </motion.div>
 
         {/* Headline */}
@@ -127,7 +127,7 @@ const CTASection = () => {
           transition={{ delay: 0.3 }}
           className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto mb-12"
         >
-          Australian SMBs trust us to eliminate downtime, defeat cyber threats, and unlock growth — 
+          Australian SMBs trust us to eliminate downtime, defeat cyber threats, and unlock growth � 
           with transparent pricing and proven results.
         </motion.p>
 
@@ -370,7 +370,7 @@ const CTASection = () => {
               <div className="w-3 h-3 rounded-full bg-red-500" />
               <div className="w-3 h-3 rounded-full bg-yellow-500" />
               <div className="w-3 h-3 rounded-full bg-green-500" />
-              <span className="text-slate-400 ml-2 text-xs sm:text-sm">terminal@shakilit.au — transformation.sh</span>
+              <span className="text-slate-400 ml-2 text-xs sm:text-sm">terminal@Synclineit.au � transformation.sh</span>
             </div>
 
             {/* Scanline effect */}
@@ -448,7 +448,7 @@ const CTASection = () => {
           {[
             { Icon: CheckCircle, text: 'Free in-depth security & performance assessment', color: 'green' },
             { Icon: Clock, text: 'Clear report within 48 hours', color: 'blue' },
-            { Icon: Zap, text: 'No obligation — just actionable insights', color: 'cyan' }
+            { Icon: Zap, text: 'No obligation � just actionable insights', color: 'cyan' }
           ].map((benefit, i) => (
             <motion.div
               key={i}
@@ -501,7 +501,7 @@ const CTASection = () => {
           viewport={{ once: true }}
           className="mt-12 text-slate-400 text-base sm:text-lg"
         >
-          ⭐ Trusted by 150+ Victorian & Tasmanian businesses
+          ? Trusted by 150+ Victorian & Tasmanian businesses
         </motion.p>
       </div>
     </section>

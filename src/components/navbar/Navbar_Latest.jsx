@@ -1,4 +1,4 @@
-﻿// src/components/navbar/Navbar.jsx - FIXED VERSION
+// src/components/navbar/Navbar.jsx - FIXED VERSION
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { NavLink } from 'react-router-dom';
@@ -74,14 +74,14 @@ const Navbar = () => {
               <div className="relative flex-shrink-0">
               <img
                 src={logo80}
-                alt="Shakil IT Logo"
+                alt="Syncline IT Logo"
                 className="h-12 w-auto sm:h-14 lg:h-16 object-contain"
               />
 
                 <div className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 sm:w-3 sm:h-3 bg-green-500 rounded-full border-2 border-slate-900 animate-pulse" />
               </div>
               <div className="min-w-0 hidden sm:block">
-                <span className="text-sm sm:text-base lg:text-lg font-bold text-white block truncate">Shakil IT</span>
+                <span className="text-sm sm:text-base lg:text-lg font-bold text-white block truncate">Syncline IT</span>
                 <span className="hidden lg:block text-xs text-slate-400 truncate">Enterprise IT Solutions</span>
               </div>
             </NavLink>

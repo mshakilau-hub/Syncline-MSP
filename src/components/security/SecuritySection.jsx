@@ -1,4 +1,4 @@
-﻿//C:\Projects\Web\shakil-it-solutions\src\components\security\SecuritySection.jsx
+//C:\Projects\Web\Syncline-it-solutions\src\components\security\SecuritySection.jsx
 // src/components/security/SecuritySection.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
@@ -21,8 +21,8 @@ const SecuritySection = () => {
   const securityLayers = [
   {
     icon: Lock,
-    title: 'Secure Sign‑In',
-    description: 'Stronger sign‑in practices to help keep your accounts protected.',
+    title: 'Secure Sign-In',
+    description: 'Stronger sign-in practices to help keep your accounts protected.',
     color: 'text-blue-400',
     bg: 'bg-blue-500/10'
   },
@@ -107,7 +107,7 @@ const stats = [
         </h2>
 
         <p className="text-lg text-slate-400 mb-8">
-          We help your business stay safe online with clear guidance, secure sign‑ins, and dependable backups — all using the tools already built into Microsoft 365. No complex systems or heavy security stacks.
+          We help your business stay safe online with clear guidance, secure sign-ins, and dependable backups � all using the tools already built into Microsoft 365. No complex systems or heavy security stacks.
         </p>
 
         {/* Alert Banner */}
@@ -116,7 +116,7 @@ const stats = [
           <div>
             <h4 className="font-semibold text-white mb-1">Good to know</h4>
             <p className="text-sm text-slate-400">
-              Most small businesses only need a few practical steps to stay safe day‑to‑day — and we help you put those in place.
+              Most small businesses only need a few practical steps to stay safe day-to-day � and we help you put those in place.
             </p>
           </div>
         </div>
@@ -181,12 +181,12 @@ const stats = [
             </h3>
 
             <p className="text-lg text-slate-400 mb-6">
-              We help your team work confidently from home or the office using practical, easy‑to‑use tools already built into Microsoft 365. No complicated setups or expensive licensing.
+              We help your team work confidently from home or the office using practical, easy-to-use tools already built into Microsoft 365. No complicated setups or expensive licensing.
             </p>
 
             <ul className="space-y-3 mb-8">
               {[
-                'Safe sign‑in and access for your staff',
+                'Safe sign-in and access for your staff',
                 'Works across laptops, desktops, and mobile devices',
                 'Simple setup for remote file and email access',
                 'Clear guidance and support when your team needs help'
